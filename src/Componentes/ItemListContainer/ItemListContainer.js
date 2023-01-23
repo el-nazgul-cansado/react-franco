@@ -46,6 +46,7 @@ export const ItemListContainer = () => {
                 setProdBusc(res)
              } else {
                  setProductos(res)
+                 setProdBusc(res)
              }
         })
         .catch((err) => {

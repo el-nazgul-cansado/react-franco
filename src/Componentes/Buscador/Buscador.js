@@ -12,9 +12,6 @@ export const Buscador = ({handleChange, busqueda}) => {
         <input className='form-control inputBuscar'
         onChange={handleChange} value={busqueda} placeholder="Busqueda por nombre o tipo de producto..."
         />
-        <button className='btn btn-outline-success'>
-          <FontAwesomeIcon icon={faSearch} />
-        </button>
       </div>
     )
 }

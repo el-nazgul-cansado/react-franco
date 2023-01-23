@@ -14,20 +14,6 @@ export const ItemListContainer = () => {
     const [busqueda, setBusqueda] = useState("")
     const { categoryId } = useParams()
     
-    const handleChange = e => {
-        setBusqueda(e.target.value)
-        filtrar(e.target.value)
-      }
-    
-      const filtrar=(terminoBusqueda) => {
-        let resultadosBusqueda=prodBusc.filter((elemento)=>{
-          if(elemento.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
-            || elemento.category.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
-            return elemento;
-          }
-        })
-        setProductos(resultadosBusqueda)
-      }
 
     useEffect(() => {
         
@@ -53,19 +39,34 @@ export const ItemListContainer = () => {
         
         
         
-        pedirDatos()
-            .then((res) => {
-                if (categoryId) {
-                    setProductos(res.filter(prod => prod.category.includes(categoryId)))
-                    setProdBusc(res)
-                } else {
-                    setProductos(res)
-                }
-            })
-            .catch((err) => {
-                console.log(err)
-            })
-    }, [categoryId])
+    pedirDatos()
+        .then((res) => {
+            if (categoryId) {
+                setProductos(res.filter(prod => prod.category.includes(categoryId)))
+                setProdBusc(res)
+             } else {
+                 setProductos(res)
+             }
+        })
+        .catch((err) => {
+              console.log(err)
+         })
+     }, [categoryId])
+
+    const handleChange = e => {
+        setBusqueda(e.target.value)
+        filtrar(e.target.value)
+      }
+    
+      const filtrar=(terminoBusqueda) => {
+        let resultadosBusqueda=prodBusc.filter((elemento)=>{
+          if(elemento.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+            || elemento.category.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
+            return elemento;
+          }
+        })
+        setProductos(resultadosBusqueda)
+      }
     
 
     return(

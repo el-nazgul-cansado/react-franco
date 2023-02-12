@@ -11,10 +11,10 @@ export const ItemCount = ({max, setCantidad, cantidad}) => {
     }
 
     return (
-        <div>
-            <button onClick={handleRestar}>-</button>
-            <span>{cantidad}</span>
-            <button onClick={handleSumar}>+</button>
+        <div className="itemDetailCount">
+            <button onClick={handleRestar} className="itemDetailRestar">-</button>
+            <span className="itemDetailCantidad">{cantidad}</span>
+            <button onClick={handleSumar} className="itemDetailSumar">+</button>
             <br/>
         </div>
     )

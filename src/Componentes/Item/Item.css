@@ -1,3 +1,28 @@
 .item{
-    width: 200px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.item .itemLink{
+    height: 38px;
+}
+.itemPrice{
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.itemAlert{
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    color: red;
+    font-weight: 700;
+    font-size: 20px;
+}
+.itemImage{
+    height: 200px;
+    width: 250px;
+}
+.itemName{
+    padding-top: 70px;
 }

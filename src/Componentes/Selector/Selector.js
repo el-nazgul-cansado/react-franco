@@ -9,7 +9,7 @@ export const Selector= ({ options, set }) => {
 
     return(
         <select onChange={handleSelection}>
-            {options.map( (opt) => <option value={opt.value}>{opt.text}</option> )}
+            {options.map( (opt) => <option key={opt.id} value={opt.value}>{opt.text}</option> )}
         </select>
 
     )

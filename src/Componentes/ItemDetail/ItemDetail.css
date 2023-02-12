@@ -1,0 +1,44 @@
+.itemDetailTerminar{
+    text-decoration: none;
+    color: white;
+}
+.itemDetailName{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    font-size: 60px;
+}
+.itemDetailImage{
+    height: 500px;
+    width: 500px;
+}
+.itemDetailDescription{
+    text-align: center;
+    height: 150px;
+}
+.itemDetailPrice{
+    padding-top: 50px;
+    padding-left: 550px;
+    margin: 0;
+}
+.itemDetailCount{
+    padding-top: 50px;
+    padding-left: 50px;
+}
+.itemDetailOptions{
+    padding-top: 50px;
+    padding-left: 550px;
+    padding-bottom: 150px;
+}
+.itemDetailAlert{
+    padding-top: 50px;
+    padding-left: 50px;
+    font-weight: 900;
+    color: red;
+}
+.containerCountAlert{
+    display: flex;
+}
+.containerNoOptions{
+    padding-bottom: 200px;
+}

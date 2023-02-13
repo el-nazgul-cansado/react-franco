@@ -14,6 +14,8 @@ export const Checkout = () => {
 
     const [createdOrder, setCreatedOrder] = useState(null)
 
+    const [loadingCheck, setLoadingCheck] = useState(false)
+
     const [values, setValues] = useState({
         nombre: '',
         direccion: '',
@@ -35,6 +37,8 @@ export const Checkout = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+
+        setLoadingCheck(true)
 
         const order = {
             cliente: values,
@@ -142,7 +146,7 @@ export const Checkout = () => {
 
                         </div>
                     </div>
-                    <button className="btn btn-success">Terminar compra</button>
+                    <button className="btn btn-success" disabled={loadingCheck}>Terminar compra</button>
                 </form>
             </div>
         </div>

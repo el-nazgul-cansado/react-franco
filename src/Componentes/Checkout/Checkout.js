@@ -4,6 +4,8 @@ import { useCartContext } from "../../context/CartContext"
 import { db } from "../../firebase/config"
 import { collection, writeBatch, documentId, getDocs, where, query, addDoc } from "firebase/firestore"
 import { CheckoutSummary } from "../CheckoutSummary/CheckoutSummary"
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 import "./Checkout.css"
 
 
@@ -60,6 +62,8 @@ export const Checkout = () => {
             }
         })
 
+        const MySwal = withReactContent(Swal)
+
         if(outOfStock.length === 0) {
             batch.commit()
                 .then(() => {
@@ -71,14 +75,18 @@ export const Checkout = () => {
                         .catch((error) => console.log(error))
                             })
         } else {
-            alert("Hay Items sin stock")
+            MySwal.fire({
+                title: <strong>Oh no!!</strong>,
+                html: <i>Ya no hay stock!!</i>,
+                icon: 'error'
+                })
         }
 
     }
 
     if (createdOrder) {
         return (
-            <div>
+            <div className="compraExitosa">
                 <h2>Tu compra ha sido exitosa</h2>
                 <hr/>
                 <p>tu codigo de compra es: {createdOrder}</p>

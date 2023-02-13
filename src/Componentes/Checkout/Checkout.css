@@ -1,5 +1,9 @@
 .checkoutContainer{
+    min-height: 70vh;
     display: flex;
     justify-content: space-evenly;
     padding-top: 60px;
+}
+.compraExitosa{
+    min-height: 70vh;
 }

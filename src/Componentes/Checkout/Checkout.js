@@ -3,7 +3,8 @@ import { Link, Navigate } from "react-router-dom"
 import { useCartContext } from "../../context/CartContext"
 import { db } from "../../firebase/config"
 import { collection, writeBatch, documentId, getDocs, where, query, addDoc } from "firebase/firestore"
-
+import { CheckoutSummary } from "../CheckoutSummary/CheckoutSummary"
+import "./Checkout.css"
 
 
 export const Checkout = () => {
@@ -14,7 +15,13 @@ export const Checkout = () => {
     const [values, setValues] = useState({
         nombre: '',
         direccion: '',
-        email: ''
+        email: '',
+        celular: '',
+        metodoDePago: '',
+        creditCard: '',
+        cvc: '',
+        MM: '',
+        YY: ''
     })
 
     const handleInputChange = (e) => {
@@ -26,19 +33,6 @@ export const Checkout = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-
-        if(values.nombre.length < 2) {
-           alert("nombre invalido")
-           return 
-        }
-        if(values.direccion.length < 2) {
-           alert("direccion invalida")
-           return 
-        }
-        if(values.email.length < 2) {
-           alert("email invalido")
-           return 
-        }
 
         const order = {
             cliente: values,
@@ -99,16 +93,50 @@ export const Checkout = () => {
     }
 
     return(
-        <div>
-            <h2>Terminar compra</h2>
-            <hr/>
+         <div className="checkoutContainer">   
+            <div>
+            <CheckoutSummary />
+            </div>
+            <div>
+                <h2>Terminar compra</h2>
+                <hr/>
+                <form onSubmit={handleSubmit}>
+                    <input className="form-control my-2" onChange={handleInputChange} type="text" name="nombre" value={values.nombre} placeholder="Tu nombre"/>
 
-            <form onSubmit={handleSubmit}>
-                <input className="form-control my-2" onChange={handleInputChange} type="text" name="nombre" value={values.nombre} placeholder="Tu nombre"/>
-                <input className="form-control my-2" onChange={handleInputChange} type="text" name="direccion" value={values.direccion} placeholder="Tu direccion"/>
-                <input className="form-control my-2" onChange={handleInputChange} type="email" name="email" value={values.email} placeholder="Tu email"/>
-                <button className="btn btn-primary">Enviar</button>
-            </form>
+                    <input className="form-control my-2" onChange={handleInputChange} type="text" name="direccion" value={values.direccion} placeholder="Tu direccion"/>
+
+                    <input className="form-control my-2" onChange={handleInputChange} type="email" name="email" value={values.email} placeholder="Tu email"/>
+
+                    <input className="form-control my-2" onChange={handleInputChange} type="number" name="celular" value={values.celular} placeholder="Tu celular"/>
+                    <div>
+                        <select
+                            name="metodoDePago"
+                            className="form-control my-2"
+                            onChange={handleInputChange}
+                            value={values.paymentMethod}
+                        >
+                            <option value={""} disabled>Selecciona un método de pago</option>
+                            <option value={"mastercard"}>Mastercard</option>
+                            <option value={"visa"}>Visa</option>
+                        </select>
+                            
+                    </div>
+                    <input className="form-control my-2" onChange={handleInputChange} type="number" name="creditCard" value={values.creditCard} placeholder="Numero de la tarjeta"/>
+
+                    <div>
+                        <div>
+                            <input className="form-control my-2" onChange={handleInputChange} type="number" name="MM" value={values.MM} placeholder="MM"/>
+                            <input className="form-control my-2" onChange={handleInputChange} type="number" name="YY" value={values.YY} placeholder="YY"/>
+
+                        </div>
+                        <div>
+                            <input className="form-control my-2" onChange={handleInputChange} type="number" name="cvc" value={values.cvc} placeholder="CVC"/>
+
+                        </div>
+                    </div>
+                    <button className="btn btn-success">Terminar compra</button>
+                </form>
+            </div>
         </div>
     )
 }

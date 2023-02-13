@@ -13,7 +13,7 @@ function CarouselContainer() {
           <Link to = "/productos/consola">
             <img
               className="d-block w-100 carouselImg"
-              src="https://images.unsplash.com/photo-1603481588273-2f908a9a7a1b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGMlMjBnYW1lcnxlbnwwfHwwfHw%3D&w=1000&q=80"
+              src="https://www.muycomputer.com/wp-content/uploads/2021/04/C%C3%B3mo-exportar-capturas-y-v%C3%ADdeos-de-la-consola-a-un-ordenador-1000x600.jpg"
               alt="Second slide"
             />
             </Link>
@@ -26,7 +26,7 @@ function CarouselContainer() {
             <Link to = "/productos/consola">
             <img
               className="d-block w-100 carouselImg"
-              src="https://images.unsplash.com/photo-1603481588273-2f908a9a7a1b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGMlMjBnYW1lcnxlbnwwfHwwfHw%3D&w=1000&q=80"
+              src="https://www.muycomputer.com/wp-content/uploads/2019/08/PC-barato-1080p-portada-1000x600.jpg"
               alt="Second slide"
             />
             </Link>
@@ -40,7 +40,7 @@ function CarouselContainer() {
           <Link to = "/productos/pc">
             <img
               className="d-block w-100 carouselImg"
-              src="https://images.unsplash.com/photo-1603481588273-2f908a9a7a1b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGMlMjBnYW1lcnxlbnwwfHwwfHw%3D&w=1000&q=80"
+              src="https://www.muycomputer.com/wp-content/uploads/2022/09/Robo_cuentas_Steam-1000x600.jpg"
               alt="Second slide"
             />
             </Link>

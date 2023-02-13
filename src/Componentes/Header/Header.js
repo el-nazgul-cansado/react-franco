@@ -16,7 +16,7 @@ export const Header = () => {
                 <Link className="links" to="/">Inicio</ Link>
                 <Link className="links" to="/productos/consola">Consolas</Link>
                 <Link className="links" to="/productos/pc">Computadoras</Link>
-                <Link className="links" to="#">Plataformas</Link>
+                <Link className="links" to="/plataformas">Plataformas</Link>
             </nav>
             <section className="contenedorCarrito">
                 <CartWidget />
@@ -25,7 +25,7 @@ export const Header = () => {
                 
                 {user.logged ?
                  <div>
-                 <p> Bienvenid@ {user.displayName}</p>
+                 <p className="userWelcome"> Bienvenid@ {user.displayName}</p>
                  <button className="btn btn-danger" onClick={logout}>Logout</button>
                  </div>
                  : <Link to='/login'><button className="btn btn-danger">Login</button></Link>}

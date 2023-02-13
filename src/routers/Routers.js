@@ -8,6 +8,8 @@ import { ItemListContainer } from '../Componentes/ItemListContainer/ItemListCont
 import { Header } from '../Componentes/Header/Header.js';
 import { RegisterScreen } from '../Componentes/RegisterScreen/RegisterScreen.js';
 import { Checkout } from '../Componentes/Checkout/Checkout.js';
+import { Footer } from '../Componentes/Footer/Footer.js';
+import { Plataformas } from '../Componentes/Plataformas/Plataformas.js';
 
 
 export const Routers = () => {
@@ -25,10 +27,12 @@ export const Routers = () => {
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/register" element={<RegisterScreen />} />
                 <Route path="/checkout" element={<Checkout />} />
+                <Route path="/plataformas" element={<Plataformas />} />
                 <Route path={user.logged ? "/" : "/login"} element={user.logged ? <CarouselContainer /> : <LoginScreen />} />
                 <Route path="*" element={ <Navigate to={"/"} />} />
                 <Route path="/detail/*" element={ <Navigate to={"/"} />} />
             </Routes>
+            <Footer />
         </BrowserRouter>
     )
 }

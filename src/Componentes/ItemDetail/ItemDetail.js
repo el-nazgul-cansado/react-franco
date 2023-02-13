@@ -71,8 +71,8 @@ export const ItemDetail = ({id, name, description, image, price, stock, category
                                     : null}
                     <button onClick={handleAgregar} className="btn btn-success itemDetailAddToCart">Agregar al carrito</button>
                     {cart.length === 0
-                            ? <button disabled = { cart.length === 0 } className="btn btn-success">Terminar compra</button>
-                            : <Link to="/cart"><button className="btn btn-success">Terminar compra</button></Link>
+                            ? <button disabled = { cart.length === 0 } className="btn btn-success">Ir al carrito</button>
+                            : <Link to="/cart"><button className="btn btn-success">Ir al carrito</button></Link>
                     }
                 </div>
                 

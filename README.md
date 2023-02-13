@@ -1,3 +1,9 @@
+Buenas tardes/noches.
+La idea del proyecto era simplemente un e-commerce donde se pueda encontrar todo lo que necesitas para la pc y las consolas
+algunos detalles que no pude hacer funcionar son: no pude hacer que se pueda crear un nombre de usuario en Firestore, por lo tanto no aparece en el boton de arriba de logout, pero si aparece si utiliza el login con Google o Facebook. Tambien intente implementar los errores para los inputs del checkout, pero por algun motivo la pagina me tiraba error constantemente porque no podia leer la propiedad null del "nombre", supongo que fue porque el handleSubmit estaba en async y al momento de tomar los datos, aparecia en null, trate de arreglarlo con eso en vista pero tampoco pude, seguro habia algo que no estaba viendo, por ultimo, hice una barra de busqueda que funciono a la perfeccion hasta que aplicamos Firebase, me aparece un error diciendo que .filter() no es una funcion, y no se como refutar eso, lo deje comentado de todas formas en el ItemListContainer por si quiere revisarlo. Por ultimo, la ruta 404 hice que directamente te envie a la pagina inicial, pero cuando modifico el id de algun item en item detail, aparece un error que no pude solucionar.
+Estos son los errores que no pude corregir, dicho esto, inplemente tanto como pude y me permitio el tiempo.
+Muchas gracias por sus clases, espero que haya disfrutado de las vacaciones.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -15,7 +15,7 @@ export const Header = () => {
             <nav className="contenedorLinks">
                 <Link className="links" to="/">Inicio</ Link>
                 <Link className="links" to="/productos/consola">Consolas</Link>
-                <Link className="links" to="/productos/pc">Computadoras</Link>
+                <Link className="links" to="/productos/pc">PC</Link>
                 <Link className="links" to="/plataformas">Plataformas</Link>
             </nav>
             <section className="contenedorCarrito">

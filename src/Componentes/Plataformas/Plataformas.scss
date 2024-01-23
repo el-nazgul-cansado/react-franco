@@ -1,0 +1,24 @@
+.link-container{
+    height: calc( 100vh - 140px - 138px );
+}
+.steamLink {
+    background-color: black;
+}
+.steamLink img{
+    border-radius: 50px;
+}
+.originLink {
+    background-color: orange;
+}
+.playStationLink {
+    background-color: blue;
+}
+.xBoxLink {
+    background-color: green;
+}
+.epicGamesLink {
+    background-color: grey;
+}
+.gogLink {
+    background-color: rgb(44, 44, 44);
+}

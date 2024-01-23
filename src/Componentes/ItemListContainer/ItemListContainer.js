@@ -1,29 +1,29 @@
 import './ItemListContainer.css'
 import { useEffect, useState } from 'react'
-import { pedirDatos } from '../../helpers/pedirDatos'
 import { ItemList } from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
-import { collection, getDocs, query, where } from 'firebase/firestore'
-import { db } from '../../firebase/config'
+import { pedirDatos } from '../../helpers/pedirDatos'
 import { Buscador } from '../Buscador/Buscador'
+import { Footer } from '../Footer/Footer'
+/* import { collection, getDocs, query, where } from 'firebase/firestore'
+import { db } from '../../firebase/config' */
 
 export const ItemListContainer = () => {
     
     const [productos, setProductos] = useState([])
-    const [loading, setLoading] = useState(true)
+    const { categoryId } = useParams()
     const [prodBusc, setProdBusc] = useState([])
     const [busqueda, setBusqueda] = useState("")
-    const { categoryId } = useParams()
+
     
 
     useEffect(() => {
         
-            const productosRef = collection(db, 'productos')
+           /*  const productosRef = collection(db, 'productos')
             const q = categoryId
                     ? query(productosRef, where('category', 'array-contains', categoryId))
                     : productosRef
         
-        setTimeout(() => {
         if(categoryId){
             getDocs(q)
             .then((resp) => {
@@ -36,9 +36,7 @@ export const ItemListContainer = () => {
                 }
                     )
                         )
-            }).finally(() => {
-                setLoading(false)
-                })
+            })
         }else{
             getDocs(productosRef)
             .then((resp) => {
@@ -50,16 +48,10 @@ export const ItemListContainer = () => {
                 }
                     )
                         )
-            }).finally(() => {
-                setLoading(false)
-                })
-        }}, 1000)
+            })
+        } */
         
-         
-        
-    setLoading(true) 
-        
-    /* pedirDatos()
+    pedirDatos()
         .then((res) => {
             if (categoryId) {
                 setProductos(res.filter(prod => prod.category.includes(categoryId)))
@@ -71,12 +63,10 @@ export const ItemListContainer = () => {
         })
         .catch((err) => {
               console.log(err)
-         }).finally(() => {
-                setLoading(false)
-                })
+         })
          
 
-     */} , [categoryId]) 
+    } , [categoryId]) 
 
     const handleChange = e => {
         setBusqueda(e.target.value)
@@ -92,20 +82,16 @@ export const ItemListContainer = () => {
         })
         setProductos(resultadosBusqueda)
       }
-    
 
     return(
         <main className='main'>
             <h2 className='titulo'>Nuestros productos</h2>
-           {/*  <div>
+           <div>
                 <Buscador handleChange={handleChange} busqueda={busqueda} />
-            </div> */}
+            </div>
             <div>
-                {
-                    loading
-                        ? <h2>Cargando...</h2>
-                        : <ItemList productos={productos} />
-                }
+                <ItemList productos={productos} />
+                <Footer />
             </div>
         </main>
     )

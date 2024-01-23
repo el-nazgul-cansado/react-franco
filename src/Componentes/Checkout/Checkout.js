@@ -8,7 +8,7 @@ import { CheckoutForm } from "../CheckoutForm/CheckoutForm"
 import { pedirDatos } from "../../helpers/pedirDatos"
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
-import "./Checkout.css"
+import "./Checkout.scss"
 /* import { db } from "../../firebase/config"
 import { collection, writeBatch, documentId, getDocs, where, query, addDoc } from "firebase/firestore" */
 
@@ -56,11 +56,10 @@ export const Checkout = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-<<<<<<< HEAD
 
         setLoadingCheck(true)
 
-        const order = {
+        /* const order = {
             cliente: values,
             item: cart,
             total: totalCart()
@@ -74,9 +73,7 @@ export const Checkout = () => {
 
         const itemsRef = query(productosRef, where(documentId(), 'in', cart.map(prod => prod.id)))
 
-        const productosAsync = await getDocs(itemsRef)
-=======
->>>>>>> nueva_rama
+        const productosAsync = getDocs(itemsRef) */
         
         let check = true
         
@@ -198,7 +195,6 @@ export const Checkout = () => {
                     let stockFinal = producto.stock - item.cantidad;
                     values.ordenCodigo = caracteresAleatorios
                     setCreatedOrder(values)
-                    console.log(stockFinal)
                     emptyCart()
                   } 
                 })
@@ -209,6 +205,7 @@ export const Checkout = () => {
     if(createdOrder) {
         return(
             <>
+                <div className="completeOrderContainer">
                 <h2>Felicidades {createdOrder.nombre}!! Tu compra fue exitosa!!</h2>
 
                 <h3>Tu codigo de compra es {createdOrder.ordenCodigo}</h3>
@@ -216,6 +213,7 @@ export const Checkout = () => {
                 <h2>Disfruta tu compra! Vuelve cuando quieras!!</h2>
 
                 <Link to='/'>Volver al inicio</Link>
+                </div>
                 <Footer />
             </>
         )
@@ -233,7 +231,6 @@ export const Checkout = () => {
                     <CheckoutForm handleSubmit={handleSubmit} handleInputChange={handleInputChange} values={values} errors={errors} cart={cart} />
                 </div>
             </div>
-<<<<<<< HEAD
             <div>
                 <h2>Terminar compra</h2>
                 <hr/>
@@ -274,10 +271,9 @@ export const Checkout = () => {
                     <button className="btn btn-success" disabled={loadingCheck}>Terminar compra</button>
                 </form>
             </div>
-        </div>
-=======
+        
             <Footer />
         </>
->>>>>>> nueva_rama
+
     )
 }

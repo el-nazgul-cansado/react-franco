@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Play Station 5",
         "description": "Un cerebro muy potente. El cerebro de la PS5 tiene un chipset fabricado por AMD basado en una CPU Zen 2 de 8 núcleos a 3,5 GHz (frecuencia variable) y una GPU RDNA 2 con 36 unidades de computación a 2,23 GHz (frecuencia variable) con los que ofrece un total de 10,28 teraflops.",
-        "image": "http://dummyimage.com/200x200.png/dddddd/000000",
+        "image": "https://arsonyb2c.vtexassets.com/arquivos/ids/348000-800-800?v=637363594131470000&width=800&height=800&aspect=true",
         "price": 4146,
         "stock": 10,
         "category": [
@@ -13,8 +13,8 @@
     {
         "id": 2,
         "name": "X box Series X",
-        "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
-        "image": "http://dummyimage.com/200x200.png/cc0000/ffffff",
+        "description": "Xbox se ha caracterizado desde hace mucho tiempo por un diseño de mando ergonómico y funcional, con una disposición de botones muy buena y un rendimiento bastante alto.",
+        "image": "https://m.media-amazon.com/images/I/61JGKhqxHxL._AC_SX466_.jpg",
         "price": 2511,
         "stock": 20,
         "category": [
@@ -24,8 +24,8 @@
     {
         "id": 3,
         "name": "Nintendo Switch",
-        "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
-        "image": "http://dummyimage.com/200x200.png/cc0000/ffffff",
+        "description": "Nintendo Switch (ニンテンドー スイッチ Nintendō Suitchi) es una consola de videojuegos desarrollada por Nintendo. Conocida en el desarrollo por su nombre código «NX», se dio a conocer en octubre de 2016 y fue lanzada mundialmente el 3 de marzo de 2017.",
+        "image": "https://fs-prod-cdn.nintendo-europe.com/media/images/08_content_images/systems_5/nintendo_switch_3/not_approved_1/NSwitch_ws_NintendoSwitch.png",
         "price": 4081,
         "stock": 23,
         "category": [
@@ -35,8 +35,8 @@
     {
         "id": 4,
         "name": "Joystick PS 5",
-        "description": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-        "image": "http://dummyimage.com/200x200.png/dddddd/000000",
+        "description": "El control inalámbrico DualSense para PS5 ofrece respuesta háptica inmersiva2, gatillos adaptativos dinámicos y un micrófono integrado, todo en un diseño icónico. Dimensiones - 160mm x 66mm x 106mm. Peso - 280 gramos. Motion Sensor - Six-axis (tres axis para giroscopio + tres axis para acelerómetro) Audio - Puerto para auriculares Jack 3.5 (salida 48kHz/16bit, entrada : 24kHz/16bit)",
+        "image": "https://www.fullh4rd.com.ar/img/productos/Pics_Prod/joystick-playstation-ps5-dualsense-white-0.jpg",
         "price": 1435,
         "stock": 25,
         "category": [
@@ -48,8 +48,8 @@
     {
         "id": 5,
         "name": "Joystick X Box",
-        "description": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
-        "image": "http://dummyimage.com/200x200.png/cc0000/ffffff",
+        "description": "Stick izquierdo y stick derecho: Son pequeños joysticks que se utilizan para interactuar con los juegos, las aplicaciones y la consola Xbox. Se utilizan para moverse en las diversas direcciones y también pueden funcionar como botones en los que se puede hacer clic presionándolos.",
+        "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/397/305/products/joystick-negro1-002244d2abac0854ad16041647992529-640-0.jpg",
         "price": 9745,
         "stock": 12,
         "category": [
@@ -61,8 +61,8 @@
     {
         "id": 6,
         "name": "Nintendo Joy-Con",
-        "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
-        "image": "http://dummyimage.com/200x200.png/ff4444/ffffff",
+        "description": "Los mandos Joy-Con son los principales controles de la consola de videojuegos Nintendo Switch. Son de dos unidades individuales, cada una de las cuales contiene una palanca análoga y una matriz de botones.",
+        "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/082/436/products/joy-con1-605094efaac86bf6c116572163662895-640-0.webp",
         "price": 3596,
         "stock": 42,
         "category": [
@@ -73,8 +73,8 @@
     {
         "id": 7,
         "name": "Monitor LG 24''",
-        "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
-        "image": "http://dummyimage.com/200x200.png/dddddd/000000",
+        "description": "Monitor para juegos con modo protector de ojos, sincronización libre premium, pantalla ajustable de altura para comodidad de jugador, capacidad de montaje VESA (LS27AG320NNXZA)",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_956742-MLA41489067010_042020-O.jpg",
         "price": 7300,
         "stock": 36,
         "category": [
@@ -85,8 +85,8 @@
     {
         "id": 8,
         "name": "Monitor Samsung 28''",
-        "description": "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
-        "image": "http://dummyimage.com/200x200.png/cc0000/ffffff",
+        "description": "Recientemente, Samsung presentó Smart Monitor, una pantalla innovadora que puede transformar fácilmente el hogar en una oficina, un gimnasio y un cine, todo sin la necesidad de una PC.",
+        "image": "https://images.samsung.com/is/image/samsung/mx-ur55-lu28r550uqlxzx-frontblack-248668639?$650_519_PNG$",
         "price": 1671,
         "stock": 15,
         "category": [
@@ -97,8 +97,8 @@
     {
         "id": 9,
         "name": "Monitor AORUS 20''",
-        "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
-        "image": "http://dummyimage.com/200x200.png/dddddd/000000",
+        "description": "AORUS AD27QD presenta un panel QHD de 27 pulgadas(resolución de 2560x1440) en una relación de aspecto de 16:9 con una frecuencia de actualización de 144hz, le brinda el doble de detalles y calidad de visualización que Full HD, y le permite disfrutar de juegos y películas en su tamaño original.",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_910595-MLA48690831582_122021-W.jpg",
         "price": 4920,
         "stock": 22,
         "category": [
@@ -109,8 +109,8 @@
     {
         "id": 10,
         "name": "Mouse Razer",
-        "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
-        "image": "http://dummyimage.com/200x200.png/dddddd/000000",
+        "description": "El ratón cuenta con 8 botones programables que puedes configurar por completo a través de Razer Synapse 3, lo que te brinda acceso a las macros y las funciones secundarias para que ejecutes cada acción con facilidad.",
+        "image": "https://www.newmaster.com.ar/wp-content/uploads/2019/03/2-13.jpg",
         "price": 7482,
         "stock": 31,
         "category": [
@@ -121,8 +121,8 @@
     {
         "id": 11,
         "name": "Mouse Logitech",
-        "description": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
-        "image": "http://dummyimage.com/200x200.png/dddddd/000000",
+        "description": "Con Logitech® M170 Wireless Mouse tienes la fiabilidad de un dispositivo con cable y la comodidad de uno inalámbrico (con un radio de acción de 10 metros) gracias a la tecnología inalámbrica avanzada de 2,4 GHz de Logitech. Este asequible mouse funciona hasta 12 meses con una sola pila AA.",
+        "image": "https://ockam-cloud-thebest.imgix.net/imagenes-s/productos/mouse-logitech-g502-hero-76536.png?auto=format",
         "price": 3968,
         "stock": 13,
         "category": [
@@ -133,8 +133,8 @@
     {
         "id": 12,
         "name": "Mouse Roccat Burst Pro",
-        "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
-        "image": "http://dummyimage.com/200x200.png/dddddd/000000",
+        "description": "La ROCCAT Burst Pro está diseñada con la máxima atención al detalle y es tan elegante como potente. Cuenta con un sensor óptico ROCCAT Owl-Eye de 16.000 ppp y un revestimiento especialmente desarrollado para un agarre excepcional.",
+        "image": "https://m.media-amazon.com/images/I/71BlPt0okAL.jpg",
         "price": 3322,
         "stock": 12,
         "category": [
@@ -145,8 +145,8 @@
     {
         "id": 13,
         "name": "Mouse Logitech MX Master",
-        "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
-        "image": "http://dummyimage.com/200x200.png/cc0000/ffffff",
+        "description": "MX Master 3 es precisión instantánea y potencial infinito. Es el ratón de la serie Master más avanzado hasta la fecha. Diseñado para diseñadores y concebido para codificadores. Si se te ocurre algo, puedes dominarlo.",
+        "image": "https://tecnomilenio.com.ar/wp-content/uploads/2022/09/logitech-mx-master-s3-negro1.png",
         "price": 2759,
         "stock": 5,
         "category": [
@@ -157,8 +157,8 @@
     {
         "id": 14,
         "name": "Mouse Logitech M280",
-        "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-        "image": "http://dummyimage.com/200x200.png/dddddd/000000",
+        "description": "El M280 incluye un botón rueda de goma con una sensación táctil que permite realizar un desplazamiento controlado línea a línea. El seguimiento de alta precisión de Logitech ofrece un nivel superior de control del cursor, para una estupenda navegación prácticamente sobre cualquier superficie.",
+        "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/002/278/419/products/910-004284_21-25ec35b188a7189f7b16582386348505-640-0.jpg",
         "price": 8533,
         "stock": 8,
         "category": [
@@ -169,8 +169,8 @@
     {
         "id": 15,
         "name": "Play Station 4",
-        "description": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
-        "image": "http://dummyimage.com/200x200.png/cc0000/ffffff",
+        "description": "PS4 es un sistema de entretenimiento digital y la cuarta consola de sobremesa desarrollada por Sony Computer Entertainment. Cuenta con un procesador APU de ocho núcleos x86-64 Jaguar desarrollado por AMD. La GPU también fabricada por AMD Radeon tiene una potencia de procesamiento de 1,84 Teraflops.",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_797532-MLA51827540871_102022-O.jpg",
         "price": 3063,
         "stock": 19,
         "category": [
@@ -180,8 +180,8 @@
     {
         "id": 16,
         "name": "Joystick PS 4",
-        "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-        "image": "http://dummyimage.com/200x200.png/dddddd/000000",
+        "description": "Es el primer mando de la línea DualShock en cambiar significativamente su diseño, presentando un diseño más redondeado que sus predecesores. Presenta un panel táctil parecido al usado en la PlayStation Vita.",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_917352-MLA52349227590_112022-O.jpg",
         "price": 8741,
         "stock": 11,
         "category": [
@@ -193,8 +193,8 @@
     {
         "id": 17,
         "name": "Nintendo Wii U",
-        "description": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
-        "image": "http://dummyimage.com/200x200.png/dddddd/000000",
+        "description": "Wii U es la nueva consola doméstica de Nintendo, una consola que cambia radicalmente la relación que tienes con tu televisor y la forma en la que te conectas con tus amigos y familiares. Una consola potente de alta definición con un mando extraordinario, el Wii U GamePad, que redefine cómo juegas con otros.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Wii_U_Console_and_Gamepad.png/800px-Wii_U_Console_and_Gamepad.png",
         "price": 6141,
         "stock": 17,
         "category": [
@@ -204,8 +204,8 @@
     {
         "id": 18,
         "name": "joystick Wii U",
-        "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
-        "image": "http://dummyimage.com/200x200.png/ff4444/ffffff",
+        "description": "Wii U GamePad es un nuevo mando exclusivo para Wii U que elimina las barreras que siempre ha habido entre juegos, jugadores y televisor, creando una segunda ventana para asomarse al mundo de los juegos. *La suspensión del juego con el botón HOME no es posible durante ciertas secuencias del juego.",
+        "image": "https://i.blogs.es/e6f27e/wii-20u-20pro-20controller/450_1000.jpeg",
         "price": 2993,
         "stock": 7,
         "category": [
@@ -216,8 +216,8 @@
     {
         "id": 19,
         "name": "X Box One",
-        "description": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
-        "image": "http://dummyimage.com/200x200.png/cc0000/ffffff",
+        "description": "Xbox One es la tercera videoconsola de sobremesa de la marca Xbox, producida por Microsoft. Forma parte de las videoconsolas de octava generación, fue presentada por Microsoft el 21 de mayo de 2013.7​ Es la sucesora de la Xbox 360 y la predecesora de la Xbox Series X. Actualmente compite con PlayStation 4 de Sony y Wii U de Nintendo. Su salida a la venta fue el 22 de noviembre de 20138​ a un precio de 499 dólares.9​  El Firmware actual de la consola es el 10.0.17133.2020 (rs4_release_xbox_dev_1804.180418-1415), donde hay más opciones de salida de vídeo, hay un nuevo nivel de interactividad de Mixer, se pueden compartir las capturas en Twitter, hay torneos abiertos, se pueden poner los temas en un horario, hay mejoras al Narrador, mejoras en Edge, hay más audio inmersivo y hay un filtrado avanzado para propietarios de clubes.",
+        "image": "https://m.media-amazon.com/images/I/61tPrRh-rHL.jpg",
         "price": 4140,
         "stock": 7,
         "category": [
@@ -227,8 +227,8 @@
     {
         "id": 20,
         "name": "Joystick X box One",
-        "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
-        "image": "http://dummyimage.com/200x200.png/cc0000/ffffff",
+        "description": "Para Xbox One, simplificamos el control inalámbrico de Xbox para mayor comodidad, mejor rendimiento y uso compartido instantáneo. El control también funciona muy bien con los dispositivos de juego en la nube, Windows 10/11 y Xbox One.",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_639615-MLA44528221983_012021-O.jpg",
         "price": 5686,
         "stock": 21,
         "category": [
@@ -240,8 +240,8 @@
     {
         "id": 21,
         "name": "Cable HDMI",
-        "description": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
-        "image": "http://dummyimage.com/200x200.png/ff4444/ffffff",
+        "description": "High-Definition Multimedia Interface (interfaz multimedia de alta definición). Un HDMI proporciona una interfaz entre cualquier fuente de audio y vídeo digital por medio de un único cable. Es el conector audiovisual digital que ofrece grandes ventajas a la hora de transferir la señal (audio, imagen y video).",
+        "image": "https://inkgenio.com.ar/2297-large_default/cable-hdmi-14v-5m-600375.jpg",
         "price": 6314,
         "stock": 18,
         "category": [
@@ -252,7 +252,7 @@
     {
         "id": 22,
         "name": "Cable USB C",
-        "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+        "description": "El cable USB Type-C es compatible con hasta 130 W* de transmisión de alimentación en el mismo cable para dispositivos compatibles en comparación con 2,5 W en sus predecesores USB 2.0 o USB 3.0. Esto permite suministrar alimentación a dispositivos, como celulares y tabletas, y cargar laptops compatibles o Ultrabooks.",
         "image": "http://dummyimage.com/200x200.png/cc0000/ffffff",
         "price": 1218,
         "stock": 5,
@@ -264,8 +264,8 @@
     {
         "id": 23,
         "name": "Cable USB micro",
-        "description": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
-        "image": "http://dummyimage.com/200x200.png/cc0000/ffffff",
+        "description": "El Micro USB es el predecesor al USB-C, es un conector de pequeñas dimensiones que, generalmente, ofrece velocidades de USB 2.0. Las velocidades de un conector no dependen de la forma del mismo, sino más bien del bus al que vayan conectados y de la tecnología incorporada en el conector en sí.",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_951142-MLA45335632937_032021-O.jpg",
         "price": 6565,
         "stock": 4,
         "category": [
@@ -276,8 +276,8 @@
     {
         "id": 24,
         "name": "Teclado Logitech",
-        "description": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-        "image": "http://dummyimage.com/200x200.png/cc0000/ffffff",
+        "description": "Diseño a resistente a salpicaduras. No sumerjas el teclado en ningún líquido., teclas resistentes y robustas patas inclinables con altura ajustable, este teclado está hecho para durar.",
+        "image": "https://www.comeros.com.ar/wp-content/uploads/2022/11/920-003051.jpg",
         "price": 9978,
         "stock": 9,
         "category": [
@@ -288,8 +288,8 @@
     {
         "id": 25,
         "name": "Teclado Razer",
-        "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
-        "image": "http://dummyimage.com/200x200.png/ff4444/ffffff",
+        "description": "Con tecnología Razer™ HyperSpeed Wireless - la tecnología inalámbrica más avanzada de Razer para juego con latencia ultra baja y comandos hipersensibles.",
+        "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/474/949/products/ultimate1-55a23555b2ffacfc3216295112568358-640-0.png",
         "price": 3265,
         "stock": 25,
         "category": [
@@ -300,8 +300,8 @@
     {
         "id": 26,
         "name": "Teclado Corsair",
-        "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
-        "image": "http://dummyimage.com/200x200.png/dddddd/000000",
+        "description": "El CORSAIR K70 RGB MK. 2 es un teclado mecánico premium para juegos diseñado para durar, con una estructura de aluminio, interruptores 100 % CHERRY MX y 8 MB de almacenamiento interno de perfiles. Acceso cómodo a un puerto USB adicional para su ratón o sus auriculares.",
+        "image": "https://www.qloud.ar/SITES/ryr/fotos/19347-0.jpg",
         "price": 6021,
         "stock": 2,
         "category": [
@@ -312,8 +312,8 @@
     {
         "id": 27,
         "name": "Teclado Newskill",
-        "description": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
-        "image": "http://dummyimage.com/200x200.png/dddddd/000000",
+        "description": "Los teclados mecánicos son más sensibles y proporcionan un feedback claro entre lo que pulsas y lo que se ve en pantalla, además de ser más sonoros. Además, permiten que los usuarios pulsen varias teclas a la vez. A causa de su tecnología, son más gruesos, pesados y caros.",
+        "image": "https://elchapuzasinformatico.com/wp-content/uploads/2020/01/Newskill-Serike-TKL-Oficial.png",
         "price": 5922,
         "stock": 4,
         "category": [
@@ -324,8 +324,8 @@
     {
         "id": 28,
         "name": "Teclado HyperX",
-        "description": "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
-        "image": "http://dummyimage.com/200x200.png/dddddd/000000",
+        "description": "Teclado mecánico para gaming HyperX Alloy Origins 60HyperX Alloy Origins™ 60 es un teclado de alta resistencia, con un factor de forma del 60%, sumamente portátil, que te brinda más espacio para movimientos de desplazamiento del mouse.",
+        "image": "https://www.brandimia.com/productos/HX-KB4BL1-USWW.jpg",
         "price": 7970,
         "stock": 3,
         "category": [
@@ -336,8 +336,8 @@
     {
         "id": 29,
         "name": "Teclado MSI",
-        "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
-        "image": "http://dummyimage.com/200x200.png/ff4444/ffffff",
+        "description": "Un teclado gaming, o teclado mecánico, se diferencia de otros tipos de teclados en que cuentan con un mecanismo propio de pulsación, haciendo que cada una de las teclas sea totalmente independiente. Además, duran hasta 50 millones de pulsaciones, siendo que los teclados convencionales duran entre 5 y 10.",
+        "image": "https://tecnopolisolavarria.com/wp-content/uploads/2022/07/TecladoMSIGK40-03.jpg",
         "price": 3685,
         "stock": 33,
         "category": [
@@ -348,8 +348,8 @@
     {
         "id": 30,
         "name": "Teclado Asus",
-        "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.",
-        "image": "http://dummyimage.com/200x200.png/5fa2dd/ffffff",
+        "description": "El teclado gaming ASUS Sagaris GK1100 cuenta con interruptores mecánicos Cherry MX Blue duraderos de 50 millones de pulsaciones. Las teclas con retroiluminación LED RGB le brindan hasta siete modos de iluminación que se pueden personalizar a través de una interfaz intuitiva.",
+        "image": "https://www.asus.com/media/global/products/VhfjeAw84tomuPVC/P_setting_xxx_0_90_end_692.png",
         "price": 7959,
         "stock": 38,
         "category": [

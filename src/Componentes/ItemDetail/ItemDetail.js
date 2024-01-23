@@ -3,6 +3,7 @@ import { ItemCount } from "../ItemCount/ItemCount"
 import { useState, useContext } from "react"
 import { Selector } from "../Selector/Selector"
 import { CartContext } from '../../context/CartContext';
+import ReactImageMagnify from 'react-image-magnify';
 import "./ItemDetail.css"
 
 export const ItemDetail = ({id, name, description, image, price, stock, category}) => {
@@ -44,44 +45,57 @@ export const ItemDetail = ({id, name, description, image, price, stock, category
 
     }
 
-
     return(
         <div className="itemDetailContainer">
             <h2 className="itemDetailName">{name}</h2>
-            <img className="itemDetailImage" src={image} align="left" alt={name} />
-            <p className="itemDetailDescription">{description}</p>
-            <p className="itemDetailPrice">Precio : <strong>$ {price}</strong></p>
-            {
-                <div>
-                    <div className={`containerCountAlert ${category.includes("cable")
-                                                                    && "containerNoOptions"}
-                                                         ${category.includes("monitor")
-                                                                    && "containerNoOptions"}`}>
+            <div className="itemDetailUpperContainer">
+                <div className="itemDetailImage">
+                    <ReactImageMagnify {...{
+                        smallImage: {
+                            alt: name,
+                            isFluidWidth: true,
+                            src: image,
+                            height: 500,
+                            width: 500
+                        },
+                        largeImage: {
+                            src: image,
+                            width: 1200,
+                            height: 1800
+                        }
+                    }} />
+                </div>
+                <div className="itemDetailText">
+                    <p className="itemDetailDescription">{description}</p>
+                    <p className="itemDetailPrice">Precio: <strong>$ {price}</strong></p>
+                    <div className={`containerCountAlert ${category.includes("cable") && "containerNoOptions"}
+                                                        ${category.includes("monitor") && "containerNoOptions"}`}>
                         <ItemCount max={stock} cantidad={cantidad} setCantidad={setCantidad} />
                         {stock <= 5 && <h5 className="itemDetailAlert">Quedan {stock} en stock!!</h5>}
                     </div>
-                    {category.includes("consola", "joystick")
-                                    ? <div className="itemDetailOptions"><Selector options={colores} set={setColor}/></div>
-                                    : null}
-                    {category.includes("mouse")
-                                    ? <div className="itemDetailOptions"><Selector options={colores} set={setColor}/></div>
-                                    : null}
-                    {category.includes("teclado")
-                                    ? <div className="itemDetailOptions"><Selector options={colores} set={setColor}/></div>
-                                    : null}
-                    <button onClick={handleAgregar} className="btn btn-success itemDetailAddToCart">Agregar al carrito</button>
-                    {cart.length === 0
-                            ? <button disabled = { cart.length === 0 } className="btn btn-success">Ir al carrito</button>
-                            : <Link to="/cart"><button className="btn btn-success">Ir al carrito</button></Link>
-                    }
+                    <div className="itemDetailSelector">
+                            {category.includes("consola", "joystick")
+                                            ? <div className="itemDetailOptions"><Selector options={colores} set={setColor}/></div>
+                                            : null}
+                            {category.includes("mouse")
+                                            ? <div className="itemDetailOptions"><Selector options={colores} set={setColor}/></div>
+                                            : null}
+                            {category.includes("teclado")
+                                            ? <div className="itemDetailOptions"><Selector options={colores} set={setColor}/></div>
+                                            : null}
+                    </div>
                 </div>
-                
-            }
-             <br/>
-            <button className="btn btn-primary itemDetailVolver" onClick={handleVolver}>Volver</button>
-            
-            <Link className="btn btn-primary itemDetailInicio" to={'/'}>Inicio</Link>
-            
+                    
+            </div>
+            <div className="buttonsContainer">
+                <button onClick={handleAgregar} className="btn btn-success itemDetailButtons">Agregar al carrito</button>
+                {cart.length === 0
+                    ? <button disabled={cart.length === 0} className="btn btn-success itemDetailButtons">Ir al carrito</button>
+                    : <Link to="/cart"><button className="btn btn-success itemDetailButtons">Ir al carrito</button></Link>
+                }
+                <button className="btn btn-primary itemDetailButtons" onClick={handleVolver}>Volver</button>
+                <Link className="btn btn-primary itemDetailButtons" to={'/'}>Inicio</Link>
+            </div>
         </div>
     )
 }

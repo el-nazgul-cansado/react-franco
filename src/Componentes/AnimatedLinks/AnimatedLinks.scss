@@ -1,0 +1,164 @@
+.link-container {
+    display: grid;
+    grid-template-columns: repeat(3, 600px);
+    grid-gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.link-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 20px;
+}
+
+.link-wrapper .link-img-steam {
+    transition: transform 0.3s ease;
+    max-width: 100px;
+}
+.link-wrapper .link-img-origin {
+    transition: transform 0.3s ease;
+    max-width: 100px;
+}
+.link-wrapper .link-img-play-station {
+    transition: transform 0.3s ease;
+    max-width: 100px;
+}
+.link-wrapper .link-img-xbox {
+    transition: transform 0.3s ease;
+    max-width: 100px;
+}
+.link-wrapper .link-img-epic-games {
+    transition: transform 0.3s ease;
+    max-width: 100px;
+}
+.link-wrapper .link-img-GOG {
+    transition: transform 0.3s ease;
+    max-width: 100px;
+}
+
+.link-text-steam {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.1s ease, right 0.1s ease;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 75px;
+    color: white;
+}
+.link-text-origin {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.1s ease, right 0.1s ease;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 75px;
+    color: white;
+}
+.link-text-play-station {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.1s ease, right 0.1s ease;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 75px;
+    color: white;
+}
+.link-text-xbox {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.1s ease, right 0.1s ease;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 75px;
+    color: white;
+}
+.link-text-epic-games {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.1s ease, right 0.1s ease;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 75px;
+    color: white;
+}
+.link-text-GOG {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.1s ease, right 0.1s ease;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 75px;
+    color: white;
+}
+
+.link-wrapper:hover .link-img-steam {
+    transform: translateX(-170px);
+}
+.link-wrapper:hover .link-img-origin {
+    transform: translateX(-160px);
+}
+.link-wrapper:hover .link-img-play-station {
+    transform: translateX(-200px);
+}
+.link-wrapper:hover .link-img-xbox {
+    transform: translateX(-160px);
+}
+.link-wrapper:hover .link-img-epic-games {
+    transform: translateX(-200px);
+}
+.link-wrapper:hover .link-img-GOG {
+    transform: translateX(-140px);
+}
+
+.link-wrapper:hover .link-text-steam {
+    opacity: 1;
+    right: 10%; 
+}
+.link-wrapper:hover .link-text-origin {
+    opacity: 1;
+    right: 13%; 
+}
+.link-wrapper:hover .link-text-play-station {
+    opacity: 1;
+    right: 7%; 
+}
+.link-wrapper:hover .link-text-xbox {
+    opacity: 1;
+    right: 15%; 
+}
+.link-wrapper:hover .link-text-epic-games {
+    opacity: 1;
+    right: 7%; 
+}
+.link-wrapper:hover .link-text-GOG {
+    opacity: 1;
+    right: 15%; 
+}

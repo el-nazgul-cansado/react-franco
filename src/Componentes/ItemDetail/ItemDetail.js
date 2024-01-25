@@ -1,9 +1,8 @@
 import { Link, useNavigate } from "react-router-dom"
 import { ItemCount } from "../ItemCount/ItemCount"
-import { useState, useContext } from "react"
+import { useState, useContext, useEffect } from "react"
 import { Selector } from "../Selector/Selector"
 import { CartContext } from '../../context/CartContext';
-import ReactImageMagnify from 'react-image-magnify';
 import "./ItemDetail.css"
 
 export const ItemDetail = ({id, name, description, image, price, stock, category}) => {
@@ -12,11 +11,43 @@ export const ItemDetail = ({id, name, description, image, price, stock, category
     
     const [cantidad, setCantidad] = useState(1)
 
+    const [lensStyle, setLensStyle] = useState({});
+
     const navigate = useNavigate()
 
     const handleVolver = () => {
         navigate(-1)
     }
+
+    const handleMouseMove = (e) => {
+        const { left, top, width, height } = e.target.getBoundingClientRect();
+        let x = (e.pageX - left) - window.scrollX;
+        let y = (e.pageY - top) - window.scrollY;
+        const zoomLevel = 1.5;
+        const lensWidth = 200;
+        const lensHeight = 200;
+        const horizontalOffset = 200;
+
+        x = Math.max(0, Math.min(x * zoomLevel - lensWidth / 2, width * zoomLevel - lensWidth));
+        y = Math.max(0, Math.min(y * zoomLevel - lensHeight / 2, height * zoomLevel - lensHeight));
+
+        const backgroundSize = `${width * zoomLevel}px ${height * zoomLevel}px`;
+        const backgroundPosition = `-${x}px -${y}px`;
+
+        setLensStyle({
+            backgroundSize,
+            backgroundPosition,
+            display: 'block',
+            backgroundColor: 'white',
+            boxShadow: '0px 0px 10px 5px rgba(0, 0, 0, 0.3)',
+            left: `${e.pageX - window.scrollX + horizontalOffset}px`,
+            top: `${e.pageY - window.scrollY - 500}px`
+        });
+    };
+
+    const handleMouseLeave = () => {
+        setLensStyle({ display: 'none' });
+    };
 
     const colores = [{
          vaule: 'rojo', text: 'Rojo', id:1},
@@ -50,20 +81,8 @@ export const ItemDetail = ({id, name, description, image, price, stock, category
             <h2 className="itemDetailName">{name}</h2>
             <div className="itemDetailUpperContainer">
                 <div className="itemDetailImage">
-                    <ReactImageMagnify {...{
-                        smallImage: {
-                            alt: name,
-                            isFluidWidth: true,
-                            src: image,
-                            height: 500,
-                            width: 500
-                        },
-                        largeImage: {
-                            src: image,
-                            width: 1200,
-                            height: 1800
-                        }
-                    }} />
+                    <img src={image} alt={name} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} />
+                    <div className="zoomLens" style={{ background: `url(${image}) no-repeat`, ...lensStyle }}></div>
                 </div>
                 <div className="itemDetailText">
                     <p className="itemDetailDescription">{description}</p>
@@ -89,10 +108,13 @@ export const ItemDetail = ({id, name, description, image, price, stock, category
             </div>
             <div className="buttonsContainer">
                 <button onClick={handleAgregar} className="btn btn-success itemDetailButtons">Agregar al carrito</button>
-                {cart.length === 0
-                    ? <button disabled={cart.length === 0} className="btn btn-success itemDetailButtons">Ir al carrito</button>
-                    : <Link to="/cart"><button className="btn btn-success itemDetailButtons">Ir al carrito</button></Link>
-                }
+                
+                <Link to={cart.length > 0 ? "/cart" : "#"}>
+                    <button className={`btn btn-success itemDetailButtons ${cart.length === 0 ? "disabled" : ""}`} disabled={cart.length === 0}>
+                        Ir al carrito
+                    </button>
+                </Link>
+                
                 <button className="btn btn-primary itemDetailButtons" onClick={handleVolver}>Volver</button>
                 <Link className="btn btn-primary itemDetailButtons" to={'/'}>Inicio</Link>
             </div>

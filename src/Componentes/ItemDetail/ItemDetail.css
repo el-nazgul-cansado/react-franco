@@ -15,9 +15,21 @@
     margin-bottom: 20px;
 }
 .itemDetailImage{
+    position: relative;
+    margin-right: 20px;
+}
+.itemDetailImage img{
     height: 500px;
-    width: 500px;
-    margin-right: 20px; 
+    width: 500px; 
+}
+.zoomLens {
+    position: absolute;
+    border: 5px solid #000;
+    width: 400px;
+    height: 400px;
+    z-index: 1000; 
+    cursor: zoom-in;
+    display: none;
 }
 .itemDetailUpperContainer {
     display: flex;

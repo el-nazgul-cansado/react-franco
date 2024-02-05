@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom"
 import { ItemCount } from "../ItemCount/ItemCount"
-import { useState, useContext, useEffect } from "react"
+import { useState, useContext } from "react"
 import { Selector } from "../Selector/Selector"
 import { CartContext } from '../../context/CartContext';
 import "./ItemDetail.css"
@@ -21,32 +21,37 @@ export const ItemDetail = ({id, name, description, image, price, stock, category
 
     const handleMouseMove = (e) => {
         const { left, top, width, height } = e.target.getBoundingClientRect();
-        let x = (e.pageX - left) - window.scrollX;
-        let y = (e.pageY - top) - window.scrollY;
-        const zoomLevel = 1.5;
-        const lensWidth = 200;
-        const lensHeight = 200;
-        const horizontalOffset = 200;
-
-        x = Math.max(0, Math.min(x * zoomLevel - lensWidth / 2, width * zoomLevel - lensWidth));
-        y = Math.max(0, Math.min(y * zoomLevel - lensHeight / 2, height * zoomLevel - lensHeight));
-
-        const backgroundSize = `${width * zoomLevel}px ${height * zoomLevel}px`;
-        const backgroundPosition = `-${x}px -${y}px`;
-
+        let x = e.pageX - left - window.pageXOffset;
+        let y = e.pageY - top - window.pageYOffset;
+    
+        const zoomLevel = 2;
+        const lensWidth = 200;  // Ancho del lente
+        const lensHeight = 200; // Altura del lente
+    
+        // Asegúrate de que el lente no muestre áreas fuera de la imagen
+        x = Math.max(0, Math.min(x, width - lensWidth / zoomLevel));
+        y = Math.max(0, Math.min(y, height - lensHeight / zoomLevel));
+    
+        let backgroundX = x * zoomLevel - lensWidth / 2;
+        let backgroundY = y * zoomLevel - lensHeight / 2;
+    
+        backgroundX = Math.max(0, Math.min(width * zoomLevel - lensWidth, backgroundX));
+        backgroundY = Math.max(0, Math.min(height * zoomLevel - lensHeight, backgroundY));
+    
         setLensStyle({
-            backgroundSize,
-            backgroundPosition,
+            backgroundColor: 'black',
+            backgroundSize: `${width * zoomLevel}px ${height * zoomLevel}px`,
+            backgroundPosition: `-${backgroundX}px -${backgroundY}px`,
             display: 'block',
-            backgroundColor: 'white',
-            boxShadow: '0px 0px 10px 5px rgba(0, 0, 0, 0.3)',
-            left: `${e.pageX - window.scrollX + horizontalOffset}px`,
-            top: `${e.pageY - window.scrollY - 500}px`
+            left: '520px', // Usa la posición fija en X
+            top: '2px', // Usa la posición fija en Y
+            width: '500px',
+            height: '500px'
         });
     };
 
     const handleMouseLeave = () => {
-        setLensStyle({ display: 'none' });
+        setLensStyle(prevStyle => ({ ...prevStyle, display: 'none' }));
     };
 
     const colores = [{

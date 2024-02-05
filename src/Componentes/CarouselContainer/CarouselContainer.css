@@ -1,10 +1,18 @@
-.main{
-    padding-top: 60px;
+.carouselContainer{
+    width: 1000px;
+    margin: 0 auto;
+    /* .titulo{
+        text-align: center;
+        padding-top: 100px;
+        margin: 0;
+    } */
 }
-.titleProducts{
+.title {
+    padding-top: 70px;
+    padding-bottom: 120px;
     font-family: 'Arial Black', Gadget, sans-serif; /* Fuente en negrita */
     color: black; /* Color interior del texto */
-    font-size: 3em; /* Tamaño de la fuente */
+    font-size: 5em; /* Tamaño de la fuente */
     text-align: center; /* Alineación del texto */
     letter-spacing: 6px; /* Espaciado entre caracteres */
     text-shadow:
@@ -16,5 +24,4 @@
       -2px -2px 0 #FFD700, /* Sombra amarilla arriba-izquierda */
       2px -2px 0 #FFD700, /* Sombra amarilla arriba-derecha */
       -2px 2px 0 #FFD700; /* Sombra amarilla abajo-izquierda */
-    padding-bottom: 60px;
-}
+  }

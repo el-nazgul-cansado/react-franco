@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { useLoginContext } from "../../context/LoginContext";
 import { CartWidget } from "../CartWidget/CartWidget";
 import './Header.css'
@@ -7,10 +8,43 @@ export const Header = () => {
 
     const { user, logout } = useLoginContext()
 
+    const [ quantity, setQuantity ] = useState(0)
+
+    const [ size, setSize ] = useState(0)
+
+    const handleChangeQuantity = (event) => {
+        setQuantity(event.target.value);
+      };
+    const handleChangeSize = (event) => {
+        setSize(event.target.value);
+      };
+
     return(
         <header className="contenedorLogoLinksCarrito">
+            <div className="rangeCointainer">
+                <label htmlFor="rangeQuantity">Cantidad: </label>
+                <input
+                    type="range"
+                    id="rangeQuantity"
+                    name="rangeQuantity"
+                    min="0"
+                    max="100"
+                    value={quantity}
+                    onChange={handleChangeQuantity}
+                />
+                <label htmlFor="rangeSize">Tamaño: </label>
+                <input
+                    type="range"
+                    id="rangeSize"
+                    name="rangeSize"
+                    min="0"
+                    max="100"
+                    value={size}
+                    onChange={handleChangeSize}
+                />
+            </div>
             <div className="contenedorLogo">
-            <Link className="logo" to="/"><h1>LOGO</h1></Link>
+                <Link className="logoLink" to="/"><h2 className="logo">PMC</h2></Link>
             </div>
             <nav className="contenedorLinks">
                 <Link className="links" to="/">Inicio</ Link>

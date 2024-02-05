@@ -1,0 +1,30 @@
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: black;
+    /* Configura múltiples capas de estrellas con diferentes tamaños */
+    background-image: 
+      radial-gradient(white 1.5px, transparent 1.5px),
+      radial-gradient(white 1px, transparent 1px),
+      radial-gradient(white 0.5px, transparent 0.5px);
+    /* Aumenta el espacio entre estrellas para reducir su densidad */
+    background-size: 
+      100px 100px,  /* Espacio más grande para la primera capa */
+      150px 150px,  /* Espacio aún más grande para la segunda capa */
+      200px 200px;  /* Espacio más grande para la tercera capa */
+    background-position: 
+      0 0, 
+      50px 50px,
+      -50px -50px;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    /* Aplica animaciones a las capas para crear un efecto de titileo sutil */
+    animation: twinkle 5s infinite alternate;
+  }
+  
+  @keyframes twinkle {
+    0% { background-color: rgba(255, 255, 255, 0.2); }
+    50% { background-color: rgba(255, 255, 255, 0.5); }
+    100% { background-color: rgba(255, 255, 255, 0.2); }
+  }
+  

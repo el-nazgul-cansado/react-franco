@@ -1,15 +1,15 @@
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router-dom';
 import { ItemListContainer } from '../ItemListContainer/ItemListContainer';
-import "./CarouselContainer.scss"
+import "./CarouselContainer.css"
 
 function CarouselContainer() {
 
   return (
     <div>
       <div>
-                <div className='carouselContainer'>
-                  <h2 className='titulo'>Proyecto MultiConsola</h2>
+        <div className='carouselContainer'>
+                <h1 className="title">Proyecto MultiConsola</h1>
                   <Carousel>
                     <Carousel.Item>
                     <Link to = "/productos/consola">

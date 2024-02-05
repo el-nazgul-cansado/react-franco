@@ -120,31 +120,31 @@
 }
 
 .link-wrapper:hover .link-img-steam {
-    transform: translateX(-170px);
+    transform: translateX(-110px);
 }
 .link-wrapper:hover .link-img-origin {
-    transform: translateX(-160px);
+    transform: translateX(-125px);
 }
 .link-wrapper:hover .link-img-play-station {
     transform: translateX(-200px);
 }
 .link-wrapper:hover .link-img-xbox {
-    transform: translateX(-160px);
+    transform: translateX(-90px);
 }
 .link-wrapper:hover .link-img-epic-games {
     transform: translateX(-200px);
 }
 .link-wrapper:hover .link-img-GOG {
-    transform: translateX(-140px);
+    transform: translateX(-100px);
 }
 
 .link-wrapper:hover .link-text-steam {
     opacity: 1;
-    right: 10%; 
+    right: 20%; 
 }
 .link-wrapper:hover .link-text-origin {
     opacity: 1;
-    right: 13%; 
+    right: 21%; 
 }
 .link-wrapper:hover .link-text-play-station {
     opacity: 1;
@@ -152,7 +152,7 @@
 }
 .link-wrapper:hover .link-text-xbox {
     opacity: 1;
-    right: 15%; 
+    right: 21%; 
 }
 .link-wrapper:hover .link-text-epic-games {
     opacity: 1;
@@ -160,5 +160,5 @@
 }
 .link-wrapper:hover .link-text-GOG {
     opacity: 1;
-    right: 15%; 
+    right: 20%; 
 }

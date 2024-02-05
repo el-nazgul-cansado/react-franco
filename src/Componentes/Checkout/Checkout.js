@@ -231,46 +231,6 @@ export const Checkout = () => {
                     <CheckoutForm handleSubmit={handleSubmit} handleInputChange={handleInputChange} values={values} errors={errors} cart={cart} />
                 </div>
             </div>
-            <div>
-                <h2>Terminar compra</h2>
-                <hr/>
-                <form onSubmit={handleSubmit}>
-                    <input className="form-control my-2" onChange={handleInputChange} type="text" name="nombre" value={values.nombre} placeholder="Tu nombre"/>
-
-                    <input className="form-control my-2" onChange={handleInputChange} type="text" name="direccion" value={values.direccion} placeholder="Tu direccion"/>
-
-                    <input className="form-control my-2" onChange={handleInputChange} type="email" name="email" value={values.email} placeholder="Tu email"/>
-
-                    <input className="form-control my-2" onChange={handleInputChange} type="number" name="celular" value={values.celular} placeholder="Tu celular"/>
-                    <div>
-                        <select
-                            name="metodoDePago"
-                            className="form-control my-2"
-                            onChange={handleInputChange}
-                            value={values.paymentMethod}
-                        >
-                            <option value={""} disabled>Selecciona un método de pago</option>
-                            <option value={"mastercard"}>Mastercard</option>
-                            <option value={"visa"}>Visa</option>
-                        </select>
-                            
-                    </div>
-                    <input className="form-control my-2" onChange={handleInputChange} type="number" name="creditCard" value={values.creditCard} placeholder="Numero de la tarjeta"/>
-
-                    <div>
-                        <div>
-                            <input className="form-control my-2" onChange={handleInputChange} type="number" name="MM" value={values.MM} placeholder="MM"/>
-                            <input className="form-control my-2" onChange={handleInputChange} type="number" name="YY" value={values.YY} placeholder="YY"/>
-
-                        </div>
-                        <div>
-                            <input className="form-control my-2" onChange={handleInputChange} type="number" name="cvc" value={values.cvc} placeholder="CVC"/>
-
-                        </div>
-                    </div>
-                    <button className="btn btn-success" disabled={loadingCheck}>Terminar compra</button>
-                </form>
-            </div>
         
             <Footer />
         </>

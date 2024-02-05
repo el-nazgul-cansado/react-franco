@@ -9,6 +9,7 @@ import { ItemListContainer } from '../Componentes/ItemListContainer/ItemListCont
 import { Header } from '../Componentes/Header/Header.js';
 import { Checkout } from '../Componentes/Checkout/Checkout.js';
 import { Plataformas } from '../Componentes/Plataformas/Plataformas.js';
+import { StarredBackground } from '../Componentes/StarredBackground/StarredBackground.jsx';
 
 
 export const Routers = () => {
@@ -16,8 +17,10 @@ export const Routers = () => {
     const { user } =useLoginContext()
 
     return(
+        
         <BrowserRouter>
-           <Header /> 
+            <StarredBackground />
+            <Header /> 
             <Routes>
                 <Route path="/" element={<CarouselContainer />} />
                 <Route path="/productos/:categoryId" element={<ItemListContainer />} />
@@ -31,5 +34,8 @@ export const Routers = () => {
                 <Route path="/detail/*" element={ <Navigate to={"/"} />} />
             </Routes>
         </BrowserRouter>
+            
+        
     )
+
 }

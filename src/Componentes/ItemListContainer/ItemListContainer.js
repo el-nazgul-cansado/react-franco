@@ -85,7 +85,7 @@ export const ItemListContainer = () => {
 
     return(
         <main className='main'>
-            <h2 className='titulo'>Nuestros productos</h2>
+            <h2 className='titleProducts'>Nuestros productos</h2>
            <div>
                 <Buscador handleChange={handleChange} busqueda={busqueda} />
             </div>

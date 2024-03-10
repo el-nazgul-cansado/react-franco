@@ -1,0 +1,27 @@
+.dropdown-content {
+    display: none; /* Oculta el contenido por defecto */
+    position: absolute;
+    background-color: black;
+    min-width: 640px; /* Ajusta esto según la suma del ancho de las 4 columnas */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    flex-wrap: wrap; /* Permite que los ítems se envuelvan en múltiples filas */
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px; /* Muestra el contenido al pasar el cursor */
+  }
+  
+  .icon-saber-pair {
+    display: flex; /* Mantiene los ítems de cada par lado a lado */
+    width: calc(25% - 10px); /* Ajusta el ancho para 4 columnas, restando el espacio del gap */
+    margin: 1px; /* Espacio entre los pares */
+    justify-content: space-evenly; /* Espacia el icono y el sable dentro del par */
+    cursor: pointer;
+  }
+  
+  .icon-saber-pair img {
+    width: 45px; /* Ajusta el ancho de las imágenes a tu preferencia, manteniendo tus tamaños */
+  }

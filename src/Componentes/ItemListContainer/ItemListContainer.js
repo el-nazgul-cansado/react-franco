@@ -15,8 +15,6 @@ export const ItemListContainer = () => {
     const [prodBusc, setProdBusc] = useState([])
     const [busqueda, setBusqueda] = useState("")
 
-    
-
     useEffect(() => {
         
            /*  const productosRef = collection(db, 'productos')

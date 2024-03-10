@@ -1,8 +1,11 @@
 import { useEffect, useRef } from 'react';
+import { useStarContext } from '../../context/StarContext';
 import './StarredBackground.css'
 
 export const StarredBackground = () => {
     const canvasRef = useRef(null);
+
+    const { quantity, size, starConfirm, setStarConfirm } = useStarContext()
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -11,10 +14,10 @@ export const StarredBackground = () => {
         canvas.height = window.innerHeight;
 
         // Genera las estrellas con posiciones y tamaños fijos, pero con opacidad inicial aleatoria
-        const stars = Array.from({ length: 1500 }, () => ({
+        const stars = Array.from({ length: quantity }, () => ({
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
-            radius: Math.random() * (1.3 - 0.5) + 0.8,
+            radius: Math.random() * (size - 0.5) + 0.8,
             opacity: Math.random(),
             deltaOpacity: Math.random() * 0.01 + 0.007, // Controla la velocidad del cambio de opacidad
         }));
@@ -40,7 +43,7 @@ export const StarredBackground = () => {
         };
 
         animate(); // Inicia la animación de titileo
-    }, []);
+    }, [starConfirm]);
 
     return <canvas ref={canvasRef} style={{ position: 'fixed', top: 0, left: 0, zIndex: -1, width: '100%', height: '100%' }} />;
 };

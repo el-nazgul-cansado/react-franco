@@ -8,6 +8,8 @@ export const StarProvider = ({ children }) => {
 
     const [starConfirm, setStarConfirm] = useState(false)
 
+    const [starChange, setStarChange] = useState(false)
+
     const [ quantity, setQuantity ] = useState(() => {
         const savedQuantity = localStorage.getItem('quantity');
         return savedQuantity ? Number(savedQuantity) : 500; // Asegúrate de convertir a Number si es necesario
@@ -25,7 +27,7 @@ export const StarProvider = ({ children }) => {
     }, [quantity, size]);
 
     return(
-        <StarContext.Provider value={{ quantity, setQuantity, size, setSize, starConfirm, setStarConfirm }}>
+        <StarContext.Provider value={{ quantity, setQuantity, size, setSize, starConfirm, setStarConfirm, starChange, setStarChange }}>
             {children}
         </StarContext.Provider>
     )

@@ -2,3 +2,7 @@ canvas {
     transform-origin: top left; /* Asegura que el canvas escale desde la esquina superior izquierda */
     transform: scale(var(--scale-factor, 1)); /* Ajusta esta escala según sea necesario */
 }
+.canvasFade {
+    transition: opacity .3s ease-in-out;
+    opacity: 1; /* Estado inicial visible */
+}

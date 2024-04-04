@@ -9,3 +9,18 @@ body {
   background-repeat: repeat;
   background-attachment: fixed; /* Mantiene el fondo fijo durante el desplazamiento */
 }
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 5px #00ff00); /* Estado inicial del brillo */
+  }
+  50% {
+    filter: drop-shadow(0 0 15px #00ff00); /* Estado más intenso del brillo */
+  }
+  100% {
+    filter: drop-shadow(0 0 5px #00ff00); /* Vuelve al estado inicial */
+  }
+}
+
+.cursor-glow {
+  animation: glow 1.5s infinite;
+}

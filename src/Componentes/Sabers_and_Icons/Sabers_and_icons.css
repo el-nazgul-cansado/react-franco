@@ -9,6 +9,7 @@
   }
   
   .dropdown:hover .dropdown-content {
+    z-index: 1000;
     display: flex;
     justify-content: space-evenly;
     gap: 50px; /* Muestra el contenido al pasar el cursor */
@@ -19,9 +20,12 @@
     width: calc(25% - 10px); /* Ajusta el ancho para 4 columnas, restando el espacio del gap */
     margin: 1px; /* Espacio entre los pares */
     justify-content: space-evenly; /* Espacia el icono y el sable dentro del par */
-    cursor: pointer;
   }
   
   .icon-saber-pair img {
     width: 45px; /* Ajusta el ancho de las imágenes a tu preferencia, manteniendo tus tamaños */
+  }
+
+  a, button, .clickable {
+    cursor: inherit !important;
   }

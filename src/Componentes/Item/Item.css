@@ -2,6 +2,12 @@
     display: grid;
     justify-items: center;
     align-items: center;
+    border: 5px solid #1c1c1c;
+    border-radius: 50px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background-color: rgba(0, 0, 0, 0.728);
+    transition: transform 0.3s ease;
 }
 .item .itemLink{
     height: 38px;
@@ -9,7 +15,8 @@
 .itemPrice{
     margin: 0;
     padding-top: 10px;
-    padding-bottom: 5px;
+    padding-bottom: 30px;
+    color: #FFD700;
 }
 .itemAlert{
     margin: 0;
@@ -24,5 +31,23 @@
     width: 250px;
 }
 .itemName{
-    padding-top: 70px;
+    color: #FFD700;
+}
+.item:hover{
+    transform: scale(1.1); /* Aumenta el tamaño del ítem en un 5% al hacer hover */
+}
+.hoverred:hover{
+    border: 5px solid red;
+}
+.hovergreen:hover{
+    border: 5px solid green;
+}
+.hoverblue:hover{
+    border: 5px solid blue;
+}
+.hoveryellow:hover{
+    border: 5px solid yellow;
+}
+.hoverpurple:hover{
+    border: 5px solid purple;
 }

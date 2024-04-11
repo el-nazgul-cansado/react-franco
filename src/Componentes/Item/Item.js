@@ -1,12 +1,17 @@
+import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import "./Item.css"
 
+export const Item = ({id, name, image, price, stock}) =>{
 
+    const savedSaber = JSON.parse(localStorage.getItem('selectedIcon'))
 
-export const Item = ({id, name, description, image, price, stock, category}) =>{
+    useEffect( () =>{
+        console.log(savedSaber.color)
+    }, [savedSaber] )
 
     return(
-        <div className="col-3 item">
+        <div className={`col-2 item hover${savedSaber.color}`}>
             <h2 className="itemName">{name}</h2>
             <img className="itemImage" src={image} alt={name} />
             <p className="itemPrice">Precio: <b>$ {price}</b></p>

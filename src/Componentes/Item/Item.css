@@ -33,21 +33,63 @@
 .itemName{
     color: #FFD700;
 }
+
+@keyframes vibratered {
+    0% { box-shadow: 0px 0px 20px red;}
+    25% { box-shadow: 0px 0px 23px red;}
+    50% { box-shadow: 0px 0px 28px red;}
+    75% { box-shadow: 0px 0px 33px red;}
+    100% { box-shadow: 0px 0px 38px red;}
+  }
+@keyframes vibrategreen {
+    0% { box-shadow: 0px 0px 20px green;}
+    25% { box-shadow: 0px 0px 23px green;}
+    50% { box-shadow: 0px 0px 28px green;}
+    75% { box-shadow: 0px 0px 33px green;}
+    100% { box-shadow: 0px 0px 38px green;}
+  }
+@keyframes vibrateblue {
+    0% { box-shadow: 0px 0px 20px blue;}
+    25% { box-shadow: 0px 0px 23px blue;}
+    50% { box-shadow: 0px 0px 28px blue;}
+    75% { box-shadow: 0px 0px 33px blue;}
+    100% { box-shadow: 0px 0px 38px blue;}
+  }
+@keyframes vibrateyellow {
+    0% { box-shadow: 0px 0px 20px yellow;}
+    25% { box-shadow: 0px 0px 23px yellow;}
+    50% { box-shadow: 0px 0px 28px yellow;}
+    75% { box-shadow: 0px 0px 33px yellow;}
+    100% { box-shadow: 0px 0px 38px yellow;}
+  }
+@keyframes vibratepurple {
+    0% { box-shadow: 0px 0px 20px purple;}
+    25% { box-shadow: 0px 0px 23px purple;}
+    50% { box-shadow: 0px 0px 28px purple;}
+    75% { box-shadow: 0px 0px 33px purple;}
+    100% { box-shadow: 0px 0px 38px purple;}
+  }
+
 .item:hover{
-    transform: scale(1.1); /* Aumenta el tamaño del ítem en un 5% al hacer hover */
+    transform: scale(1.1);
 }
 .hoverred:hover{
     border: 5px solid red;
+    animation: vibratered 0.1s linear infinite;
 }
 .hovergreen:hover{
     border: 5px solid green;
+    animation: vibrategreen 0.1s linear infinite;
 }
 .hoverblue:hover{
     border: 5px solid blue;
+    animation: vibrateblue 0.1s linear infinite;
 }
 .hoveryellow:hover{
     border: 5px solid yellow;
+    animation: vibrateyellow 0.1s linear infinite;
 }
 .hoverpurple:hover{
     border: 5px solid purple;
+    animation: vibratepurple 0.1s linear infinite;
 }

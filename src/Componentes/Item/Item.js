@@ -1,26 +1,64 @@
-import { useEffect } from "react"
-import { Link } from "react-router-dom"
-import "./Item.css"
+import { useRef, useEffect } from 'react';
+import { useSabersIcons } from '../../context/SabersIconsContext';
+import { Link } from 'react-router-dom';
+import './Item.css';
 
-export const Item = ({id, name, image, price, stock}) =>{
+export const Item = ({ id, name, image, price, stock }) => {
+    const { selectedIcon } = useSabersIcons();
+    const audioRef = useRef(null);
 
-    const savedSaber = JSON.parse(localStorage.getItem('selectedIcon'))
+    useEffect(() => {
+        if (audioRef.current) {
+            audioRef.current.volume = 0; // Iniciar con volumen en 0
+            const audio = audioRef.current;
 
-    useEffect( () =>{
-        console.log(savedSaber.color)
-    }, [savedSaber] )
+            const updateVolume = () => {
+                const targetVolume = Math.min(1, audio.currentTime / 1); // Ajusta este valor según necesites
+                audio.volume = targetVolume;
+            };
 
-    return(
-        <div className={`col-2 item hover${savedSaber.color}`}>
+            audio.addEventListener('timeupdate', updateVolume);
+
+            return () => {
+                audio.removeEventListener('timeupdate', updateVolume);
+            };
+        }
+    }, []);
+
+    const playHoverSound = () => {
+        if (audioRef.current) {
+            audioRef.current.play().catch(error => console.log('Error playing sound:', error));
+        }
+    };
+
+    const stopHoverSound = () => {
+        if (audioRef.current) {
+            audioRef.current.pause();
+            audioRef.current.currentTime = 0;
+            audioRef.current.volume = 0;
+        }
+    };
+
+    return (
+        <div
+            className={`col-2 item hover${selectedIcon.color}`}
+            onMouseEnter={playHoverSound}
+            onMouseLeave={stopHoverSound}
+        >
             <h2 className="itemName">{name}</h2>
             <img className="itemImage" src={image} alt={name} />
             <p className="itemPrice">Precio: <b>$ {price}</b></p>
-            { stock <= 5 && stock > 0
-                    ? <p className="itemAlert">Quedan pocas unidades!</p>
-                    : stock === 0 && <p className="itemAlert">Ya no quedan unidades!!</p> }
-            { stock === 0
-                    ? <button disabled={stock === 0} className="btn btn-dark">Ver mas!</button> 
-                    : <Link className="btn btn-dark itemLink" to={`/detail/${id}`}>Ver mas!</Link>}
+            {stock <= 5 && stock > 0 ? (
+                <p className="itemAlert">¡Quedan pocas unidades!</p>
+            ) : stock === 0 ? (
+                <p className="itemAlert">¡Ya no quedan unidades!</p>
+            ) : null}
+            {stock === 0 ? (
+                <button disabled className="btn btn-dark">Ver más</button>
+            ) : (
+                <Link className="btn btn-dark itemLink" to={`/detail/${id}`}>Ver más</Link>
+            )}
+            <audio ref={audioRef} src="/assets/sounds/lightsaber-sound-effect.mp3" />
         </div>
-    )
-}
+    );
+};

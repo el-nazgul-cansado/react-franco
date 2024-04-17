@@ -12,7 +12,7 @@
     z-index: 1000;
     display: flex;
     justify-content: space-evenly;
-    gap: 50px; /* Muestra el contenido al pasar el cursor */
+    gap: 50px;
   }
   
   .icon-saber-pair {

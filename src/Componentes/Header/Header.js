@@ -12,9 +12,6 @@ export const Header = () => {
     return(
         <header className="contenedorLogoLinksCarrito">
             <Sabers_and_icons />
-            <div className="contenedorLogo">
-                <Link className="logoLink" to="/"><h2 className="logo">PMC</h2></Link>
-            </div>
             <StarsRangeAndCount />
             <nav className="contenedorLinks">
                 <Link className="links" to="/">Inicio</ Link>

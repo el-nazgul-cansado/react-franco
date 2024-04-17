@@ -1,13 +1,3 @@
-.rangeContainer > div {
-    display: flex; /* Usa flexbox */
-    align-items: center; /* Centra los elementos verticalmente */
-    gap: 10px; /* Espacio entre los elementos */
-}
-
-.rangeContainer > div > div {
-    margin-right: 10px; /* Espacio entre la etiqueta y el input range */
-}
-
 input[type='range'] {
     -webkit-appearance: none;
     appearance: none;
@@ -66,4 +56,38 @@ label {
     background-color: black;
     color: white;
     border: none;
+}
+.rangeDropdown {
+    position: relative; /* Establece la posición relativa al contenedor padre */
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 11px 24px 15px 24px;
+    text-align: center;
+}
+.rangeContainer {
+    display: none; /* Oculta el rangeContainer por defecto */
+    position: absolute; /* Posicionamiento absoluto respecto a rangeDropdown */
+    top: 105%; /* Posiciona justo debajo del rangeDropdown */
+    left: 0;
+    background-color: black;
+    z-index: 100; /* Asegura que se muestre sobre otros elementos */
+}
+.rangeDropdown:hover .rangeContainer {
+    display: block; /* Muestra el rangeContainer cuando se hace hover sobre rangeDropdown */
+}
+.starIndicator {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%; /* Esto hace que el span sea un círculo */
+    background-color: white; /* Fondo blanco para el círculo */
+    animation: blinkAnimation 2.5s infinite; /* Aplica la animación de parpadeo */
+}
+
+@keyframes blinkAnimation {
+    0%, 100% {
+        opacity: 1; /* Completamente visible */
+    }
+    50% {
+        opacity: 0; /* Completamente invisible */
+    }
 }

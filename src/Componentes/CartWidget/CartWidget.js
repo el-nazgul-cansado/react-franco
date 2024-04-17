@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext"
 import{ useContext } from "react"
 import { useLoginContext } from "../../context/LoginContext";
+import './CartWidget.css'
 
 export const CartWidget = () => {
 
@@ -14,7 +15,7 @@ export const CartWidget = () => {
         <Link to={user.logged
             ?"/cart"
             :"/login"}>
-            <button className="btn btn-primary"><BsFillCartFill size={50} /><span className="carritoCantidad">{totalCantidad()}</span></button>
+            <button className="cartButton"><BsFillCartFill color="#FFD700" size={50} /><span className="carritoCantidad">{totalCantidad()}</span></button>
         </Link>
     )
 }

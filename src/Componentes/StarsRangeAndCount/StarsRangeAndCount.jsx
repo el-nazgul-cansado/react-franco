@@ -42,8 +42,10 @@ export const StarsRangeAndCount = () => {
         setSize(parseFloat(event.target.value));
       };
 
-    return (
-        <div className="rangeCointainer">
+      return (
+        <div className="rangeDropdown">
+            <span className="starIndicator" style={{ width: `20px`, height: `20px` }}></span>
+            <div className="rangeContainer">
                 <div>
                     <div>
                         <label htmlFor="rangeQuantity">Cantidad: {quantity}</label>
@@ -83,5 +85,7 @@ export const StarsRangeAndCount = () => {
                     <button className='starConfirm' onClick={handleStarConfirm}>Confirm</button>
                 </div>
             </div>
-    )
+        </div>
+    );
+    
 }

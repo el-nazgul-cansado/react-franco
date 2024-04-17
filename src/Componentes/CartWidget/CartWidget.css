@@ -1,0 +1,10 @@
+.cartButton{
+    background-color: black;
+    border-color: #FFD700;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+}
+.carritoCantidad{
+    font-size: 30px;
+    color: #FFD700;
+}

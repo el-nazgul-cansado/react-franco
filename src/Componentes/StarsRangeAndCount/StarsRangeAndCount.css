@@ -59,7 +59,7 @@ label {
 }
 .rangeDropdown {
     position: relative; /* Establece la posición relativa al contenedor padre */
-    border: 3px solid white;
+    border: 3px solid #FFD700;;
     border-radius: 10px;
     padding: 11px 24px 15px 24px;
     text-align: center;

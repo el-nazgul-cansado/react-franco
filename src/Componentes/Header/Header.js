@@ -22,14 +22,13 @@ export const Header = () => {
             <section className="contenedorCarrito">
                 <CartWidget />
             </section>
-            <div className="contenedorHeader">
-                
+            <div className="contenedorHeader">               
                 {user.logged ?
                  <div>
                  <p className="userWelcome"> Bienvenid@ {user.displayName}</p>
-                 <button className="btn btn-danger" onClick={logout}>Logout</button>
+                 <button className="logout" onClick={logout}>Logout</button>
                  </div>
-                 : <Link to='/login'><button className="btn btn-danger">Login</button></Link>}
+                 : <Link to='/login'><button className="login">Login</button></Link>}
             </div>
         </header>
     )

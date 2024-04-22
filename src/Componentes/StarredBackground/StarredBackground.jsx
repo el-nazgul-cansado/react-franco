@@ -58,7 +58,7 @@ export const StarredBackground = () => {
             clearTimeout(timer);
             canvas.style.opacity = '1';
         };
-    }, [starConfirm]);
+    }, [quantity, size]);
         
     return <canvas ref={canvasRef} style={{ position: 'fixed', top: 0, left: 0, zIndex: -1, width: '100%', height: '100%' }} />;
 };

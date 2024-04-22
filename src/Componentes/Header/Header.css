@@ -1,11 +1,18 @@
-.contenedorLogoLinksCarrito{
+.headerContainer{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.contenedorLogoLinksCarrito {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.817);
     padding-top: 30px;
     padding-bottom: 30px;
     height: 138px;
+    position: relative;
+    z-index: 1001;
 }
 
 .logo{
@@ -58,4 +65,31 @@
     color: #FFD700;
     height: 40px;
     width: 80px;
+}
+.containerButton {
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+.headerButton{
+    display: flex;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0.817);
+    color: #FFD700;
+    border-top: none;
+    border-bottom: 1.5px solid #FFD700;
+    border-left: 1.5px solid #FFD700;
+    border-right: 1.5px solid #FFD700;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+.headerButtonIcon {
+    transition: transform 0.3s ease-in-out;
+    display: inline-block; /* Importante para que transform funcione en elementos inline como los íconos */
+  }
+  
+.rotated {
+transform: rotate(180deg);
 }

@@ -32,6 +32,7 @@
 }
 .itemName{
     color: #FFD700;
+    text-align: center;
 }
 
 @keyframes vibratered {

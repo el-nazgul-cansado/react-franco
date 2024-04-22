@@ -81,9 +81,6 @@ export const StarsRangeAndCount = () => {
                         /><button onClick={handleOnCLickSizeIncrement} className="incrementDecrement">+</button>
                     </div>
                 </div>
-                <div>
-                    <button className='starConfirm' onClick={handleStarConfirm}>Confirm</button>
-                </div>
             </div>
         </div>
     );

@@ -1,0 +1,30 @@
+.containerInput{
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+}
+.inputBuscar{
+    height: 50px;
+    width: 1000px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: black;
+    border: 3px solid #FFD700;
+    border-radius: 10px;
+    color: #FFD700
+}
+.inputBuscar::placeholder{
+    color: #FFD700;
+    opacity: 60%;
+}
+.inputBuscar:focus{
+    animation: vibrate 0.1s linear infinite;
+}
+
+@keyframes vibrate {
+    0% { box-shadow: 0px 0px 20px #FFD700;}
+    25% { box-shadow: 0px 0px 23px #FFD700;}
+    50% { box-shadow: 0px 0px 28px #FFD700;}
+    75% { box-shadow: 0px 0px 33px #FFD700;}
+    100% { box-shadow: 0px 0px 38px #FFD700;}
+  }

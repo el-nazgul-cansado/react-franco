@@ -11,6 +11,16 @@
 }
 .item .itemLink{
     height: 38px;
+    width: 82px;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: black;
+    color: #FFD700;
+    border: 1px solid #FFD700;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .itemPrice{
     margin: 0;
@@ -70,7 +80,6 @@
     75% { box-shadow: 0px 0px 33px purple;}
     100% { box-shadow: 0px 0px 38px purple;}
   }
-
 .item:hover{
     transform: scale(1.1);
 }

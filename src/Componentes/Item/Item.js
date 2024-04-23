@@ -54,9 +54,9 @@ export const Item = ({ id, name, image, price, stock }) => {
                 <p className="itemAlert">¡Ya no quedan unidades!</p>
             ) : null}
             {stock === 0 ? (
-                <button disabled className="btn btn-dark">Ver más</button>
+                <button disabled className="itemLink">Ver más</button>
             ) : (
-                <Link className="btn btn-dark itemLink" to={`/detail/${id}`}>Ver más</Link>
+                <Link className="itemLink" to={`/detail/${id}`}>Ver más</Link>
             )}
             <audio ref={audioRef} src="/assets/sounds/lightsaber-sound-effect.mp3" />
         </div>

@@ -1,4 +1,4 @@
-
+import './Selector.css'
 
 export const Selector= ({ options, set }) => {
 
@@ -8,7 +8,7 @@ export const Selector= ({ options, set }) => {
 
 
     return(
-        <select onChange={handleSelection}>
+        <select className="colorSelector" onChange={handleSelection}>
             {options.map( (opt) => <option key={opt.id} value={opt.value}>{opt.text}</option> )}
         </select>
 

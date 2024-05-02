@@ -1,0 +1,16 @@
+.itemDetailCountContainer{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.itemDetailCantidad{
+    padding: 0px 20px 0px 20px ;
+    color: #FFD700;
+}
+.itemDetailCount{
+    background-color: black;
+    border-color: #FFD700;
+    border-radius: 10px;
+    color: #FFD700;
+    width: 35px;
+    height: 35px;
+}

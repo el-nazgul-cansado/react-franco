@@ -54,6 +54,8 @@ export const ItemDetail = ({id, name, description, image, price, stock, category
         setLensStyle(prevStyle => ({ ...prevStyle, display: 'none' }));
     };
 
+    
+
     const colores = [{
          vaule: 'rojo', text: 'Rojo', id:1},
         {vaule: 'azul', text: 'Azul', id:2},
@@ -81,6 +83,8 @@ export const ItemDetail = ({id, name, description, image, price, stock, category
 
     }
 
+    const descriptionLength = description.length
+
     return(
         <div className="itemDetailContainer">
             <h2 className="itemDetailName">{name}</h2>
@@ -90,12 +94,14 @@ export const ItemDetail = ({id, name, description, image, price, stock, category
                     <div className="zoomLens" style={{ background: `url(${image}) no-repeat`, ...lensStyle }}></div>
                 </div>
                 <div className="itemDetailText">
-                    <p className="itemDetailDescription">{description}</p>
-                    <p className="itemDetailPrice">Precio: <strong>$ {price}</strong></p>
+                    <div className="itemDetailDescriptionContainer">
+                        <p className="itemDetailDescription" style={{ height: `${descriptionLength}` }}>{description}</p>
+                    </div>
+                    <p className="itemDetailPrice">Precio: <strong>$ {price} </strong></p>
                     <div className={`containerCountAlert ${category.includes("cable") && "containerNoOptions"}
                                                         ${category.includes("monitor") && "containerNoOptions"}`}>
                         <ItemCount max={stock} cantidad={cantidad} setCantidad={setCantidad} />
-                        {stock <= 5 && <h5 className="itemDetailAlert">Quedan {stock} en stock!!</h5>}
+                        {stock <= 5 && <h5 className="itemDetailAlert">Quedan {stock} unidades en stock!!</h5>}
                     </div>
                     <div className="itemDetailSelector">
                             {category.includes("consola", "joystick")
@@ -112,16 +118,16 @@ export const ItemDetail = ({id, name, description, image, price, stock, category
                     
             </div>
             <div className="buttonsContainer">
-                <button onClick={handleAgregar} className="btn btn-success itemDetailButtons">Agregar al carrito</button>
+                <button onClick={handleAgregar} className="itemDetailButtons">Agregar al carrito</button>
                 
-                <Link to={cart.length > 0 ? "/cart" : "#"}>
-                    <button className={`btn btn-success itemDetailButtons ${cart.length === 0 ? "disabled" : ""}`} disabled={cart.length === 0}>
+                <Link to={cart.length > 0 && "/cart"}>
+                    <button className={`itemDetailButtons ${cart.length === 0 ? "disabled" : ""}`} disabled={cart.length === 0}>
                         Ir al carrito
                     </button>
                 </Link>
                 
-                <button className="btn btn-primary itemDetailButtons" onClick={handleVolver}>Volver</button>
-                <Link className="btn btn-primary itemDetailButtons" to={'/'}>Inicio</Link>
+                <button className="itemDetailButtons" onClick={handleVolver}>Volver</button>
+                <Link to={'/'}><button className="itemDetailButtons">Inicio</button></Link>
             </div>
         </div>
     )

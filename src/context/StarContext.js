@@ -6,8 +6,6 @@ export const useStarContext = () => useContext(StarContext)
 
 export const StarProvider = ({ children }) => {
 
-    const [starConfirm, setStarConfirm] = useState(false)
-
     const [starChange, setStarChange] = useState(false)
 
     const [ quantity, setQuantity ] = useState(() => {
@@ -27,7 +25,7 @@ export const StarProvider = ({ children }) => {
     }, [quantity, size]);
 
     return(
-        <StarContext.Provider value={{ quantity, setQuantity, size, setSize, starConfirm, setStarConfirm, starChange, setStarChange }}>
+        <StarContext.Provider value={{ quantity, setQuantity, size, setSize, starChange, setStarChange }}>
             {children}
         </StarContext.Provider>
     )

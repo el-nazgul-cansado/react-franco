@@ -13,18 +13,21 @@ export const CartProvider = ({children}) => {
     const [cart, setCart] = useState(init)
   
     const agregarAlCarrito = (item) => {
-      if(cart.some((articulo) => articulo.id === item.id)) {
+      if (cart.some((articulo) => articulo.id === item.id)) {
         const cartUpdate = cart.map((articulo) => {
           if (articulo.id === item.id) {
-            articulo.cantidad = item.cantidad
+            return {
+              ...articulo,
+              cantidad: articulo.cantidad + item.cantidad  // Suma la cantidad actual con la nueva cantidad
+            };
           }
-          return articulo
-        })
-        setCart(cartUpdate)
+          return articulo;
+        });
+        setCart(cartUpdate);
       } else {
-        setCart( [...cart, item] )
+        setCart([...cart, item]);  // Si el artículo no está en el carrito, lo añade directamente
       }
-  }
+    };
 
   const eliminarItem = (id) => {
     setCart( cart.filter(item => item.id !== id) )

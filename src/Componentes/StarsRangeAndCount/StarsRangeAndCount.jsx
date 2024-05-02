@@ -3,15 +3,7 @@ import './StarsRangeAndCount.css'
 
 export const StarsRangeAndCount = () => {
 
-    const { quantity, setQuantity, size, setSize, starConfirm, setStarConfirm } = useStarContext()
-
-    const handleStarConfirm = () => {
-        if (starConfirm) {
-            setStarConfirm(false);
-        } else {
-            setStarConfirm(true)
-        }
-    };
+    const { quantity, setQuantity, size, setSize } = useStarContext()
 
     const handleOnCLickQuantityIncrement = () => {
         if (quantity <= 3000) {

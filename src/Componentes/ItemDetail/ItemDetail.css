@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
 }
 
 .itemDetailTerminar{
@@ -12,7 +12,8 @@
 .itemDetailName{
     font-size: 70px;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    color: #FFD700;
 }
 .itemDetailImage{
     display: flex;
@@ -45,45 +46,82 @@
     width: 100%;
     flex: 1;
 }
+.itemDetailDescriptionContainer{
+    max-height: 200px;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
 .itemDetailDescription {
-    flex: 1; 
+    flex: 1;
+    max-width: 1000px;
     text-align: center;
+    padding-bottom: 190px;
+    color: #FFD700;
+    font-size: 40px;
+    align-self: center;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    animation: auto-scroll 20s linear infinite;
 }
 .itemDetailPrice {
-    margin-left: 0;
-    margin-top: 20px;
-}
-.itemDetailCount{
-    margin-left: 0;
+    color: #FFD700;
+    font-size: 30px;
+    margin-left: 100px;
     margin-top: 20px;
 }
 .itemDetailOptions{
-    margin-left: 0;
-    margin-top: 20px;
+    margin-left: 100px;
+    margin-top: 40px;
 }
 .itemDetailAlert{
-    margin-left: 0;
+    margin-left: 100px;
     margin-top: 20px;
     font-weight: 900;
     color: red;
 }
 .containerCountAlert{
     display: flex;
+    margin-top: 50px;
+}
+.itemDetailSelector{
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .containerNoOptions{
     padding-bottom: 200px;
 }
-
 .buttonsContainer {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    gap: 10px; 
+    gap: 100px; 
     margin-top: 20px; 
     flex-wrap: wrap;
 }
-
 .itemDetailButtons {
+    background-color: black;
+    border-color: #FFD700;
+    border-radius: 10px;
+    color: #FFD700;
     height: 38px;
-    width: 150px;
+    width: 200px;
+    transition: all 0.5s;
+}
+.disabled {
+    border-color: #ffd90046;
+    color: #ffd90046;
+}
+.itemDetailDescription::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes auto-scroll {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
 }

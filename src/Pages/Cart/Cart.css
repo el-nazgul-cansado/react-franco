@@ -1,0 +1,28 @@
+.emptyCartContainer{
+    height: calc( 100vh - 175px - 200px );
+}
+.cartContainer{
+    height: calc( 100% - 140px - 138px );
+}
+.cartTitle{
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-family: 'Arial Black', Gadget, sans-serif; /* Fuente en negrita */
+    color: black; /* Color interior del texto */
+    font-size: 4.3em; /* Tamaño de la fuente */
+    text-align: center; /* Alineación del texto */
+    letter-spacing: 6px; /* Espaciado entre caracteres */
+    text-shadow:
+      3px 0 0 #FFD700, /* Sombra amarilla a la derecha */
+      -3px 0 0 #FFD700, /* Sombra amarilla a la izquierda */
+      0 3px 0 #FFD700, /* Sombra amarilla debajo */
+      0 -3px 0 #FFD700, /* Sombra amarilla encima */
+      2px 2px #FFD700, /* Sombra amarilla abajo-derecha */
+      -2px -2px 0 #FFD700, /* Sombra amarilla arriba-izquierda */
+      2px -2px 0 #FFD700, /* Sombra amarilla arriba-derecha */
+      -2px 2px 0 #FFD700; /* Sombra amarilla abajo-izquierda */
+}
+.cartItemInstallments{
+    display: flex;
+    justify-content: space-between;
+}

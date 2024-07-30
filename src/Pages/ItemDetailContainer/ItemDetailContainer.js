@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { ItemDetail } from '../ItemDetail/ItemDetail'
-import { Footer } from '../Footer/Footer'
+import { ItemDetail } from '../../Componentes/ItemDetail/ItemDetail'
+import { Footer } from '../../Componentes/Footer/Footer'
 import { pedirItemPorId } from '../../helpers/pedirDatos'
-import { Loading } from '../Loading/Loading'
+import { Loading } from '../../Componentes/Loading/Loading'
 /* import { doc, getDoc } from "firebase/firestore"
 import { db } from "../../firebase/config" */
 

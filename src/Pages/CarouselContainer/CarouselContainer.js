@@ -1,6 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router-dom';
-import { ItemListContainer } from '../ItemListContainer/ItemListContainer';
+import { ItemListContainer } from '../../Componentes/ItemListContainer/ItemListContainer';
 import "./CarouselContainer.css"
 
 function CarouselContainer() {

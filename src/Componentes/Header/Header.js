@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useLoginContext } from "../../context/LoginContext";
 import { CartWidget } from "../CartWidget/CartWidget";
 import { Sabers_and_icons } from "../Sabers_and_Icons/Sabers_and_icons";
@@ -43,7 +43,7 @@ export const Header = () => {
                             <p className="userWelcome"> Bienvenid@ {user.displayName}</p>
                             <button className="loginLogout" onClick={logout}>Logout</button>
                             </div>
-                            : <Link to='/login'><button className="loginLogout">Login</button></Link>}
+                            : <Link to='/login-register'><button className="loginLogout">Login</button></Link>}
                         </div>
                     </div>
             </header>

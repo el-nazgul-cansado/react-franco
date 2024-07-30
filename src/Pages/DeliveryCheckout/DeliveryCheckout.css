@@ -1,0 +1,204 @@
+.deliveryFormAndActionsContainer{
+    margin-top: 10px;
+}
+.deliveryContainer{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 650px;
+    grid-template-rows: 40px, 400px
+}
+.deliveryFormContainer{
+    display: grid;
+    grid-template-rows: 120px, 650px, 120px;
+    justify-content: center;
+}
+.in-storePickupContainer{
+    display: flex;
+    align-items: center;
+    padding: 0 30px 0 30px;
+    height: 80px;
+    background-color: black;
+    border: 5px solid #454545;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+.in-storeDeliveryInputContainer{
+    margin-right: 25px;
+    display: flex;
+    align-items: center;
+}
+.deliveryRadioInputContainer{
+    margin-right: 25px;
+    display: flex;
+    align-items: center;
+}
+.in-storePickupParagraphsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.deliveryInputParagraph{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.in-storePickupParagraph{
+    color: #FFD700;
+    margin: 0;
+}
+.deliveryRadioInput {
+    opacity: 0;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    transition: all 0.5s;
+}
+.deliveryCustomRadio {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    border: 3px solid #454545;
+    border-radius: 50%;
+    background-color: black;
+    display: inline-block;
+    position: relative;
+    transition: background-color 0.5s, border-color 0.5s;
+}
+.deliveryRadioInput:checked + .deliveryCustomRadio::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FFD700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.deliveryRadioInput:checked + .deliveryCustomRadio {
+    border-color: #FFD700;
+}
+.deliveryInputAndParagraphsContainer {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 10px 0;
+    padding: 0 30px 0 30px;
+    height: 80px;
+    background-color: black;
+    border: 5px solid #454545;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+.deliveryParagraphsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.deliveryParagraph{
+    color: #FFD700;
+    margin: 0;
+}
+.inputsUp{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.inputsDown{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.deliveryForm{
+    margin-bottom: 10px;
+}
+.deliveryInputLabelContainer{
+    width: 211px;
+}
+.deliveryInputLabel{
+    color: #454545;
+    transition: all 0.5s;
+}
+.deliveryInput{
+    width: 100%;
+    height: 40px;
+    border: 3px solid #454545;
+    border-radius: 10px;
+    background-color: black;
+    color: #454545;
+    transition: all 0.5s;
+}
+.crossStreetsLabel{
+    color: #454545;
+    margin-bottom: 16px;
+    transition: all 0.5s;
+}
+.crossStreet{
+    display: flex;
+    gap: 70px;
+    margin-bottom: 30px;
+}
+.crossStreetInput{
+    display: grid;
+    grid-template-rows: 20px, 50px;
+}
+.atHomeWorkLabel{
+    color: #454545;
+    margin-bottom: 16px;
+    transition: all 0.5s;
+}
+.atHomeWorkContainer{
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    margin-bottom: 25px;
+}
+.atHomeWorkOption{
+    display: flex;
+}
+.atHomeWorkParagraph{
+    color: #454545;
+    margin: 0;
+    transition: all 0.5s;
+    font-weight: 600;
+}
+.atHomeWorkInputContainer{
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+.deliveryActionsContainer{
+    display: flex;
+    justify-content: space-around;
+}
+.deliveryBackButton{
+    height: 38px;
+    width: 200px;
+    color: #FFD700;
+    background-color: black;
+    border: 2px solid red;
+    border-radius: 20px;
+}
+.deliverySubmit{
+    height: 38px;
+    width: 200px;
+    color: #FFD700;
+    background-color: black;
+    border: 2px solid green;
+    border-radius: 20px;
+}
+.deliverySelected{
+    border: 5px solid #FFD700;
+}
+.deliverySelectedLabel{
+    color: #FFD700;
+    
+}
+.deliverySelectedInput{
+    border: 3px solid #FFD700;
+    color: #FFD700;
+}

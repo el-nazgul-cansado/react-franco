@@ -10,6 +10,7 @@ export const useCartContext = () => {
 const init = JSON.parse(localStorage.getItem('cart')) || []
 
 export const CartProvider = ({children}) => {
+
     const [cart, setCart] = useState(init)
   
     const agregarAlCarrito = (item) => {
@@ -18,14 +19,14 @@ export const CartProvider = ({children}) => {
           if (articulo.id === item.id) {
             return {
               ...articulo,
-              cantidad: articulo.cantidad + item.cantidad  // Suma la cantidad actual con la nueva cantidad
+              cantidad: articulo.cantidad + item.cantidad 
             };
           }
           return articulo;
         });
         setCart(cartUpdate);
       } else {
-        setCart([...cart, item]);  // Si el artículo no está en el carrito, lo añade directamente
+        setCart([...cart, item]);
       }
     };
 
@@ -50,22 +51,30 @@ export const CartProvider = ({children}) => {
   }
 
   const cantidadInCart = (id, cantidad) => {
-    cart.forEach(product => {
-        if (product.id === id) {
-            let index = cart.indexOf(product);
-            let newCart = [...cart];
-            newCart[index].cantidad = cantidad;
-            setCart(newCart);
-        }
-    });
-}
+      setCart(cart.map(item =>
+          item.id === id ? { ...item, cantidad } : item
+      ));
+  };
+
+  const updateColorInCart = (id, color) => {
+      setCart(cart.map(item =>
+          item.id === id ? { ...item, color } : item
+      ));
+  };
+
+  const [installmentSelected, setInstallmentSelected] = useState({
+                                                                    id: 'installment1',
+                                                                    amount: '1',
+                                                                    installmentPrice: (totalCart()).toFixed(2),
+                                                                    total: (totalCart()).toFixed(2)
+                                                                  });
 
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart))
   }, [cart])
 
     return(
-        <CartContext.Provider value={ {cart, agregarAlCarrito, eliminarItem, isInCart, emptyCart, totalCart, totalCantidad, cantidadInCart} }>
+        <CartContext.Provider value={ {cart, agregarAlCarrito, eliminarItem, isInCart, emptyCart, totalCart, totalCantidad, cantidadInCart, updateColorInCart, installmentSelected, setInstallmentSelected} }>
             {children}
         </CartContext.Provider>
      )

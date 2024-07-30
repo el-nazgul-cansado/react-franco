@@ -1,16 +1,36 @@
 .itemDetailCountContainer{
     margin-left: 100px;
     margin-top: 20px;
-}
-.itemDetailCantidad{
-    padding: 0px 20px 0px 20px ;
-    color: #FFD700;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 12px;
+    border: 2px solid #FFD700;
+    background-color: black;
+    width: 170.63px;
 }
 .itemDetailCount{
+    padding: 4.6px 25px 4.6px 25px ;
+    color: #FFD700;
+    background-color: black;
+}
+.itemDetailCountButton{
     background-color: black;
     border-color: #FFD700;
-    border-radius: 10px;
     color: #FFD700;
-    width: 35px;
+    width: 45px;
     height: 35px;
+}
+.increment{
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.decrement{
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }

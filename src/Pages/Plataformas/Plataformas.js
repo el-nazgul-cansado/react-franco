@@ -1,5 +1,5 @@
-import { Footer } from "../Footer/Footer"
-import AnimatedLink from '../AnimatedLinks/AnimatedLinks.js';
+import { Footer } from "../../Componentes/Footer/Footer"
+import AnimatedLink from '../../Componentes/AnimatedLinks/AnimatedLinks.js';
 import './Plataformas.scss';
 
 export const Plataformas = () => {

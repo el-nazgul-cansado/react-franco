@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import { Footer } from '../Footer/Footer'
+import { Footer } from '../../Componentes/Footer/Footer'
 import { useCartContext } from "../../context/CartContext"
 import { useLoginContext } from "../../context/LoginContext"
-import { CheckoutSummary } from "../CheckoutSummary/CheckoutSummary"
-import { CheckoutForm } from "../CheckoutForm/CheckoutForm"
+import { CheckoutSummary } from "../../Componentes/CheckoutSummary/CheckoutSummary"
+import { CheckoutForm } from "../../Componentes/CheckoutForm/CheckoutForm"
 import { pedirDatos } from "../../helpers/pedirDatos"
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'

@@ -1,0 +1,74 @@
+.cartItemContainer{
+    background-color: black;
+    height: 275px;
+    width: 800px;
+    padding: 15px 20px 15px 20px;
+    margin: 0px 0px 50px 50px;
+    border: 3px solid #FFD700;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.cartItemTop {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.cartItemName{
+    color: #FFD700;
+}
+.cartItemPrice{
+    color: #FFD700;
+    padding: 10px 0px 0px 10px;
+}
+.cartItemImage{
+    height: 150px;
+    width: auto;
+}
+.cartItemNamePrice {
+    flex: 1;
+    padding-left: 70px;
+}
+.cartItemImageContainer{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    border-left: 3px solid #FFD700;
+}
+.cartItemActions {
+    padding: 25px 70px 0px 70px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 3px solid #FFD700;
+}
+.itemCartCountContainer{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    background-color: black;
+    width: 170.63px;
+}
+.itemCartCount{
+    padding: 4.6px 25px 4.6px 25px ;
+    color: #FFD700;
+    background-color: black;
+}
+.itemCartCountButton{
+    background-color: black;
+    border-color: #FFD700;
+    color: #FFD700;
+    width: 50px;
+    height: 35px;
+}
+.cartColorSelector{
+    background-color: black;
+    color: #FFD700;
+    border: 2px solid #FFD700;
+    border-radius: 7px;
+    margin-right: 60px;
+    width: 100px;
+    height: 35px;
+}

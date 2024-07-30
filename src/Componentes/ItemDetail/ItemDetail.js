@@ -56,34 +56,38 @@ export const ItemDetail = ({id, name, description, image, price, stock, category
 
     
 
-    const colores = [{
-         vaule: 'rojo', text: 'Rojo', id:1},
-        {vaule: 'azul', text: 'Azul', id:2},
-        {vaule: 'verde', text: 'Verde', id:3},
-        {vaule: 'blanco', text: 'Negro', id:4},
-        {vaule: 'blanco', text: 'Blanco', id:5}
+    const colores = [
+        {value: 'rojo', text: 'Rojo', id:1},
+        {value: 'azul', text: 'Azul', id:2},
+        {value: 'verde', text: 'Verde', id:3},
+        {value: 'negro', text: 'Negro', id:4},
+        {value: 'blanco', text: 'Blanco', id:5}
     ]
 
-    const [color, setColor] = useState(null)
+    const [color, setColor] = useState(colores[0])
 
     const handleAgregar = () => {
         const item = {
-            id,
-            name,
-            stock,
-            category,
-            image,
-            description,
-            price,
-            cantidad,
-            color
+          id,
+          name,
+          stock,
+          category,
+          image,
+          description,
+          price,
+          cantidad,
+          color: category.includes('monitor') || category.includes('cable') ? null : color
+        };
+      
+        const articuloEnCarrito = cart.find((articulo) => articulo.id === item.id);
+        const nuevaCantidad = articuloEnCarrito ? articuloEnCarrito.cantidad + item.cantidad : item.cantidad;
+      
+        if (nuevaCantidad > item.stock) {
+          alert(`No puedes agregar más de ${item.stock} unidades de este producto.`);
+        } else {
+          agregarAlCarrito(item);
         }
-
-        agregarAlCarrito(item)
-
-    }
-
-    const descriptionLength = description.length
+      };
 
     return(
         <div className="itemDetailContainer">
@@ -95,7 +99,7 @@ export const ItemDetail = ({id, name, description, image, price, stock, category
                 </div>
                 <div className="itemDetailText">
                     <div className="itemDetailDescriptionContainer">
-                        <p className="itemDetailDescription" style={{ height: `${descriptionLength}` }}>{description}</p>
+                        <p className="itemDetailDescription" style={{ height: `${description.lenght}` }}>{description}</p>
                     </div>
                     <p className="itemDetailPrice">Precio: <strong>$ {price} </strong></p>
                     <div className={`containerCountAlert ${category.includes("cable") && "containerNoOptions"}

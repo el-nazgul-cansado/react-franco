@@ -1,0 +1,119 @@
+ul {
+    list-style-type: none;
+}
+
+.installmentsContainer{
+    width: 700px;
+}
+
+.installmentsList{
+    width: 450px;
+    height: 500px;
+    padding: 0;
+}
+
+.installmentsLabel{
+    display: flex;
+    background-color: black;
+    height: 80px;
+    width: 100%;
+    padding: 0px 15px 0px 15px;
+    margin-bottom: 15px;
+    border: 5px solid #454545;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: space-around;
+    transition: border 0.5s, transform 0.5s; 
+}
+
+.installmentsInputContainer{
+    width: 30px;
+}
+
+.installmentsTotal{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.installmentsTotalParagraph{
+    margin: 0px 0px 0px 10px;
+    color: #FFD700;
+    transition: all 0.5s;
+}
+
+.installmentsActions{
+    margin-top: 100px;
+}
+
+.installmentsInputContainer {
+    display: flex;
+    align-items: center;
+}
+
+  /* Ocultar el input original */
+.installmentsInput {
+    opacity: 0;
+    position: absolute; /* Posicionarlo fuera del flujo normal del documento */
+    width: 20px;
+    height: 20px;
+    transition: all 0.5s;
+}
+  
+  /* Estilos para el label que funcionará como el nuevo radio */
+.customRadio {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    border: 3px solid #454545; /* Color del borde */
+    border-radius: 50%;
+    background-color: black; /* Color de fondo del radio */
+    display: inline-block;
+    position: relative;
+    transition: background-color 0.5s, border-color 0.5s; /* Añadir transición */
+}
+  
+  /* Estilos para el estado seleccionado del radio */
+.installmentsInput:checked + .customRadio::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FFD700; /* Color del punto interior */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.installmentsLabel.selected {
+    border: 5px solid #FFD700;
+    transform: scale(1.1);
+}
+
+.installmentsInput:checked + .customRadio {
+    border-color: #FFD700;
+}
+
+.installmentsActions{
+    display: flex;
+    gap: 40px;
+}
+
+.installmentsEmptyCart{
+    background-color: black;
+    border: 2px solid red;
+    border-radius: 20px;
+    color: #FFD700;
+    height: 38px;
+    width: 200px;
+}
+
+.installmentsCheckout{
+    background-color: black;
+    border: 2px solid green;
+    border-radius: 20px;
+    color: #FFD700;
+    height: 38px;
+    width: 200px;
+}

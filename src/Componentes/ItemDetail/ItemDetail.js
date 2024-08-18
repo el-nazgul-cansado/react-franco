@@ -3,11 +3,14 @@ import { ItemCount } from "../ItemCount/ItemCount"
 import { useState, useContext } from "react"
 import { Selector } from "../Selector/Selector"
 import { CartContext } from '../../context/CartContext';
+import { LoginContext } from "../../context/LoginContext";
 import "./ItemDetail.css"
 
 export const ItemDetail = ({id, name, description, image, price, stock, category}) => {
 
     const { agregarAlCarrito, cart } = useContext(CartContext)
+
+    const { user } = useContext(LoginContext)
     
     const [cantidad, setCantidad] = useState(1)
 

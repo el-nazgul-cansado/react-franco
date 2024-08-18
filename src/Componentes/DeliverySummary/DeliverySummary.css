@@ -1,0 +1,30 @@
+.delivery-summary-title{
+    color: #FFD700;
+    padding-bottom: 50px;
+}
+.delivery-summary-address-shift-map-container{
+    background-color: black;
+    border: 3px solid #FFD700;
+    border-radius: 20px;
+    padding:  30px 30px 30px 30px;
+}
+.delivery-summary-address-shift{
+    color: #FFD700;
+    margin: 0;
+    padding-bottom: 30px;
+}
+.delivery-summary-container{
+    background-color: black;
+    border: 3px solid #FFD700;
+    border-radius: 20px;
+    padding:  30px 30px 30px 30px;
+}
+.delivery-summary-data{
+    color: #FFD700;
+    margin: 0;
+    padding-bottom: 50px;
+}
+.delivery-summary-data-last{
+    color: #FFD700;
+    margin: 0;
+}

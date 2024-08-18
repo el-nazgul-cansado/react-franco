@@ -41,7 +41,7 @@ export const Header = () => {
                             {user.logged ?
                             <div>
                             <p className="userWelcome"> Bienvenid@ {user.displayName}</p>
-                            <button className="loginLogout" onClick={logout}>Logout</button>
+                            <Link to='/'><button className="loginLogout" onClick={logout}>Logout</button></Link>
                             </div>
                             : <Link to='/login-register'><button className="loginLogout">Login</button></Link>}
                         </div>

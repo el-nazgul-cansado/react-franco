@@ -1,0 +1,38 @@
+.checkoutContainer{
+    min-height: 70vh;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 60px;
+}
+.compraExitosa{
+    min-height: 70vh;
+}
+.complete-order-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.complete-order-title{
+    color: #FFD700;
+    font-size: 75px;
+}
+.complete-order-img{
+    height: 300px;
+    width: 500px;
+}
+.complete-order-code-date-ferawell{
+    color: #FFD700;
+    font-size: 1.5em;
+}
+.complete-order-btn{
+    height: 38px;
+    width: 200px;
+    color: #FFD700;
+    background-color: black;
+    border: 2px solid #FFD700;
+    border-radius: 20px;
+}

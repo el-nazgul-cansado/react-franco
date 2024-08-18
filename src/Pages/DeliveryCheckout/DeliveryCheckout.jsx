@@ -1,6 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { useContext } from 'react'
+import { useContext, useState, useEffect } from 'react'
+import { Loading } from '../../Componentes/Loading/Loading'
 import { DeliveryContext } from '../../context/DeliveryContext'
+import { LoginContext } from '../../context/LoginContext'
 import { Footer } from '../../Componentes/Footer/Footer'
 import './DeliveryCheckout.css'
 
@@ -8,7 +10,36 @@ export const DeliveryCheckout = () => {
 
     const { selectedOption, setSelectedOption, selectedAtHomeWorkOption, setSelectedAtHomeWorkOption, setFinalSelectedOption } = useContext(DeliveryContext)
 
+    const { user } = useContext(LoginContext)
+    
     const navigate = useNavigate()
+
+    const [loading, setLoading] = useState(true)
+    const [userLogged, setUserLogged] = useState(false)
+
+    setTimeout(() =>{
+        setLoading(false)
+    }, 900)
+
+    useEffect(() => {
+        const checkUserLogged = async () => {
+          if (user.logged === true) {
+            setUserLogged(true);
+          }
+        };
+    
+        checkUserLogged();
+      }, [user.logged]);
+    
+      useEffect(() => {
+        const timeout = setTimeout(() => {
+          if (!userLogged) {
+            navigate('/login-register'); // Reemplaza '/otra-ruta' con la ruta deseada
+          }
+        }, 900);
+    
+        return () => clearTimeout(timeout); // Limpia el timeout si el componente se desmonta
+      }, [userLogged, navigate]);
 
     const handleVolverDelivery = () => {
         navigate(-1)
@@ -49,6 +80,7 @@ export const DeliveryCheckout = () => {
 
         if (selectedOption.option === 'in-storePickup') {
             setFinalSelectedOption( {
+                option: 'in-storePickup',
                 address: 'Avenida Siempreviva',
                 addressNumber: 742,
                 dept: null,
@@ -65,6 +97,8 @@ export const DeliveryCheckout = () => {
     };
 
     return(
+        <>
+        {loading ? <Loading /> :
         <div className="deliveryFormAndActionsContainer">
             <form className='deliveryFormContainer' onSubmit={handleSubmit}>
                 <div className={`in-storePickupContainer ${selectedOption.option === 'in-storePickup' ? 'deliverySelected' : ''}`} onClick={() => handleOptionInStorePickup()}>
@@ -133,18 +167,18 @@ export const DeliveryCheckout = () => {
                         <div>
                             <label className={`atHomeWorkLabel ${selectedOption.option === 'delivery' ? 'deliverySelectedLabel' : ''}`}>¿Es tu trabajo o tu casa?</label>
                             <div className='atHomeWorkContainer'>
-                                <div className="atHomeWorkOption" onClick={() => handleAtHomeWorkChange('work')}>
+                                <div className="atHomeWorkOption" onClick={() => handleAtHomeWorkChange('trabajo')}>
                                     <div className='atHomeWorkInputContainer'>
-                                        <input className="deliveryRadioInput" disabled={selectedOption.option === 'in-storePickup'} checked={selectedAtHomeWorkOption === 'work'} onChange={() => handleAtHomeWorkChange('work')} type="radio" id="atWorkInput" />
+                                        <input className="deliveryRadioInput" disabled={selectedOption.option === 'in-storePickup'} checked={selectedAtHomeWorkOption === 'trabajo'} onChange={() => handleAtHomeWorkChange('work')} type="radio" id="atWorkInput" />
                                         <label className="deliveryCustomRadio" htmlFor="atWorkInput"></label>
                                     </div>
                                     <div>
                                         <p className={`atHomeWorkParagraph ${selectedOption.option === 'delivery' ? 'deliverySelectedLabel' : ''}`}>Es mi trabajo</p>
                                     </div>
                                 </div>
-                                <div className="atHomeWorkOption" onClick={() => handleAtHomeWorkChange('home')}>
+                                <div className="atHomeWorkOption" onClick={() => handleAtHomeWorkChange('hogar')}>
                                     <div className='atHomeWorkInputContainer'>
-                                        <input className="deliveryRadioInput" disabled={selectedOption.option === 'in-storePickup'} checked={selectedAtHomeWorkOption === 'home'} onChange={() => handleAtHomeWorkChange('home')} type="radio" id="atHomeInput" />
+                                        <input className="deliveryRadioInput" disabled={selectedOption.option === 'in-storePickup'} checked={selectedAtHomeWorkOption === 'hogar'} onChange={() => handleAtHomeWorkChange('home')} type="radio" id="atHomeInput" />
                                         <label className="deliveryCustomRadio" htmlFor="atHomeInput"></label>
                                     </div>
                                     <div>
@@ -161,6 +195,7 @@ export const DeliveryCheckout = () => {
                 </div>
             </form>
             <Footer />
-        </div>
+        </div>}
+        </>
     )
 }

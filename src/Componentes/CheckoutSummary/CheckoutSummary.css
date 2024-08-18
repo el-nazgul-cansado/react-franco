@@ -1,0 +1,70 @@
+.checkout-product-container{
+    background-color: black;
+    border: 3px solid #FFD700;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+.checkout-summary-title{
+    color: #FFD700;
+    padding-bottom: 50px;
+}
+.checkout-product-name-container{
+    border-bottom: 3px solid #FFD700;
+}
+.checkout-product-name{
+    color: #FFD700;
+    padding: 15px 0px 15px 50px;
+}
+.checkout-image-data-container{
+    display: flex;
+    align-items: center;
+}
+.checkout-product-image-container{
+    padding: 18px 18px 18px 18px;
+    border-right: 3px solid #FFD700;
+}
+.checkout-product-image{
+    height: 200px;
+    width: 200px;
+}
+.checkout-data-container{
+    padding: 0px 30px 0px 30px;
+}
+.checkout-product-color{
+    color: #FFD700;
+}
+.checkout-product-quantity{
+    color: #FFD700;
+}
+.checkout-product-price{
+    color: #FFD700;
+}
+.purchase-summary-prices-container{
+    display: grid;
+    grid-template-rows: 50px 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: 3px solid #FFD700;
+    border-radius: 20px;
+}
+.checkout-summary-installments-amount-container{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.checkout-summary-installments{
+    color: #FFD700;
+    margin: 0;
+}
+.checkout-summary-amount{
+    color: #FFD700;
+    margin: 0;
+}
+.checkout-summary-total-container{
+    display: flex;
+    justify-content: center;
+}
+.checkout-summary-total{
+    color: #FFD700;
+}

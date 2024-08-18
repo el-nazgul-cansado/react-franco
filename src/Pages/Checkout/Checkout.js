@@ -1,28 +1,38 @@
 import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { Footer } from '../../Componentes/Footer/Footer'
 import { useCartContext } from "../../context/CartContext"
 import { useLoginContext } from "../../context/LoginContext"
+import { useDeliveryContext } from "../../context/DeliveryContext"
+import { Loading } from "../../Componentes/Loading/Loading"
 import { CheckoutSummary } from "../../Componentes/CheckoutSummary/CheckoutSummary"
 import { CheckoutForm } from "../../Componentes/CheckoutForm/CheckoutForm"
+import { DeliverySummary } from "../../Componentes/DeliverySummary/DeliverySummary"
 import { pedirDatos } from "../../helpers/pedirDatos"
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
-import "./Checkout.scss"
+import "./Checkout.css"
 /* import { db } from "../../firebase/config"
 import { collection, writeBatch, documentId, getDocs, where, query, addDoc } from "firebase/firestore" */
 
 
 export const Checkout = () => {
+
+    const navigate = useNavigate();
+
     const { cart, emptyCart } = useCartContext()
 
     const { user } = useLoginContext()
 
+    const { finalSelectedOption } = useDeliveryContext()
+
     const [createdOrder, setCreatedOrder] = useState(null)
     const [allProds, setAllProds] = useState([])
-    const [errors, setErrors] = useState({})
+/*     const [errors, setErrors] = useState({}) */
+    const [userLogged, setUserLogged] = useState(false)
+    const [isDeliverySummaryReady, setIsDeliverySummaryReady] = useState(false);
 
-    const [loadingCheck, setLoadingCheck] = useState(false)
+    const [loading, setLoading] = useState(true)
 
     const [values, setValues] = useState({
         nombre: '',
@@ -42,22 +52,54 @@ export const Checkout = () => {
         values.email = user.email
     }
 
+    setTimeout(() =>{
+        setLoading(false)
+    }, 900)
+
+    useEffect(() => {
+        const checkUserLogged = async () => {
+          if (user.logged === true) {
+            setUserLogged(true);
+          }
+        };
+    
+        checkUserLogged();
+      }, [user.logged]);
+    
+      useEffect(() => {
+        const timeout = setTimeout(() => {
+          if (!userLogged) {
+            navigate('/login-register'); // Reemplaza '/otra-ruta' con la ruta deseada
+          }
+        }, 900);
+    
+        return () => clearTimeout(timeout); // Limpia el timeout si el componente se desmonta
+      }, [userLogged, navigate]);
+
+      useEffect(() => {
+        // Simula la verificación del estado de carga del componente DeliverySummary
+        const checkDeliverySummary = async () => {
+            await new Promise(resolve => setTimeout(resolve, 1000)); // Simula tiempo de carga
+            setIsDeliverySummaryReady(true); // Marca como listo cuando esté cargado
+        };
+
+        checkDeliverySummary();
+    }, []);
+
+    useEffect(() => {
+        pedirDatos()
+        .then(data =>{ setAllProds(data)})
+    },[allProds])
+
     const handleInputChange = (e) => {
         setValues({
             ...values,
             [e.target.name]: e.target.value
         })
     }
-    
-    useEffect(() => {
-        pedirDatos()
-        .then(data =>{ setAllProds(data)})
-    },[allProds])
 
     const handleSubmit = (e) => {
         e.preventDefault()
-
-        setLoadingCheck(true)
 
         /* const order = {
             cliente: values,
@@ -76,6 +118,8 @@ export const Checkout = () => {
         const productosAsync = getDocs(itemsRef) */
         
         let check = true
+
+        let checkForm = {}
         
             const MySwal = withReactContent(Swal)
                 allProds.filter(producto =>
@@ -92,86 +136,8 @@ export const Checkout = () => {
                     }
                     })
                   );
-
-            let checkForm = {}
             
-            if(!values.nombre.trim()) {
-                checkForm.nombre = 'Este campo no puede estar vacio'
-                check = false
-                setErrors(checkForm)
-            } else {
-                delete errors.nombre
-            }
-            if(!values.direccion.trim()) {
-                checkForm.direccion = 'Este campo no puede estar vacio'
-                check = false
-                setErrors(checkForm)
-            } else {
-                delete errors.direccion
-            }
-            if(!values.email.trim()) {
-                checkForm.email = 'Este campo no puede estar vacio'
-                check = false
-                setErrors(checkForm)
-            } else {
-                delete errors.email
-            }
-            if(!values.celular.trim()) {
-                checkForm.celular = 'Este campo no puede estar vacio'
-                check = false
-                setErrors(checkForm)
-            } else {
-                delete errors.celular
-            }
-            if(values.celular.length < 10) {
-                checkForm.celular = 'Numero incompleto'
-                check = false
-                setErrors(checkForm)
-            } else {
-                delete errors.celular
-            }
-            if(values.metodoDePago.length <= 0) {
-                checkForm.metodoDePago = 'Este campo no puede estar vacio'
-                check = false
-                setErrors(checkForm)
-            } else {
-                delete errors.metodoDePago
-            }
-            if(!values.creditCard.trim()) {
-                checkForm.creditCard = 'Este campo no puede estar vacio'
-                check = false
-                setErrors(checkForm)
-            } else {
-                delete errors.creditCard
-            }
-            if(values.creditCard.length < 12) {
-                checkForm.creditCard = 'Numero incompleto'
-                check = false
-                setErrors(checkForm)
-            } else {
-                delete errors.creditCard
-            }
-            if(!values.MM.trim()) {
-                checkForm.datosTarjeta = 'Estos campos no puedenestar vacios'
-                check = false
-                setErrors(checkForm)
-            } else {
-                delete errors.datosTarjeta
-            }
-            if(!values.YY.trim()) {
-                checkForm.datosTarjeta = 'Estos campos no puedenestar vacios'
-                check = false
-                setErrors(checkForm)
-            } else {
-                delete errors.datosTarjeta
-            }
-            if(!values.cvc.trim()) {
-                checkForm.datosTarjeta = 'Estos campos no puedenestar vacios'
-                check = false
-                setErrors(checkForm)
-            } else {
-                delete errors.datosTarjeta
-            }
+/*             setErrors(checkForm); */
 
             function generarCaracterAleatorio() {
                 var caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -202,37 +168,71 @@ export const Checkout = () => {
         }
     }
 
-    if(createdOrder) {
-        return(
-            <>
-                <div className="completeOrderContainer">
-                <h2>Felicidades {createdOrder.nombre}!! Tu compra fue exitosa!!</h2>
-
-                <h3>Tu codigo de compra es {createdOrder.ordenCodigo}</h3>
-
-                <h2>Disfruta tu compra! Vuelve cuando quieras!!</h2>
-
-                <Link to='/'>Volver al inicio</Link>
-                </div>
-                <Footer />
-            </>
-        )
-    }
+    const currentDate = new Date()
+    const futureDate = new Date();
+    futureDate.setDate(currentDate.getDate() + 3);
+    const formattedDate = futureDate.toLocaleDateString();
 
     return(
         <>
-            <div className="checkoutContainer">   
-                <div>
-                    <CheckoutSummary />
+        {createdOrder ? 
+            <>
+                <div className="complete-order-container">
+                    <h2 className="complete-order-title">Gracias por tu compra maquina!!</h2>
+                    <img className="complete-order-img" src="/assets/images/complete-order/complete-order-emoji.png" alt="complete-order-emoji" />
+                    <h3 className="complete-order-code-date-ferawell">Tu codigo de compra es {createdOrder.ordenCodigo}</h3>
+                    {finalSelectedOption.option === 'in-storePickup' ?
+                        <h3 className="complete-order-code-date-ferawell">Te esperamos de Lunes a viernes en Avenida Siempreviva 742 de 9hs a 20hs</h3>
+                        :
+                        <h3 className="complete-order-code-date-ferawell">Enviaremos tu paquete a partir del {formattedDate} de 9hs a 20hs</h3>
+                        }
+                    <h3 className="complete-order-code-date-ferawell">Disfruta tu compra!! Vuelve cuando quieras!!</h3>
+                    <Link to='/'><button className="complete-order-btn">Volver al inicio</button></Link>
                 </div>
-                <div>
-                    <h2>Terminar compra</h2>
-                    <hr/>
-                    <CheckoutForm handleSubmit={handleSubmit} handleInputChange={handleInputChange} values={values} errors={errors} cart={cart} />
-                </div>
-            </div>
+                <Footer />
+            </>
+            :
+            cart && cart.length === 0 ? (
+                <>
+                    <div className="emptyCartContainer">
+                        <h2 className="empty-cart-title">OH NO!!</h2>
+                        <img className="empty-cart-img" src="/assets/images/empty-cart-c3po/c3po.jpg" alt="oh-no-c3po" />
+                        <p className="empty-cart-paragraph">Parece que t carrito esta vacio, andá a comprar algo</p>  {/* CSS en Cart.css */}
+                        <Link to="/"><button className="empty-cart-btn">Ir a comprar algo</button></Link>
+                    </div>
+                    <div>
+                        <Footer />
+                    </div>
+                </>
+            ) : (
+                <>
+                
+                    {loading ? <Loading /> :
+                    <>
+                        <div className="checkoutContainer">   
+                            <div>
+                                <CheckoutSummary />
+                            </div>
+                            <div>
+                                <DeliverySummary />
+                            </div>
+                            <div>
+                                <h2 className="delivery-summary-title">Terminar compra</h2>
+                                <CheckoutForm 
+                                    handleSubmit={handleSubmit} 
+                                    handleInputChange={handleInputChange} 
+                                    values={values} 
+                                    cart={cart} 
+                                />
+                            </div>
+                        </div>
+                        <Footer />
+                    </>}
+                </>
+            )}
+            
         
-            <Footer />
+
         </>
 
     )

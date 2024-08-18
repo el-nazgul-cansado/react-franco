@@ -1,9 +1,9 @@
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router-dom';
 import { ItemListContainer } from '../../Componentes/ItemListContainer/ItemListContainer';
-import "./CarouselContainer.css"
+import "./IndexComponent.css"
 
-function CarouselContainer() {
+function IndexComponent() {
 
   return (
     <div>
@@ -34,7 +34,7 @@ function CarouselContainer() {
                       </Link>
           
                       <Carousel.Caption>
-                        <h3>Buildea tu PC</h3>
+                        <h3>Armá tu PC Gamer</h3>
                         <p>Todos los perifericos que necesites para terminar de armar tu PC</p>
                       </Carousel.Caption>
                     </Carousel.Item>
@@ -65,4 +65,4 @@ function CarouselContainer() {
   );
 }
 
-export default CarouselContainer;
+export default IndexComponent;

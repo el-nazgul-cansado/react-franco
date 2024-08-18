@@ -1,0 +1,19 @@
+.checkout-form-input{
+    border: 2px solid #FFD700;
+    color: #FFD700;
+    background-color: black;
+    margin-bottom: 23px;
+}
+.checkout-form-input:focus{
+    border: 2px solid #FFD700;
+    color: #FFD700;
+    background-color: black;
+}
+.checkout-summary-btn{
+    height: 38px;
+    width: 200px;
+    color: #FFD700;
+    background-color: black;
+    border: 2px solid green;
+    border-radius: 20px;
+}

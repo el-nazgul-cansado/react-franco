@@ -1,5 +1,32 @@
 .emptyCartContainer{
     height: calc( 100vh - 175px - 200px );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+}
+.empty-cart-title{
+    color: #FFD700;
+    font-size: 75px;
+}
+.empty-cart-img{
+    height: 300px;
+    width: 600px;
+}
+.empty-cart-paragraph{
+    color: #FFD700;
+    font-size: 30px;
+    margin: 0;
+}
+.empty-cart-btn{
+    height: 38px;
+    width: 200px;
+    color: #FFD700;
+    background-color: black;
+    border: 2px solid #FFD700;
+    border-radius: 20px;
 }
 .cartContainer{
     height: calc( 100% - 140px - 138px );

@@ -22,7 +22,18 @@ export const DeliveryProvider = ({children}) => {
     });
     const [selectedAtHomeWorkOption, setSelectedAtHomeWorkOption] = useState('');
 
-    const [finalSelectedOption, setFinalSelectedOption] = useState({})
+    const [finalSelectedOption, setFinalSelectedOption] = useState({
+                                                                    option: 'in-storePickup',
+                                                                    address: 'Avenida Siempreviva',
+                                                                    addressNumber: 742,
+                                                                    dept: null,
+                                                                    zipCode: '1714',
+                                                                    province: 'Buenos Aires',
+                                                                    city: 'Ituzaingo',
+                                                                    crossStreet1: 'Avenida Nuncaviva',
+                                                                    crossStreet2: 'Avenida Avecesviva',
+                                                                    atHomeWork: null
+    })
 
     return(
         <DeliveryContext.Provider value={ {selectedOption, setSelectedOption, selectedAtHomeWorkOption, setSelectedAtHomeWorkOption, finalSelectedOption, setFinalSelectedOption} }>

@@ -21,5 +21,7 @@ export const CharacterLimitInput = ({ limit, className, onChange, name, value, p
 
   }, [limit]);
 
-  return <input type="number" className={className} onChange={onChange} name={name} value={value} placeholder={placeholder} ref={inputRef} />;
+  return (
+    <input type="number" className={className} onChange={onChange} name={name} value={value} placeholder={placeholder} ref={inputRef} />
+  )
 };

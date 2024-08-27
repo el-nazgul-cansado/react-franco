@@ -24,11 +24,10 @@ export const Checkout = () => {
 
     const { user } = useLoginContext()
 
-    const { finalSelectedOption } = useDeliveryContext()
+    const { selectedOption } = useDeliveryContext()
 
     const [createdOrder, setCreatedOrder] = useState(null)
     const [allProds, setAllProds] = useState([])
-/*     const [errors, setErrors] = useState({}) */
     const [userLogged, setUserLogged] = useState(false)
     const [isDeliverySummaryReady, setIsDeliverySummaryReady] = useState(false);
 
@@ -36,7 +35,6 @@ export const Checkout = () => {
 
     const [values, setValues] = useState({
         nombre: '',
-        direccion: '',
         email: '',
         celular: '',
         metodoDePago: '',
@@ -91,82 +89,59 @@ export const Checkout = () => {
         .then(data =>{ setAllProds(data)})
     },[allProds])
 
-    const handleInputChange = (e) => {
-        setValues({
-            ...values,
-            [e.target.name]: e.target.value
-        })
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-
-        /* const order = {
-            cliente: values,
-            item: cart,
-            total: totalCart()
-        }
-
-        const batch = writeBatch(db)
-        const ordersRef = collection(db, 'orders')
-        const productosRef = collection(db, 'productos')
-
-        const outOfStock = []
-
-        const itemsRef = query(productosRef, where(documentId(), 'in', cart.map(prod => prod.id)))
-
-        const productosAsync = getDocs(itemsRef) */
+    const handleSubmit = (values, { setSubmitting }) => {
         
-        let check = true
-
-        let checkForm = {}
-        
-            const MySwal = withReactContent(Swal)
-                allProds.filter(producto =>
-                    cart.find(item => {
-                    if (item.id === producto.id) {
-                        if (producto.stock <= 0){
-                            MySwal.fire({
-                                title: <strong>Oh no!!</strong>,
-                                html: <i>Ya no hay stock de {item.name}!!</i>,
-                                icon: 'error'
-                                })
-                            check = false
-                          }
+        let check = true;
+    
+        const MySwal = withReactContent(Swal);
+        allProds.filter(producto =>
+            cart.find(item => {
+                if (item.id === producto.id) {
+                    if (producto.stock <= 0) {
+                        MySwal.fire({
+                            title: <strong>Oh no!!</strong>,
+                            html: <i>Ya no hay stock de {item.name}!!</i>,
+                            icon: 'error'
+                        });
+                        check = false;
                     }
-                    })
-                  );
-            
-/*             setErrors(checkForm); */
-
-            function generarCaracterAleatorio() {
-                var caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-                var indice = Math.floor(Math.random() * caracteres.length);
-                return caracteres.charAt(indice);
-              }
-            
-              function generarCaracteresAleatorios(cantidad) {
-                var resultado = "";
-                for (var i = 0; i < cantidad; i++) {
-                  resultado += generarCaracterAleatorio();
                 }
-                return resultado;
-              }
-              var caracteresAleatorios = generarCaracteresAleatorios(10);
-
+            })
+        );
+    
+        function generarCaracterAleatorio() {
+            var caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            var indice = Math.floor(Math.random() * caracteres.length);
+            return caracteres.charAt(indice);
+        }
+    
+        function generarCaracteresAleatorios(cantidad) {
+            var resultado = "";
+            for (var i = 0; i < cantidad; i++) {
+                resultado += generarCaracterAleatorio();
+            }
+            return resultado;
+        }
+    
+        var caracteresAleatorios = generarCaracteresAleatorios(10);
+    
         if (check) {
             allProds.filter(producto =>
                 cart.find(item => {
-                if (item.id === producto.id && item.cantidad > 0 && producto.stock > 0) {
-                    let stockFinal = producto.stock - item.cantidad;
-                    values.ordenCodigo = caracteresAleatorios
-                    setCreatedOrder(values)
-                    emptyCart()
-                  } 
+                    if (item.id === producto.id && item.cantidad > 0 && producto.stock > 0) {
+                        let stockFinal = producto.stock - item.cantidad;
+                        values.ordenCodigo = caracteresAleatorios;
+                        setCreatedOrder(values);
+                        emptyCart();
+                        console.log(values);
+                    }
                 })
-              );
+            );
         }
-    }
+    
+        // Indica que la operación de submit ha terminado
+        setSubmitting(false);
+    };
 
     const currentDate = new Date()
     const futureDate = new Date();
@@ -181,7 +156,7 @@ export const Checkout = () => {
                     <h2 className="complete-order-title">Gracias por tu compra maquina!!</h2>
                     <img className="complete-order-img" src="/assets/images/complete-order/complete-order-emoji.png" alt="complete-order-emoji" />
                     <h3 className="complete-order-code-date-ferawell">Tu codigo de compra es {createdOrder.ordenCodigo}</h3>
-                    {finalSelectedOption.option === 'in-storePickup' ?
+                    {selectedOption.option === 'in-storePickup' ?
                         <h3 className="complete-order-code-date-ferawell">Te esperamos de Lunes a viernes en Avenida Siempreviva 742 de 9hs a 20hs</h3>
                         :
                         <h3 className="complete-order-code-date-ferawell">Enviaremos tu paquete a partir del {formattedDate} de 9hs a 20hs</h3>
@@ -220,9 +195,8 @@ export const Checkout = () => {
                                 <h2 className="delivery-summary-title">Terminar compra</h2>
                                 <CheckoutForm 
                                     handleSubmit={handleSubmit} 
-                                    handleInputChange={handleInputChange} 
-                                    values={values} 
-                                    cart={cart} 
+                                    values={values}
+                                    cart={cart}
                                 />
                             </div>
                         </div>
@@ -237,3 +211,19 @@ export const Checkout = () => {
 
     )
 }
+
+        /* const order = {
+            cliente: values,
+            item: cart,
+            total: totalCart()
+        }
+
+        const batch = writeBatch(db)
+        const ordersRef = collection(db, 'orders')
+        const productosRef = collection(db, 'productos')
+
+        const outOfStock = []
+
+        const itemsRef = query(productosRef, where(documentId(), 'in', cart.map(prod => prod.id)))
+
+        const productosAsync = getDocs(itemsRef) */

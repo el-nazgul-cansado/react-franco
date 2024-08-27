@@ -5,7 +5,7 @@ import './DeliverySummary.css'
 
 export const DeliverySummary = () => {
     
-    const { finalSelectedOption } = useDeliveryContext();
+    const { selectedOption } = useDeliveryContext();
 
     const apiKey = 'AIzaSyANetDCMcrv0ASgkPPC4Sllic7sNlM9ckw';
     const defaultLocation = { lat: -34.603722, lng: -58.381592 };
@@ -24,7 +24,7 @@ export const DeliverySummary = () => {
         loadMapData();
     }, []);
 
-    if (finalSelectedOption.option === 'in-storePickup'){
+    if (selectedOption.option === 'in-storePickup'){
         return(
             <div>
                 <h2 className="delivery-summary-title">
@@ -32,7 +32,7 @@ export const DeliverySummary = () => {
                 </h2>
                 <div className="delivery-summary-address-shift-map-container">
                     <div className="delivery-summary-address-shift-container">
-                        <p className="delivery-summary-address-shift"><strong>Direccion: </strong>{finalSelectedOption.address} {finalSelectedOption.addressNumber}</p>
+                        <p className="delivery-summary-address-shift"><strong>Direccion: </strong>{selectedOption.address} {selectedOption.addressNumber}</p>
                         <p className="delivery-summary-address-shift"><strong>Horario: </strong>Lunes a Viernes de 9hs a 20hs</p>
                     </div>
                     <div>
@@ -50,19 +50,19 @@ export const DeliverySummary = () => {
                 </div>
             </div>
         )
-    } if(finalSelectedOption.option === 'delivery') {
+    } if(selectedOption.option === 'delivery') {
         return(
             <div>
                 <h2 className="delivery-summary-title">
                     Delivery
                 </h2>
                 <div className="delivery-summary-container">
-                    <p className="delivery-summary-data"><strong>Direccion: </strong>{finalSelectedOption.address} {finalSelectedOption.addressNumber}</p>
-                    <p className="delivery-summary-data"><strong>Dpto: </strong>{finalSelectedOption.dept ? finalSelectedOption.dept : '-'}</p>
-                    <p className="delivery-summary-data"><strong>Provincia: </strong>{finalSelectedOption.province}</p>
-                    <p className="delivery-summary-data"><strong>Ciudad: </strong>{finalSelectedOption.city}</p>
-                    <p className="delivery-summary-data">Entre <strong>{finalSelectedOption.crossStreet1}</strong> y <strong>{finalSelectedOption.crossStreet2}</strong></p>
-                    <p className="delivery-summary-data-last">Este es mi <strong>{finalSelectedOption.atHomeWork}</strong></p>
+                    <p className="delivery-summary-data"><strong>Direccion: </strong>{selectedOption.address} {selectedOption.addressNumber}</p>
+                    <p className="delivery-summary-data"><strong>Dpto: </strong>{selectedOption.dept ? selectedOption.dept : '-'}</p>
+                    <p className="delivery-summary-data"><strong>Provincia: </strong>{selectedOption.province}</p>
+                    <p className="delivery-summary-data"><strong>Ciudad: </strong>{selectedOption.city}</p>
+                    <p className="delivery-summary-data">Entre <strong>{selectedOption.crossStreet1}</strong> y <strong>{selectedOption.crossStreet2}</strong></p>
+                    <p className="delivery-summary-data-last">Es mi <strong>{selectedOption.atHomeWork}</strong></p>
                 </div>
             </div>
         )

@@ -103,3 +103,23 @@
     border: 5px solid purple;
     animation: vibratepurple 0.1s linear infinite;
 }
+.hoverred:hover .itemImage{
+    filter: drop-shadow(0px 0px 30px
+    rgba(255,0,0));
+}
+.hovergreen:hover .itemImage{
+    filter: drop-shadow(0px 0px 30px
+    rgba(0,128,0));
+}
+.hoverblue:hover .itemImage{
+    filter: drop-shadow(0px 0px 30px
+    rgba(0,0,255));
+}
+.hoveryellow:hover .itemImage{
+    filter: drop-shadow(0px 0px 30px
+    rgba(255,255,0));
+}
+.hoverpurple:hover .itemImage{
+    filter: drop-shadow(0px 0px 30px
+    rgba(128,0,128));
+}

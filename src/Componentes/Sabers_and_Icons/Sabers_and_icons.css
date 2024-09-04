@@ -2,24 +2,38 @@
     display: none; /* Oculta el contenido por defecto */
     position: absolute;
     background-color: black;
-    min-width: 640px; /* Ajusta esto según la suma del ancho de las 4 columnas */
+    min-width: 640px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     flex-wrap: wrap; /* Permite que los ítems se envuelvan en múltiples filas */
+    padding: 30px 15px 30px 15px;
+    transition: all 0.3 ease;
   }
   
   .dropdown:hover .dropdown-content {
     z-index: 1000;
     display: flex;
     justify-content: space-evenly;
-    gap: 50px;
+    gap: 20px;
+    border-radius: 20px;
   }
   
   .icon-saber-pair {
     display: flex; /* Mantiene los ítems de cada par lado a lado */
-    width: calc(25% - 10px); /* Ajusta el ancho para 4 columnas, restando el espacio del gap */
-    margin: 1px; /* Espacio entre los pares */
+    width: calc(25% - 10px);
     justify-content: space-evenly; /* Espacia el icono y el sable dentro del par */
+    border: 2px solid #FFD700;
+    border-radius: 20px;
+    padding: 20px 0 20px 0;
+    transition: all 0.3s ease;
+  }
+
+  .icon-saber-pair.active{
+    transform: scale(1.2);
+  }
+
+  .icon-saber-pair.inactive {
+    filter: grayscale(100%);
   }
   
   .icon-saber-pair img {
@@ -29,3 +43,87 @@
   a, button, .clickable {
     cursor: inherit !important;
   }
+
+@keyframes vibratered {
+    0% { box-shadow: 0px 0px 20px red;}
+    25% { box-shadow: 0px 0px 23px red;}
+    50% { box-shadow: 0px 0px 28px red;}
+    75% { box-shadow: 0px 0px 33px red;}
+    100% { box-shadow: 0px 0px 38px red;}
+  }
+@keyframes vibrategreen {
+    0% { box-shadow: 0px 0px 20px green;}
+    25% { box-shadow: 0px 0px 23px green;}
+    50% { box-shadow: 0px 0px 28px green;}
+    75% { box-shadow: 0px 0px 33px green;}
+    100% { box-shadow: 0px 0px 38px green;}
+  }
+@keyframes vibrateblue {
+    0% { box-shadow: 0px 0px 20px blue;}
+    25% { box-shadow: 0px 0px 23px blue;}
+    50% { box-shadow: 0px 0px 28px blue;}
+    75% { box-shadow: 0px 0px 33px blue;}
+    100% { box-shadow: 0px 0px 38px blue;}
+  }
+@keyframes vibrateyellow {
+    0% { box-shadow: 0px 0px 20px yellow;}
+    25% { box-shadow: 0px 0px 23px yellow;}
+    50% { box-shadow: 0px 0px 28px yellow;}
+    75% { box-shadow: 0px 0px 33px yellow;}
+    100% { box-shadow: 0px 0px 38px yellow;}
+  }
+@keyframes vibratepurple {
+    0% { box-shadow: 0px 0px 20px purple;}
+    25% { box-shadow: 0px 0px 23px purple;}
+    50% { box-shadow: 0px 0px 28px purple;}
+    75% { box-shadow: 0px 0px 33px purple;}
+    100% { box-shadow: 0px 0px 38px purple;}
+  }
+.item:hover{
+    transform: scale(1.1);
+}
+.hoverIconred:hover{
+    border: 2px solid red;
+    animation: vibratered 0.1s linear infinite;
+}
+.hoverIcongreen:hover{
+    border: 2px solid green;
+    animation: vibrategreen 0.1s linear infinite;
+}
+.hoverIconblue:hover{
+    border: 2px solid blue;
+    animation: vibrateblue 0.1s linear infinite;
+}
+.hoverIconyellow:hover{
+    border: 2px solid yellow;
+    animation: vibrateyellow 0.1s linear infinite;
+}
+.hoverIconpurple:hover{
+    border: 2px solid purple;
+    animation: vibratepurple 0.1s linear infinite;
+}
+
+.dropdown:hover .hoverDropdownred {
+  border: 3px solid red;
+  animation: vibratered 0.1s linear infinite;
+}
+
+.dropdown:hover .hoverDropdowngreen {
+  border: 3px solid green;
+  animation: vibrategreen 0.1s linear infinite;
+}
+
+.dropdown:hover .hoverDropdownblue {
+  border: 3px solid blue;
+  animation: vibrateblue 0.1s linear infinite;
+}
+
+.dropdown:hover .hoverDropdownyellow {
+  border: 3px solid yellow;
+  animation: vibrateyellow 0.1s linear infinite;
+}
+
+.dropdown:hover .hoverDropdownpurple {
+  border: 3px solid purple;
+  animation: vibratepurple 0.1s linear infinite;
+}

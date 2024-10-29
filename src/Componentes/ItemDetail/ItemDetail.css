@@ -65,6 +65,9 @@
     -ms-overflow-style: none;
     animation: auto-scroll 20s linear infinite;
 }
+.itemDetailDescription::-webkit-scrollbar {
+    display: none;
+}
 .itemDetailPrice {
     color: #FFD700;
     font-size: 30px;
@@ -112,9 +115,6 @@
 .disabled {
     border-color: #ffd90046;
     color: #ffd90046;
-}
-.itemDetailDescription::-webkit-scrollbar {
-    display: none;
 }
 
 @keyframes auto-scroll {

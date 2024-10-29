@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { useSabersIcons } from '../../context/SabersIconsContext';
 import { Link } from 'react-router-dom';
 import './Item.css';
@@ -6,6 +6,16 @@ import './Item.css';
 export const Item = ({ id, name, image, price, stock }) => {
     const { selectedIcon } = useSabersIcons();
     const audioRef = useRef(null);
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const [isHovering, setIsHovering] = useState(false)
+
+    const handleMouseMove = (e) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        setMousePosition({
+            x: e.clientX - rect.left,
+            y: e.clientY - rect.top
+        });
+    };
 
     useEffect(() => {
         if (audioRef.current) {
@@ -29,6 +39,7 @@ export const Item = ({ id, name, image, price, stock }) => {
         if (audioRef.current) {
             audioRef.current.play().catch(error => console.log('Error playing sound:', error));
         }
+        setIsHovering(true)
     };
 
     const stopHoverSound = () => {
@@ -37,6 +48,7 @@ export const Item = ({ id, name, image, price, stock }) => {
             audioRef.current.currentTime = 0;
             audioRef.current.volume = 0;
         }
+        setIsHovering(false)
     };
 
     return (
@@ -44,6 +56,12 @@ export const Item = ({ id, name, image, price, stock }) => {
             className={`col-2 item hover${selectedIcon.color}`}
             onMouseEnter={playHoverSound}
             onMouseLeave={stopHoverSound}
+            onMouseMove={handleMouseMove}
+            style={{
+                background: isHovering
+                    ? `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, ${selectedIcon.color}, transparent 30%), black`
+                    : 'black'
+            }}
         >
             <h2 className="itemName">{name}</h2>
             <img className="itemImage" src={image} alt={name} />

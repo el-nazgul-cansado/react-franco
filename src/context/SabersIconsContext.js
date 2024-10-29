@@ -1,4 +1,3 @@
-// SabersIconsContext.js
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { sabers_and_icons_data } from '../helpers/pedirDatos'; // Asegúrate de actualizar la ruta de importación según sea necesario
 
@@ -39,6 +38,8 @@ export const SabersIconsProvider = ({ children }) => {
   const handleIconClick = (icon) => {
     setSelectedIcon(icon);
     localStorage.setItem('selectedIcon', JSON.stringify(icon));
+    const audio = new Audio("/assets/sounds/sonido_sable_laser_icono.mp3");
+    audio.play();
   };
 
   const updateCursor = (cursorUrl) => {

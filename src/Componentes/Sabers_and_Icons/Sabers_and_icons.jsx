@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { useSabersIcons } from "../../context/SabersIconsContext" // Asegúrate de actualizar la ruta de importación según sea necesario
+import { useSabersIcons } from "../../context/SabersIconsContext"
 import './Sabers_and_icons.css';
 
 export const Sabers_and_icons = () => {
@@ -17,7 +17,7 @@ export const Sabers_and_icons = () => {
   };
 
   if (!selectedIcon) {
-    return <div>Cargando...</div>;
+    return <div></div>;
   }
 
   return (

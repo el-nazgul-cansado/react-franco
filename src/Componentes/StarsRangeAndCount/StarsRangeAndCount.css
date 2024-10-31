@@ -33,6 +33,7 @@ input[type='range']::-moz-range-thumb {
     text-align: center;
     font-size: 20px;
     background-color: black;
+    border-radius: 200px;
     border: none;
 }
 
@@ -68,10 +69,13 @@ label {
 .rangeContainer {
     display: none; /* Oculta el rangeContainer por defecto */
     position: absolute; /* Posicionamiento absoluto respecto a rangeDropdown */
-    top: 105%; /* Posiciona justo debajo del rangeDropdown */
+    top: 150%; /* Posiciona justo debajo del rangeDropdown */
     left: 0;
     background-color: black;
-    z-index: 100; /* Asegura que se muestre sobre otros elementos */
+    border: 2px solid #FFD700;
+    border-radius: 20px;
+    z-index: 100;
+    padding: 5px 5px 5px 5px;
 }
 .rangeDropdown:hover .rangeContainer {
     display: block; /* Muestra el rangeContainer cuando se hace hover sobre rangeDropdown */

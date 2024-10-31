@@ -5,7 +5,7 @@
 }
 .contenedorLogoLinksCarrito {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.817);
     padding-top: 30px;
@@ -13,47 +13,29 @@
     height: 138px;
     position: relative;
     z-index: 1001;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(4px);
 }
-
-.logo{
-    font-family: 'Arial Black', Gadget, sans-serif; /* Fuente en negrita */
-    color: black; /* Color interior del texto */
-    font-size: 50px; /* Tamaño de la fuente */
-    text-align: center; /* Alineación del texto */
-    letter-spacing: 6px; /* Espaciado entre caracteres */
-    text-shadow:
-      3px 0 0 #FFD700, /* Sombra amarilla a la derecha */
-      -3px 0 0 #FFD700, /* Sombra amarilla a la izquierda */
-      0 3px 0 #FFD700, /* Sombra amarilla debajo */
-      0 -3px 0 #FFD700, /* Sombra amarilla encima */
-      2px 2px #FFD700, /* Sombra amarilla abajo-derecha */
-      -2px -2px 0 #FFD700, /* Sombra amarilla arriba-izquierda */
-      2px -2px 0 #FFD700, /* Sombra amarilla arriba-derecha */
-      -2px 2px 0 #FFD700; /* Sombra amarilla abajo-izquierda */
+.icons-stars-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
 }
-
-.logoLink {
-    text-decoration: none;
+.star-wars-logo{
+    height: 90px;
+    width: 200px;
 }
-
-.contenedorLinks{
+.contenedorLinks {
     display: flex;
     justify-items: space-around;
     gap: 50px;
-}
-
-.contenedorLinks .links{
-    font-size: 20px;
-    color: #FFD700;
-    text-decoration: none;
 }
 .userWelcome{
     color: white;
 }
 .loginLogout{
     background-color: black;
-    border-color: #FFD700;
+    border-color: white;
     border-radius: 10px;
     color: #FFD700;
     height: 40px;
@@ -76,12 +58,11 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 10px 20px;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
+    transition: all 0.3s ease; 
 }
 .headerButtonIcon {
     transition: transform 0.3s ease-in-out;
-    display: inline-block; /* Importante para que transform funcione en elementos inline como los íconos */
+    display: inline-block;
   }
   
 .rotated {

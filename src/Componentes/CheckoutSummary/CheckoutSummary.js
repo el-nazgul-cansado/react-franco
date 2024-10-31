@@ -31,7 +31,7 @@ export const CheckoutSummary = () => {
                     <img className="checkout-product-image" src={product.image} />
                   </div>
                   <div className="checkout-data-container">
-                    {product.color && <p className="checkout-product-color"><strong>Color: </strong>{product.color.text}</p>}
+                    {product.color && <p className="checkout-product-color"><strong>Color: </strong>{product.color}</p>}
                     <p className="checkout-product-quantity"><strong>Cantidad X </strong>{product.cantidad}</p>
                     <p className="checkout-product-price"><strong>Precio total: </strong>{product.price * product.cantidad}</p>
                   </div>

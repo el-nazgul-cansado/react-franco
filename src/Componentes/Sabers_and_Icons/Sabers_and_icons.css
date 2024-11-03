@@ -102,28 +102,3 @@ a, button, .clickable {
   border: 2px solid purple;
   animation: vibratepurple 0.1s linear infinite;
 }
-
-.dropdown:hover .hoverDropdownred {
-border: 3px solid red;
-animation: vibratered 0.1s linear infinite;
-}
-
-.dropdown:hover .hoverDropdowngreen {
-border: 3px solid green;
-animation: vibrategreen 0.1s linear infinite;
-}
-
-.dropdown:hover .hoverDropdownblue {
-border: 3px solid blue;
-animation: vibrateblue 0.1s linear infinite;
-}
-
-.dropdown:hover .hoverDropdownyellow {
-border: 3px solid yellow;
-animation: vibrateyellow 0.1s linear infinite;
-}
-
-.dropdown:hover .hoverDropdownpurple {
-border: 3px solid purple;
-animation: vibratepurple 0.1s linear infinite;
-}

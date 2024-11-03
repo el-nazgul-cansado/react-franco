@@ -44,7 +44,7 @@ export const LoginScreen = () => {
         <>
             <div className='login-register-image-screen-container'>  
                 <div className='login-register-image-container'>
-                    <img className='login-register-image' src='/assets/images/login-register/wallpaper2.svg' alt='login-register-image' />
+                    <img className='login-register-image' src='/assets/images/login-register/login-register.png' alt='login-register-image' />
                 </div>
                 <div className='login-register-screen'>
                     <div className={`login ${isRegistering ? 'login-exit-active' : 'login-enter-active'}`}>

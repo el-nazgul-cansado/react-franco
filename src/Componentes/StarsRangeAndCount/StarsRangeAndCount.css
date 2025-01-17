@@ -69,7 +69,7 @@ label {
 .rangeContainer {
     display: none; /* Oculta el rangeContainer por defecto */
     position: absolute; /* Posicionamiento absoluto respecto a rangeDropdown */
-    top: 150%; /* Posiciona justo debajo del rangeDropdown */
+    top: 100%; /* Posiciona justo debajo del rangeDropdown */
     left: 0;
     background-color: black;
     border: 2px solid #FFD700;

@@ -13,7 +13,7 @@ import './Header.css'
 export const Header = () => {
     const { user, logout } = useLoginContext()
 
-    const { selectedIcon } = useSabersIcons()
+    const { selectedIcon, toIndex } = useSabersIcons()
 
     const [rotationDegrees, setRotationDegrees] = useState(0);
     const [isToggled, setIsToggled] = useState(false);
@@ -23,16 +23,20 @@ export const Header = () => {
             setRotationDegrees(prev => prev + 180);
     };
 
-    const vibrate = keyframes`
-        0% { box-shadow: 0px 0px 5px ${selectedIcon.color}, 0px 0px 10px ${selectedIcon.color}, 0px 0px 20px ${selectedIcon.color}; } /* Sombra más definida */
-        25% { box-shadow: 0px 0px 8px ${selectedIcon.color}, 0px 0px 15px ${selectedIcon.color}, 0px 0px 25px ${selectedIcon.color}; } /* Sombra más definida */
-        50% { box-shadow: 0px 0px 10px ${selectedIcon.color}, 0px 0px 20px ${selectedIcon.color}, 0px 0px 40px ${selectedIcon.color}; } /* Sombra más definida */
-        75% { box-shadow: 0px 0px 8px ${selectedIcon.color}, 0px 0px 15px ${selectedIcon.color}, 0px 0px 25px ${selectedIcon.color}; } /* Sombra más definida */
-        100% { box-shadow: 0px 0px 5px ${selectedIcon.color}, 0px 0px 10px ${selectedIcon.color}, 0px 0px 20px ${selectedIcon.color}; } /* Sombra más definida */
-    `;
+    const vibrate = selectedIcon
+    ? keyframes`
+        0% { box-shadow: 0px 0px 5px ${selectedIcon.color}, 0px 0px 10px ${selectedIcon.color}, 0px 0px 20px ${selectedIcon.color}; }
+        25% { box-shadow: 0px 0px 8px ${selectedIcon.color}, 0px 0px 15px ${selectedIcon.color}, 0px 0px 25px ${selectedIcon.color}; }
+        50% { box-shadow: 0px 0px 10px ${selectedIcon.color}, 0px 0px 20px ${selectedIcon.color}, 0px 0px 40px ${selectedIcon.color}; }
+        75% { box-shadow: 0px 0px 8px ${selectedIcon.color}, 0px 0px 15px ${selectedIcon.color}, 0px 0px 25px ${selectedIcon.color}; }
+        100% { box-shadow: 0px 0px 5px ${selectedIcon.color}, 0px 0px 10px ${selectedIcon.color}, 0px 0px 20px ${selectedIcon.color}; }
+    `
+    :
+    null;
   
 
-    const StyledLink = styled(Link)`
+    const StyledLink = selectedIcon &&
+     styled(Link)`
         font-size: 25px;
         color: #FFD700;
         text-decoration: none;
@@ -60,6 +64,12 @@ export const Header = () => {
         animation: ${vibrate} .003s infinite; /* Aplicamos la animación vibrate */
         }
     `;
+
+    if ( toIndex === 1 ){
+        return(
+            <></>
+        )
+    }
 
     return(
         <div className="headerContainer">

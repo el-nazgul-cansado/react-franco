@@ -39,7 +39,7 @@ export const Sabers_and_icons = () => {
       <img src={selectedIcon.icon} alt={selectedIcon.name} className="selected-icon" />
       <StyledDropdown className={`dropdown-content`} >
         {sabersAndIcons.map((e, index) => (
-          <div key={e.id} className={`icon-saber-pair ${activeCard === index ? 'active' : 'inactive'} hoverIcon${e.color}`} onClick={() => handleIconClick(e)}
+          <div key={e.id} className={`icon-saber-pair hoverIcon${e.color}`} onClick={() => handleIconClick(e)}
           onMouseEnter={() => handleMouseEnter(index)}
           onMouseLeave={handleMouseLeave}
           style={{

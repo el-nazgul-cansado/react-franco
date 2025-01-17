@@ -28,13 +28,9 @@
   transition: all 0.3s ease;
 }
 
-.icon-saber-pair.active{
+.icon-saber-pair:hover{
   transform: scale(1.2);
-}
-
-.icon-saber-pair.inactive {
-  filter: grayscale(100%);
-}
+} 
 
 .icon-saber-pair img {
   width: 45px; /* Ajusta el ancho de las imágenes a tu preferencia, manteniendo tus tamaños */

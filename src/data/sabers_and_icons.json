@@ -4,6 +4,7 @@
         "name": "Ahsoka Tano",
         "saber": "/assets/images/cursors-and-icons/ahsoka_tano/ahsoka_tano_lightsaber.png",
         "icon": "/assets/images/cursors-and-icons/ahsoka_tano/ahsoka_tano_face.png",
+        "profile": "/assets/images/cursors-and-icons/ahsoka_tano/ahsoka_tano_profile.png",
         "trype": "simple",
         "color": "green"
     },
@@ -12,6 +13,7 @@
         "name": "Anakyn Skywalker",
         "saber": "/assets/images/cursors-and-icons/anakyn_skywalker/anakyn_skywalker_lightsaber.png",
         "icon": "/assets/images/cursors-and-icons/anakyn_skywalker/anakyn_skywalker_face.png",
+        "profile": "/assets/images/cursors-and-icons/anakyn_skywalker/anakyn_skywalker_profile.png",
         "trype": "simple",
         "color": "blue"
     },
@@ -20,6 +22,7 @@
         "name": "Asajj Ventress",
         "saber": "/assets/images/cursors-and-icons/asajj_ventress/asajj_ventress_lightsaber.png",
         "icon": "/assets/images/cursors-and-icons/asajj_ventress/asajj_ventress_face.png",
+        "profile": "/assets/images/cursors-and-icons/asajj_ventress/asajj_ventress_profile.png",
         "trype": "simple",
         "color": "red"
     },
@@ -28,6 +31,7 @@
         "name": "Cal Kestis",
         "saber": "/assets/images/cursors-and-icons/cal_kestis/cal_kestis_lightsaber.png",
         "icon": "/assets/images/cursors-and-icons/cal_kestis/cal_kestis_face.png",
+        "profile": "/assets/images/cursors-and-icons/cal_kestis/cal_kestis_profile.png",
         "trype": "simple",
         "color": "blue"
     },
@@ -36,6 +40,7 @@
         "name": "Count Dooku",
         "saber": "/assets/images/cursors-and-icons/count_dooku/count_dooku_lightsaber.png",
         "icon": "/assets/images/cursors-and-icons/count_dooku/count_dooku_face.png",
+        "profile": "/assets/images/cursors-and-icons/count_dooku/count_dooku_profile.png",
         "trype": "simple",
         "color": "red"
     },
@@ -44,6 +49,7 @@
         "name": "Dark Rey",
         "saber": "/assets/images/cursors-and-icons/dark_rey/dark_rey_lightsaber.png",
         "icon": "/assets/images/cursors-and-icons/dark_rey/dark_rey_face.png",
+        "profile": "/assets/images/cursors-and-icons/dark_rey/dark_rey_profile.png",
         "trype": "double",
         "color": "red"
     },
@@ -52,6 +58,7 @@
         "name": "Darth Vader",
         "saber": "/assets/images/cursors-and-icons/darth_vader/darth_vader_lightsaber.png",
         "icon": "/assets/images/cursors-and-icons/darth_vader/darth_vader_face.png",
+        "profile": "/assets/images/cursors-and-icons/darth_vader/darth_vader_profile.png",
         "trype": "simple",
         "color": "red"
     },
@@ -60,6 +67,7 @@
         "name": "Emperor Palpatine",
         "saber": "/assets/images/cursors-and-icons/emperor_palpatine/emperor_palpatine_lightsaber.png",
         "icon": "/assets/images/cursors-and-icons/emperor_palpatine/emperor_palpatine_face.png",
+        "profile": "/assets/images/cursors-and-icons/emperor_palpatine/emperor_palpatine_profile.png",
         "trype": "simple",
         "color": "red"
     },
@@ -68,6 +76,7 @@
         "name": "Jar Jar Binks",
         "saber": "/assets/images/cursors-and-icons/jar_jar_binks/jar_jar_binks_staff.png",
         "icon": "/assets/images/cursors-and-icons/jar_jar_binks/jar_jar_binks_face.png",
+        "profile": "/assets/images/cursors-and-icons/jar_jar_binks/jar_jar_binks_profile.png",
         "trype": "simple",
         "color": "blue"
     },
@@ -76,6 +85,7 @@
         "name": "Jedi Temple Guard",
         "saber": "/assets/images/cursors-and-icons/jedi_temple_guard/jedi_temple_guard_lightsaber.png",
         "icon": "/assets/images/cursors-and-icons/jedi_temple_guard/jedi_temple_guard_face.png",
+        "profile": "/assets/images/cursors-and-icons/jedi_temple_guard/jedi_temple_guard_profile.png",
         "trype": "double",
         "color": "yellow"
     },
@@ -84,6 +94,7 @@
         "name": "Luke Skywalker",
         "saber": "/assets/images/cursors-and-icons/luke_skywalker/luke_skywalker_lightsaber.png",
         "icon": "/assets/images/cursors-and-icons/luke_skywalker/luke_skywalker_face.png",
+        "profile": "/assets/images/cursors-and-icons/luke_skywalker/luke_skywalker_profile.png",
         "trype": "simple",
         "color": "blue"
     },
@@ -92,6 +103,7 @@
         "name": "Mace Windu",
         "saber": "/assets/images/cursors-and-icons/mace_windu/mace_windu_lightsaber.png",
         "icon": "/assets/images/cursors-and-icons/mace_windu/mace_windu_face.png",
+        "profile": "/assets/images/cursors-and-icons/mace_windu/mace_windu_profile.png",
         "trype": "simple",
         "color": "purple"
     },
@@ -100,6 +112,7 @@
         "name": "Obi-Wan Kenobi",
         "saber": "/assets/images/cursors-and-icons/obi-wan_kenobi/obi_wan_kenobi_lightsaber.png",
         "icon": "/assets/images/cursors-and-icons/obi-wan_kenobi/obi_wan_kenobi_face.png",
+        "profile": "/assets/images/cursors-and-icons/obi-wan_kenobi/obi-wan_kenobi_profile.png",
         "trype": "simple",
         "color": "blue"
     },
@@ -108,6 +121,7 @@
         "name": "Qui-Gon Jin",
         "saber": "/assets/images/cursors-and-icons/qui-gon_jin/qui_gon_jin_lightsaber.png",
         "icon": "/assets/images/cursors-and-icons/qui-gon_jin/qui_gon_jin_face.png",
+        "profile": "/assets/images/cursors-and-icons/qui-gon_jin/qui-gon_jin_profile.png",
         "trype": "simple",
         "color": "green"
     },
@@ -116,6 +130,7 @@
         "name": "Rey Palpatine",
         "saber": "/assets/images/cursors-and-icons/rey_palpatine/rey_palpatine_lightsaber.png",
         "icon": "/assets/images/cursors-and-icons/rey_palpatine/rey_palpatine_face.png",
+        "profile": "/assets/images/cursors-and-icons/rey_palpatine/rey_palpatine_profile.png",
         "trype": "simple",
         "color": "yellow"
     },
@@ -124,6 +139,7 @@
         "name": "Taron Malicos",
         "saber": "/assets/images/cursors-and-icons/taron_malicos/taron_malicos_lightsaber.png",
         "icon": "/assets/images/cursors-and-icons/taron_malicos/taron_malicos_face.png",
+        "profile": "/assets/images/cursors-and-icons/taron_malicos/taron_malicos_profile.png",
         "trype": "simple",
         "color": "red"
     },
@@ -132,6 +148,7 @@
         "name": "Trilla Suduri",
         "saber": "/assets/images/cursors-and-icons/trilla_suduri/trilla_suduri_lightsaber.png",
         "icon": "/assets/images/cursors-and-icons/trilla_suduri/trilla_suduri_face.png",
+        "profile": "/assets/images/cursors-and-icons/trilla_suduri/trilla_suduri_profile.png",
         "trype": "simple",
         "color": "red"
     },
@@ -140,6 +157,7 @@
         "name": "Darth Revan",
         "saber": "/assets/images/cursors-and-icons/darth_revan/darth_revan_lightsaber.png",
         "icon": "/assets/images/cursors-and-icons/darth_revan/darth_revan_face.png",
+        "profile": "/assets/images/cursors-and-icons/darth_revan/darth_revan_profile.png",
         "trype": "simple",
         "color": "purple"
     }

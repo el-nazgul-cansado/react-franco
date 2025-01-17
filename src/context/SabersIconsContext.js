@@ -15,10 +15,10 @@ export const SabersIconsProvider = ({ children }) => {
       .then((res) => {
         setSabersAndIcons(res);
         if (!selectedIcon && res.length > 0) {
-          const initialSelection = res[0];
-          setSelectedIcon(initialSelection);
-          localStorage.setItem('selectedIcon', JSON.stringify(initialSelection));
-          updateCursor(initialSelection.saber);
+/*           const initialSelection = res[0]; */
+          setSelectedIcon(null);
+          localStorage.setItem('selectedIcon', JSON.stringify(null));
+          /* updateCursor(initialSelection.saber); */
         }
       })
       .catch((error) => {
@@ -35,10 +35,11 @@ export const SabersIconsProvider = ({ children }) => {
     };
   }, [selectedIcon]);
 
+  const audio = new Audio("/assets/sounds/sonido_sable_laser_icono.mp3");
+
   const handleIconClick = (icon) => {
     setSelectedIcon(icon);
     localStorage.setItem('selectedIcon', JSON.stringify(icon));
-    const audio = new Audio("/assets/sounds/sonido_sable_laser_icono.mp3");
     audio.play();
   };
 
@@ -46,8 +47,14 @@ export const SabersIconsProvider = ({ children }) => {
     document.body.style.cursor = `url('${cursorUrl}'), auto`;
   };
 
+  const [toIndex, setToIndex] = useState(() => {
+    // Cargar el valor inicial desde sessionStorage, si existe
+    const savedIndex = sessionStorage.getItem('toIndex');
+    return savedIndex !== null ? Number(savedIndex) : 1; // Valor predeterminado: 1
+  }); //Coloqué este useState aqui para poder manejar el estado del display: none del header desde aui, y no tener que crear un context solo para este useState.
+
   return (
-    <SabersIconsContext.Provider value={{ sabersAndIcons, selectedIcon, handleIconClick }}>
+    <SabersIconsContext.Provider value={{ sabersAndIcons, selectedIcon, handleIconClick, toIndex, setToIndex }}>
       {children}
     </SabersIconsContext.Provider>
   );

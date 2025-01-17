@@ -1,3 +1,18 @@
+.parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Asegura la altura completa de la ventana */
+}
+
+.sai_carousel_and_next_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .carouselContainer{
     width: 1000px;
     margin: 0 auto;

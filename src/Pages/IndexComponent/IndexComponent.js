@@ -1,9 +1,29 @@
 import Carousel from 'react-bootstrap/Carousel';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useSabersIcons } from '../../context/SabersIconsContext';
 import { ItemListContainer } from '../../Componentes/ItemListContainer/ItemListContainer';
 import "./IndexComponent.css"
+import { Sabers_and_Icons_carousel } from '../../Componentes/Sabers_and_Icons_carousel/Sabers_and_Icons_carousel';
+
 
 function IndexComponent() {
+
+  const { toIndex, sabersAndIcons } = useSabersIcons()
+
+  useEffect(() => {
+    sessionStorage.setItem('toIndex', toIndex);
+  }, [toIndex]);
+
+  if (toIndex === 1) {
+    return(
+      <div className="parent-container">
+        <div className="sai_carousel_and_next_container">
+          <Sabers_and_Icons_carousel />
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div>

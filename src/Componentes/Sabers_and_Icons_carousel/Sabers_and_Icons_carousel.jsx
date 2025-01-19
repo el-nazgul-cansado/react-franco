@@ -8,7 +8,7 @@ export const Sabers_and_Icons_carousel = () => {
     const { setToIndex, sabersAndIcons, handleIconClick } = useSabersIcons();
     const carouselRef = useRef(null);
     const [isAnimating, setIsAnimating] = useState(false);
-    const [startAnimation, setStartanimation] = useState(0)
+    const [startBorderAnimation, setStartBorderAnimation] = useState(0)
     const [caruselPosition, setCaruselPosition] = useState(0)
     const cardWidth = 400;  // Ancho real de tus tarjetas
     const gapWidth = 250;   // Espacio entre las tarjetas
@@ -23,10 +23,11 @@ export const Sabers_and_Icons_carousel = () => {
             }, 500); // Duración de la animación (500ms)
         }
         if (caruselPosition === 0) {
-            //No hace nada
+
         }  
         else {
             setCaruselPosition(caruselPosition - 1)
+            
         }
     };
 
@@ -41,10 +42,11 @@ export const Sabers_and_Icons_carousel = () => {
         }
         
         if (caruselPosition >= sabersAndIcons.length - 1) {
-            //No hace nada
+
         }  
-        else {
+        else  {
             setCaruselPosition(caruselPosition + 1)
+            
         }
     };
 
@@ -98,11 +100,23 @@ export const Sabers_and_Icons_carousel = () => {
   sabersAndIcons[caruselPosition] &&
   styled.div`
     position: relative;
+    background-color: black;
+    border-radius: 3px;
+    height: 600px;
+    width: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+    position: relative;
 
     &::after {
       content: '';
       position: absolute;
-      bottom: -1px; /* Ajusta la posición del subrayado */
+      bottom: -1.3px; /* Ajusta la posición del subrayado */
       height: 3.5px; /* Ajusta el grosor del subrayado */
       border-radius: 20px;
       background-color: white;
@@ -146,7 +160,7 @@ export const Sabers_and_Icons_carousel = () => {
     }
 
     ${(props) =>
-      props.startAnimation === 1 &&
+      props.startBorderAnimation === 1 &&
       css`
         &::after {
             animation: ${expandUnderline} .2s ease-out forwards, ${vibrate} 0.003s infinite; /* Animación de subrayado */
@@ -175,20 +189,21 @@ export const Sabers_and_Icons_carousel = () => {
 
     const handleToIndex = () => {
         handleIconClick(sabersAndIcons[caruselPosition])
-        setTimeout(() => {
+ /*        setTimeout(() => {
             setToIndex(0);
-        }, 2750)
-        setStartanimation(1)
+        }, 2750) */
+        setStartBorderAnimation(1)
     };
 
     return (
         <>
             <div className='saiCarrouselContainer'>
-                <button className='saiButton' onClick={scrollLeft} disabled={isAnimating}><AiOutlineDoubleLeft className='saiIcon' /></button>
+                <button className='saiButton' onClick={scrollLeft} disabled={isAnimating || startBorderAnimation === 1}><AiOutlineDoubleLeft className='saiIcon' /></button>
                 <div className='saiCardContainer' ref={carouselRef}>
                     {sabersAndIcons.map((sai, index) => (
                         <div key={index}>
-                            <StyledDiv className='saiCard' startAnimation={startAnimation}>
+                            <StyledDiv className={`border${sai.color}`} 
+                            startBorderAnimation={startBorderAnimation}>
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -207,7 +222,7 @@ export const Sabers_and_Icons_carousel = () => {
                         </div>
                     ))}
                 </div>
-                <button className='saiButton' onClick={scrollRight} disabled={isAnimating}><AiOutlineDoubleRight className='saiIcon' /></button>
+                <button className='saiButton' onClick={scrollRight} disabled={isAnimating || startBorderAnimation === 1}><AiOutlineDoubleRight className='saiIcon' /></button>
             </div>
             <button onClick={handleToIndex} className='toIndexButton'>Siguiente</button>
         </>

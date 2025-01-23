@@ -51,7 +51,7 @@ export const Cart = ( ) => {
                 <>
                     <div className="emptyCartContainer">
                         <h2 className="empty-cart-title">OH NO!!</h2>
-                        <img className="empty-cart-img" src="/assets/images/empty-cart-c3po/c3po.jpg" alt="oh-no-c3po" />
+                        <img className="empty-cart-img" src="https://github.com/Han-Juri/React-Franco/blob/main/public/assets/images/empty-cart-c3po/c3po.jpg?raw=true" alt="oh-no-c3po" />
                         <p className="empty-cart-paragraph">Parece que tu carrito esta vacio, andá a comprar algo</p>
                         <Link to="/"><button className="empty-cart-btn">Ir a comprar algo</button></Link>
                     </div>

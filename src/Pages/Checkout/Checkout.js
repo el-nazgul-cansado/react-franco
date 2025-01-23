@@ -156,7 +156,7 @@ export const Checkout = () => {
             <>
                 <div className="complete-order-container">
                     <h2 className="complete-order-title">Gracias por tu compra maquina!!</h2>
-                    <img className="complete-order-img" src="/assets/images/complete-order/complete-order-emoji.png" alt="complete-order-emoji" />
+                    <img className="complete-order-img" src="https://github.com/Han-Juri/React-Franco/blob/main/public/assets/images/complete-order/complete-order-emoji.png?raw=true" alt="complete-order-emoji" />
                     <h3 className="complete-order-code-date-ferawell">Tu codigo de compra es {createdOrder.ordenCodigo}</h3>
                     {selectedOption.option === 'in-storePickup' ?
                         <h3 className="complete-order-code-date-ferawell">Te esperamos de Lunes a viernes en Avenida Siempreviva 742 de 9hs a 20hs</h3>

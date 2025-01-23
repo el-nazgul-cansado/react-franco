@@ -241,7 +241,7 @@
         "id": 21,
         "name": "Cable HDMI",
         "description": "High-Definition Multimedia Interface (interfaz multimedia de alta definición). Un HDMI proporciona una interfaz entre cualquier fuente de audio y vídeo digital por medio de un único cable. Es el conector audiovisual digital que ofrece grandes ventajas a la hora de transferir la señal (audio, imagen y video).",
-        "image": "/assets/images/products/cable_hdmi.png",
+        "image": "https://github.com/Han-Juri/React-Franco/blob/main/public/assets/images/products/cable_hdmi.png?raw=true",
         "price": 6314,
         "stock": 18,
         "category": [

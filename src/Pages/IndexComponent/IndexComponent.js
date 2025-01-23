@@ -6,6 +6,7 @@ import { ItemListContainer } from '../../Componentes/ItemListContainer/ItemListC
 import "./IndexComponent.css"
 import { Sabers_and_Icons_carousel } from '../../Componentes/Sabers_and_Icons_carousel/Sabers_and_Icons_carousel';
 
+/* "assets/images/cursors-and-icons/ahsoka_tano/ahsoka_tano_lightsaber.png" */
 
 function IndexComponent() {
 

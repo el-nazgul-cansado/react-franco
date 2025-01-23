@@ -22,7 +22,7 @@
         "name": "Asajj Ventress",
         "saber": "assets/images/cursors-and-icons/asajj_ventress/asajj_ventress_lightsaber.png",
         "icon": "assets/images/cursors-and-icons/asajj_ventress/asajj_ventress_face.png",
-        "profile": "/assets/images/cursors-and-icons/asajj_ventress/asajj_ventress_profile.png",
+        "profile": "assets/images/cursors-and-icons/asajj_ventress/asajj_ventress_profile.png",
         "trype": "simple",
         "color": "red"
     },
@@ -128,7 +128,7 @@
     {
         "id": 15,
         "name": "Rey Palpatine",
-        "saber": "/ssets/images/cursors-and-icons/rey_palpatine/rey_palpatine_lightsaber.png",
+        "saber": "assets/images/cursors-and-icons/rey_palpatine/rey_palpatine_lightsaber.png",
         "icon": "assets/images/cursors-and-icons/rey_palpatine/rey_palpatine_face.png",
         "profile": "assets/images/cursors-and-icons/rey_palpatine/rey_palpatine_profile.png",
         "trype": "simple",

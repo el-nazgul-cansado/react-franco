@@ -17,6 +17,8 @@ export const Header = () => {
 
     const [rotationDegrees, setRotationDegrees] = useState(0);
     const [isToggled, setIsToggled] = useState(false);
+    const [isIconHovered, setIsIconHovered] = useState(true)
+    const [isStarHovered, setIsStarHovered] = useState(true)
 
     const handleClick = () => {
             setIsToggled(!isToggled)
@@ -84,9 +86,13 @@ export const Header = () => {
                         transform: isToggled ? 'translateY(-100%)' : 'translateY(0)',
                         transition: 'transform 0.5s ease-in-out'
                     }}>
-                        <div className="icons-stars-logo">
-                            <Sabers_and_icons />
-                            <StarsRangeAndCount />
+                        <div className="icons-stars-logo ">
+                            <div className={`${isIconHovered && 'animate__animated animate__pulse animate__faster animate__infinite'}`} onMouseEnter={() => {setIsIconHovered(false)}}>
+                                <Sabers_and_icons  />
+                            </div>
+                            <div className={`${isStarHovered && 'animate__animated animate__pulse animate__faster animate__infinite'}`} onMouseEnter={() => {setIsStarHovered(false)}}>
+                                <StarsRangeAndCount />
+                            </div>
                             <Link to="/"><img className="star-wars-logo" src="https://github.com/Han-Juri/React-Franco/blob/main/public/assets/images/star-wars-logo.png?raw=true" alt="star-wars-logo" /></ Link>
                         </div>
                         <nav className="contenedorLinks">

@@ -19,6 +19,8 @@ export const DeliveryCheckout = () => {
     const [loading, setLoading] = useState(true)
     const [userLogged, setUserLogged] = useState(false)
 
+    const select_option_audio = new Audio("/assets/sounds/buttons_sounds/next_card.mp3")
+
     setTimeout(() =>{
         setLoading(false)
     }, 900)
@@ -69,35 +71,20 @@ export const DeliveryCheckout = () => {
     setFieldValue('crossStreet1', '');
     setFieldValue('crossStreet2', '');
     setFieldValue('atHomeWork', '');
+
+    select_option_audio.play()
     };
 
     const handleOptionDelivery = (setFieldValue) => {
-/*         setSelectedOption({
-                        option: 'delivery',
-                        address: '',
-                        addressNumber: '',
-                        dept: null,
-                        zipCode: '',
-                        province: '',
-                        city: '',
-                        crossStreet1: '',
-                        crossStreet2: '',
-                        atHomeWork: ''
-        }); */
         setSelectedOption(prevState => ({
             ...prevState,
             option: 'delivery',
         }));
         setFieldValue('option', 'delivery');
+        select_option_audio.play()
     };
 
     const handleAtHomeWorkChange = (value, setFieldValue) => {
-
-/*         if(selectedOption.option === 'delivery'){
-            setSelectedOption({
-                    ...selectedOption, atHomeWork: option
-});
-        } */
         setSelectedOption(prevState => ({
             ...prevState,
             atHomeWork: value,
@@ -105,46 +92,7 @@ export const DeliveryCheckout = () => {
         setFieldValue('atHomeWork', value);
     };
 
-/*     const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setSelectedOption(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
-    }; */
-
     const handleSubmit = (values, actions) => {
-
-/*         if (values.option === 'in-storePickup') {
-            const inStorePickupValues = {
-                option: 'in-storePickup',
-                address: 'Avenida Siempreviva',
-                addressNumber: '742',
-                dept: null,
-                zipCode: '1714',
-                province: 'Buenos Aires',
-                city: 'Ituzaingo',
-                crossStreet1: 'Avenida Nuncaviva',
-                crossStreet2: 'Avenida Avecesviva',
-                atHomeWork: ''
-            };
-    
-            // Actualiza Formik con los valores de 'in-storePickup'
-            actions.setValues(inStorePickupValues);
-    
-        } else {
-            // Actualiza el estado local con los valores finales
-            actions.setValues(values);  // Asegura que Formik también tenga los valores correctos
-        }
-    
-        // Verifica si hay errores antes de proceder
-        if (Object.keys(actions.errors || {}).length === 0) {
-            navigate("/checkout");
-        } else {
-            console.error("Validation errors:", actions.errors);
-        }
-        // Marca la sumisión del formulario como completa
-        actions.setSubmitting(false); */
         let finalValues;
 
         if (values.option === 'in-storePickup') {
@@ -163,8 +111,6 @@ export const DeliveryCheckout = () => {
         } else {
             finalValues = { ...values };
         }
-
-        console.log(finalValues)
     
         // Actualiza el estado local con los valores finales
         setSelectedOption(finalValues);

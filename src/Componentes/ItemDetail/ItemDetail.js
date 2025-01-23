@@ -18,6 +18,12 @@ export const ItemDetail = ({id, name, description, image, price, stock, category
 
     const navigate = useNavigate()
 
+    const to_cart_audio = new Audio("/assets/sounds/buttons_sounds/to_cart.mp3")
+
+    const to_cart_audio_handle = () => {
+        to_cart_audio.play()
+    }
+
     const handleVolver = () => {
         navigate(-1)
     }
@@ -127,7 +133,7 @@ export const ItemDetail = ({id, name, description, image, price, stock, category
             <div className="buttonsContainer">
                 <button onClick={handleAgregar} className="itemDetailButtons">Agregar al carrito</button>
                 
-                <Link to={cart.length > 0 && "/cart"}>
+                <Link onClick={to_cart_audio_handle} to={cart.length > 0 && "/cart"}>
                     <button className={`itemDetailButtons ${cart.length === 0 ? "disabled" : ""}`} disabled={cart.length === 0}>
                         Ir al carrito
                     </button>

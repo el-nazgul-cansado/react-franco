@@ -53,9 +53,24 @@
   border-radius: 20px;
 }
 
+.disabledSaiButton{
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  border: 2px solid #1c1c1c;
+  border-radius: 20px;
+}
+
 .saiIcon {
   color: #FFD700;
   font-size: 70px;
+  transition: all 0.3s;
+}
+
+.disabledSaiIcon{
+  color: #1c1c1c;
+  font-size: 70px;
+  transition: all 0.3s;
 }
 
 .toIndexButton{

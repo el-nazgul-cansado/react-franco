@@ -65,6 +65,12 @@ export const Header = () => {
         }
     `;
 
+    const to_cart_audio = new Audio ("/assets/sounds/buttons_sounds/to_cart.mp3")
+
+    const to_cart_audio_handle = () => {
+        to_cart_audio.play()
+    }
+
     if ( toIndex === 1 ){
         return(
             <></>
@@ -88,7 +94,7 @@ export const Header = () => {
                             <StyledLink to="/productos/pc">PC</StyledLink>
                             <StyledLink to="/plataformas">Plataformas</StyledLink>
                         </nav>
-                        <section className="contenedorCarrito">
+                        <section onClick={to_cart_audio_handle} className="contenedorCarrito">
                             <CartWidget />
                         </section>
                         <div className="contenedorHeader">               

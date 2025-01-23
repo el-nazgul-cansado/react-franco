@@ -9,13 +9,22 @@ import './LoginScreen.css'
 export const LoginScreen = () => {
 
     const [isRegistering, setIsRegistering] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
+
+    const togglePasswordVisibility = () => {
+      setShowPassword(!showPassword);
+    };
+
+    const to_register_audio = new Audio("/assets/sounds/buttons_sounds/next_card.mp3")
 
     const handleRegisterClick = () => {
         setIsRegistering(true);
+        to_register_audio.play()
     };
 
     const handleLoginClick = () => {
         setIsRegistering(false);
+        to_register_audio.play()
     };
 
     const { login, user, googleLogin, facebookLogin } = useLoginContext()
@@ -51,7 +60,33 @@ export const LoginScreen = () => {
                         <h2 className='login-title'>Login</h2>
                         <form onSubmit={handleSubmit}>
                             <input className='login-input' type={'email'} value={values.email} onChange={handleInputChange} name='email' placeholder='Ingrese su email...' />
-                            <input className='login-input' type={'password'} value={values.password} onChange={handleInputChange} name='password' placeholder='Ingrese su contraseña...' />
+                            <div className="password-input-container" style={{ position: 'relative', display: 'inline-block', width: '356px' }}>
+                                <input
+                                    className="login-input"
+                                    type={showPassword ? 'text' : 'password'}
+                                    value={values.password}
+                                    onChange={handleInputChange}
+                                    name="password"
+                                    placeholder="Ingrese su contraseña..."
+                                    style={{ paddingRight: '40px' }} // Espacio para el botón
+                                />
+                                <button
+                                    type="button"
+                                    onClick={togglePasswordVisibility}
+                                    style={{
+                                    position: 'absolute',
+                                    right: '10px',
+                                    top: '33%',
+                                    transform: 'translateY(-50%)',
+                                    background: 'none',
+                                    border: 'none',
+                                    cursor: 'pointer',
+                                    fontSize: '16px',
+                                    }}
+                                >
+                                    {showPassword ? '🙈' : '👁️'}
+                                </button>
+                            </div>
                             <button className='login-btn'>Ingresar</button>
                             <div className='error-container'>
                                 {user.error && <p className='error'>{user.error}</p>}

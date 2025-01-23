@@ -13,6 +13,9 @@ export const Sabers_and_Icons_carousel = () => {
     const cardWidth = 400;  // Ancho real de tus tarjetas
     const gapWidth = 250;   // Espacio entre las tarjetas
 
+    const next_card_audio = new Audio("/assets/sounds/buttons_sounds/next_card.mp3")
+    const disabled_audio = new Audio("/assets/sounds/buttons_sounds/disabled.mp3")
+
     const scrollLeft = () => {
         if (carouselRef.current && !isAnimating) {
             setIsAnimating(true);
@@ -23,11 +26,11 @@ export const Sabers_and_Icons_carousel = () => {
             }, 500); // Duración de la animación (500ms)
         }
         if (caruselPosition === 0) {
-
+            disabled_audio.play()  
         }  
         else {
             setCaruselPosition(caruselPosition - 1)
-            
+            next_card_audio.play()  
         }
     };
 
@@ -42,10 +45,11 @@ export const Sabers_and_Icons_carousel = () => {
         }
         
         if (caruselPosition >= sabersAndIcons.length - 1) {
-
+            disabled_audio.play()
         }  
         else  {
             setCaruselPosition(caruselPosition + 1)
+            next_card_audio.play()  
             
         }
     };
@@ -186,19 +190,18 @@ export const Sabers_and_Icons_carousel = () => {
       `}
   `;
 
-
     const handleToIndex = () => {
         handleIconClick(sabersAndIcons[caruselPosition])
- /*        setTimeout(() => {
+        setTimeout(() => {
             setToIndex(0);
-        }, 2750) */
+        }, 2750)
         setStartBorderAnimation(1)
     };
 
     return (
         <>
             <div className='saiCarrouselContainer'>
-                <button className='saiButton' onClick={scrollLeft} disabled={isAnimating || startBorderAnimation === 1}><AiOutlineDoubleLeft className='saiIcon' /></button>
+                <button className={`${caruselPosition === 0 ? 'disabledSaiButton' : 'saiButton'}`} onClick={scrollLeft} disabled={isAnimating || startBorderAnimation === 1}><AiOutlineDoubleLeft className={`${caruselPosition === 0 ? 'disabledSaiIcon' : 'saiIcon'}`} /></button>
                 <div className='saiCardContainer' ref={carouselRef}>
                     {sabersAndIcons.map((sai, index) => (
                         <div key={index}>
@@ -222,7 +225,7 @@ export const Sabers_and_Icons_carousel = () => {
                         </div>
                     ))}
                 </div>
-                <button className='saiButton' onClick={scrollRight} disabled={isAnimating || startBorderAnimation === 1}><AiOutlineDoubleRight className='saiIcon' /></button>
+                <button className={`${caruselPosition >= sabersAndIcons.length - 1 ? 'disabledSaiButton' : 'saiButton'}`} onClick={scrollRight} disabled={isAnimating || startBorderAnimation === 1}><AiOutlineDoubleRight className={`${caruselPosition >= sabersAndIcons.length - 1 ? 'disabledSaiIcon' : 'saiIcon'}`} /></button>
             </div>
             <button onClick={handleToIndex} className='toIndexButton'>Siguiente</button>
         </>

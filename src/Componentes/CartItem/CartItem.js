@@ -11,10 +11,13 @@ export const CartItem = ({id, name, price, cantidad, stock, image, color}) => {
 
     const [cantidadCart, setCantidadCart] = useState(cantidad)
 
+    const add_amount_audio = new Audio("/assets/sounds/buttons_sounds/add_amount.mp3")
+
     const handleRestarCart = () => {
         if (cantidadCart > 1) {
             setCantidadCart(cantidadCart - 1)
             cantidadInCart(id, cantidadCart - 1);
+            add_amount_audio.play()
         }
     };
 
@@ -22,6 +25,7 @@ export const CartItem = ({id, name, price, cantidad, stock, image, color}) => {
         if (cantidadCart < stock){
             setCantidadCart(cantidadCart + 1)
             cantidadInCart(id, cantidadCart + 1);
+            add_amount_audio.play()
         }
     };
 

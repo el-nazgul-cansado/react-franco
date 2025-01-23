@@ -30,11 +30,11 @@ export const CheckoutSummary = () => {
                   <div className="checkout-product-image-container">
                     <img className="checkout-product-image" src={product.image} />
                   </div>
-                  <div className="checkout-data-container">
-                    {product.color && <p className="checkout-product-color"><strong>Color: </strong>{product.color}</p>}
+{                  <div className="checkout-data-container">
+                    {product.color && <p className="checkout-product-color"><strong>Color: </strong>{product.color.value}</p>}
                     <p className="checkout-product-quantity"><strong>Cantidad X </strong>{product.cantidad}</p>
-                    <p className="checkout-product-price"><strong>Precio total: </strong>{product.price * product.cantidad}</p>
-                  </div>
+{                    <p className="checkout-product-price"><strong>Precio total: </strong>{product.price * product.cantidad}</p>}
+                  </div>}
                 </div>
                 {outOfStock && <> <p>¡Este producto está sin stock!</p> <button onClick={() => eliminarItem(product.id)} className="btn btn-outline-danger"><FaTrashAlt /></button> </>}
               </article>

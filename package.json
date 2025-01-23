@@ -2,6 +2,7 @@
   "name": "react-franco",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Han-Juri.github.io/React-Franco/build",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",

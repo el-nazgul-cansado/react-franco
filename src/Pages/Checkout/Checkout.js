@@ -31,6 +31,8 @@ export const Checkout = () => {
     const [userLogged, setUserLogged] = useState(false)
     const [isDeliverySummaryReady, setIsDeliverySummaryReady] = useState(false);
 
+    const end_purchase_audio = new Audio("/assets/sounds/end_purchase.mp3")
+
     const [loading, setLoading] = useState(true)
 
     const [values, setValues] = useState({
@@ -132,8 +134,8 @@ export const Checkout = () => {
                         let stockFinal = producto.stock - item.cantidad;
                         values.ordenCodigo = caracteresAleatorios;
                         setCreatedOrder(values);
+                        end_purchase_audio.play()
                         emptyCart();
-                        console.log(values);
                     }
                 })
             );
@@ -185,9 +187,9 @@ export const Checkout = () => {
                     {loading ? <Loading /> :
                     <>
                         <div className="checkoutContainer">   
-                            <div>
+{                            <div>
                                 <CheckoutSummary />
-                            </div>
+                            </div>}
                             <div>
                                 <DeliverySummary />
                             </div>

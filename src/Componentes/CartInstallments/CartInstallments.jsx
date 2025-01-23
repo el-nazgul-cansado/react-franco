@@ -10,6 +10,19 @@ export const CartInstallments = () => {
     
     const { selectedIcon } = useSabersIcons()
 
+    const select_installment_audio = new Audio("/assets/sounds/buttons_sounds/next_card.mp3")
+
+    const empty_cart_audio = new Audio("/assets/sounds/buttons_sounds/eliminate.mp3")
+
+    const select_installment_handle = () => {
+        select_installment_audio.play()
+    }
+
+    const handleEmptyCart = () => {
+        empty_cart_audio.play()
+        emptyCart()
+    }
+
     const handleChange = (event) => {
         const installmentId = event.target.id
         switch (installmentId){
@@ -79,7 +92,7 @@ export const CartInstallments = () => {
         <div className="installmentsContainer">
             <ul style={ulStyle} className="installmentsList">
                 <li>
-                    <label style={liStyle} className={`installmentsLabel ${installmentSelected.id === 'installment1' ? 'selected' : ''}`}  htmlFor="installment1">
+                    <label onClick={select_installment_handle} style={liStyle} className={`installmentsLabel ${installmentSelected.id === 'installment1' ? 'selected' : ''}`}  htmlFor="installment1">
                         <div className="installmentsInputContainer">
                             <input style={liStyle} className="installmentsInput" type="radio" id="installment1" onChange={handleChange} checked={installmentSelected.id === 'installment1'} name="installment" />
                             <label style={liStyle} className="customRadio" htmlFor="installment1"></label>
@@ -91,7 +104,7 @@ export const CartInstallments = () => {
                     </label>
                 </li>
                 <li>
-                    <label style={liStyle} className={`installmentsLabel ${installmentSelected.id === 'installment2' ? 'selected' : ''}`} htmlFor="installment2">
+                    <label onClick={select_installment_handle} style={liStyle} className={`installmentsLabel ${installmentSelected.id === 'installment2' ? 'selected' : ''}`} htmlFor="installment2">
                         <div className="installmentsInputContainer">
                             <input style={liStyle} className="installmentsInput" type="radio" id="installment2" onChange={handleChange} name="installment" />
                             <label style={liStyle} className="customRadio" htmlFor="installment2"></label>
@@ -103,7 +116,7 @@ export const CartInstallments = () => {
                     </label>
                 </li>
                 <li>
-                    <label style={liStyle} className={`installmentsLabel ${installmentSelected.id === 'installment3' ? 'selected' : ''}`} htmlFor="installment3">
+                    <label onClick={select_installment_handle} style={liStyle} className={`installmentsLabel ${installmentSelected.id === 'installment3' ? 'selected' : ''}`} htmlFor="installment3">
                         <div className="installmentsInputContainer">
                             <input style={liStyle} className="installmentsInput" type="radio" id="installment3" onChange={handleChange} name="installment" />
                             <label style={liStyle} className="customRadio" htmlFor="installment3"></label>
@@ -115,7 +128,7 @@ export const CartInstallments = () => {
                     </label>
                 </li>
                 <li>
-                    <label style={liStyle} className={`installmentsLabel ${installmentSelected.id === 'installment4' ? 'selected' : ''}`} htmlFor="installment4">
+                    <label onClick={select_installment_handle} style={liStyle} className={`installmentsLabel ${installmentSelected.id === 'installment4' ? 'selected' : ''}`} htmlFor="installment4">
                         <div className="installmentsInputContainer">
                             <input style={liStyle} className="installmentsInput" type="radio" id="installment4" onChange={handleChange} name="installment" />
                             <label style={liStyle} className="customRadio" htmlFor="installment4"></label>
@@ -127,7 +140,7 @@ export const CartInstallments = () => {
                     </label>
                 </li>
                 <li>
-                    <label style={liStyle} className={`installmentsLabel ${installmentSelected.id === 'installment5' ? 'selected' : ''}`} htmlFor="installment5">
+                    <label onClick={select_installment_handle} style={liStyle} className={`installmentsLabel ${installmentSelected.id === 'installment5' ? 'selected' : ''}`} htmlFor="installment5">
                         <div className="installmentsInputContainer">
                             <input style={liStyle} className="installmentsInput" type="radio" id="installment5" onChange={handleChange} name="installment" />
                             <label style={liStyle} className="customRadio" htmlFor="installment5"></label>
@@ -139,7 +152,7 @@ export const CartInstallments = () => {
                     </label>
                 </li>
                 <li>
-                    <label style={liStyle} className={`installmentsLabel ${installmentSelected.id === 'installment6' ? 'selected' : ''}`}  htmlFor="installment6">
+                    <label onClick={select_installment_handle} style={liStyle} className={`installmentsLabel ${installmentSelected.id === 'installment6' ? 'selected' : ''}`}  htmlFor="installment6">
                         <div className="installmentsInputContainer">
                             <input style={liStyle} className="installmentsInput" type="radio" id="installment6" onChange={handleChange} name="installment" />
                             <label style={liStyle} className="customRadio" htmlFor="installment6"></label>
@@ -152,7 +165,7 @@ export const CartInstallments = () => {
                 </li>
             </ul>
             <div className="installmentsActions">
-                <button onClick={emptyCart}  className="installmentsEmptyCart">Vaciar Carrito</button>
+                <button onClick={handleEmptyCart}  className="installmentsEmptyCart">Vaciar Carrito</button>
                 <Link to="/delivery-checkout"><button className="installmentsCheckout">Delivery</button></Link>
             </div>
         </div>

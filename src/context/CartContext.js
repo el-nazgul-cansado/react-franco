@@ -11,6 +11,10 @@ const init = JSON.parse(localStorage.getItem('cart')) || []
 
 export const CartProvider = ({children}) => {
 
+    const add_to_cart_audio = new Audio("/assets/sounds/buttons_sounds/add_to_cart.mp3")
+
+    const eliminate_audio = new Audio("/assets/sounds/buttons_sounds/eliminate.mp3")
+
     const [cart, setCart] = useState(init)
   
     const agregarAlCarrito = (item) => {
@@ -25,13 +29,16 @@ export const CartProvider = ({children}) => {
           return articulo;
         });
         setCart(cartUpdate);
+        add_to_cart_audio.play()
       } else {
         setCart([...cart, item]);
+        add_to_cart_audio.play()
       }
     };
 
   const eliminarItem = (id) => {
     setCart( cart.filter(item => item.id !== id) )
+    eliminate_audio.play()
   } 
 
   const isInCart = ( id ) => {

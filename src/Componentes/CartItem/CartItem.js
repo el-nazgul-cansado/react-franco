@@ -11,7 +11,7 @@ export const CartItem = ({id, name, price, cantidad, stock, image, color}) => {
 
     const [cantidadCart, setCantidadCart] = useState(cantidad)
 
-    const add_amount_audio = new Audio("assets/sounds/buttons_sounds/add_amount.mp3")
+    const add_amount_audio = new Audio(`${process.env.PUBLIC_URL}/assets/sounds/buttons_sounds/add_amount.mp3`)
 
     const handleRestarCart = () => {
         if (cantidadCart > 1) {

@@ -15,7 +15,7 @@ export const LoginScreen = () => {
       setShowPassword(!showPassword);
     };
 
-    const to_register_audio = new Audio("assets/sounds/buttons_sounds/next_card.mp3")
+    const to_register_audio = new Audio(`${process.env.PUBLIC_URL}/assets/sounds/buttons_sounds/next_card.mp3`)
 
     const handleRegisterClick = () => {
         setIsRegistering(true);

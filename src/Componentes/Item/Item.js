@@ -76,7 +76,7 @@ export const Item = ({ id, name, image, price, stock }) => {
             ) : (
                 <Link className="itemLink" to={`/detail/${id}`}>Ver más</Link>
             )}
-            <audio ref={audioRef} src="assets/sounds/lightsaber-sound-effect.mp3" />
+            <audio ref={audioRef} src={`${process.env.PUBLIC_URL}/assets/sounds/lightsaber-sound-effect.mp3`} />
         </div>
     );
 };

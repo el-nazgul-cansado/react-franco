@@ -10,9 +10,9 @@ export const CartInstallments = () => {
     
     const { selectedIcon } = useSabersIcons()
 
-    const select_installment_audio = new Audio("assets/sounds/buttons_sounds/next_card.mp3")
+    const select_installment_audio = new Audio(`${process.env.PUBLIC_URL}/assets/sounds/buttons_sounds/next_card.mp3`)
 
-    const empty_cart_audio = new Audio("assets/sounds/buttons_sounds/eliminate.mp3")
+    const empty_cart_audio = new Audio(`${process.env.PUBLIC_URL}/assets/sounds/buttons_sounds/eliminate.mp3`)
 
     const select_installment_handle = () => {
         select_installment_audio.play()

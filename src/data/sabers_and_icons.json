@@ -2,9 +2,9 @@
     {
         "id": 1,
         "name": "Ahsoka Tano",
-        "saber": "assets/images/cursors-and-icons/ahsoka_tano/ahsoka_tano_lightsaber.png",
-        "icon": "assets/images/cursors-and-icons/ahsoka_tano/ahsoka_tano_face.png",
-        "profile": "assets/images/cursors-and-icons/ahsoka_tano/ahsoka_tano_profile.png",
+        "saber": "https://github.com/Han-Juri/React-Franco/blob/main/public/assets/images/cursors-and-icons/ahsoka_tano/ahsoka_tano_lightsaber.png?raw=true",
+        "icon": "https://github.com/Han-Juri/React-Franco/blob/main/public/assets/images/cursors-and-icons/ahsoka_tano/ahsoka_tano_face.png?raw=true",
+        "profile": "https://github.com/Han-Juri/React-Franco/blob/main/public/assets/images/cursors-and-icons/ahsoka_tano/ahsoka_tano_profile.png?raw=true",
         "trype": "simple",
         "color": "green"
     },

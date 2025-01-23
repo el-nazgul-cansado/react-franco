@@ -23,7 +23,7 @@ export const Header = () => {
             setRotationDegrees(prev => prev + 180);
     };
 
-    const to_cart_audio = new Audio ("assets/sounds/buttons_sounds/to_cart.mp3")
+    const to_cart_audio = new Audio (`${process.env.PUBLIC_URL}/assets/sounds/buttons_sounds/to_cart.mp3`)
 
     const vibrate = selectedIcon
     ? keyframes`

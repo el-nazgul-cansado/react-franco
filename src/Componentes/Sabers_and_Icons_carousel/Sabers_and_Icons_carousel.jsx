@@ -13,8 +13,8 @@ export const Sabers_and_Icons_carousel = () => {
     const cardWidth = 400;  // Ancho real de tus tarjetas
     const gapWidth = 250;   // Espacio entre las tarjetas
 
-    const next_card_audio = new Audio("assets/sounds/buttons_sounds/next_card.mp3")
-    const disabled_audio = new Audio("assets/sounds/buttons_sounds/disabled.mp3")
+    const next_card_audio = new Audio(`${process.env.PUBLIC_URL}/assets/sounds/buttons_sounds/next_card.mp3`)
+    const disabled_audio = new Audio(`${process.env.PUBLIC_URL}/assets/sounds/buttons_sounds/disabled.mp3`)
 
     const scrollLeft = () => {
         if (carouselRef.current && !isAnimating) {

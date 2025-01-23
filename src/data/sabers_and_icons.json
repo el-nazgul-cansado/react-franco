@@ -110,8 +110,8 @@
     {
         "id": 13,
         "name": "Obi-Wan Kenobi",
-        "saber": "https://github.com/Han-Juri/React-Franco/blob/main/public/assets/images/cursors-and-icons/obi-wan_kenobi/obi_wan_kenobi_face.png?raw=true",
-        "icon": "https://github.com/Han-Juri/React-Franco/blob/main/public/assets/images/cursors-and-icons/obi-wan_kenobi/obi_wan_kenobi_lightsaber.png?raw=true",
+        "saber": "https://github.com/Han-Juri/React-Franco/blob/main/public/assets/images/cursors-and-icons/obi-wan_kenobi/obi_wan_kenobi_lightsaber.png?raw=true",
+        "icon": "https://github.com/Han-Juri/React-Franco/blob/main/public/assets/images/cursors-and-icons/obi-wan_kenobi/obi_wan_kenobi_face.png?raw=true",
         "profile": "https://github.com/Han-Juri/React-Franco/blob/main/public/assets/images/cursors-and-icons/obi-wan_kenobi/obi-wan_kenobi_profile.png?raw=true",
         "trype": "simple",
         "color": "blue"
@@ -119,8 +119,8 @@
     {
         "id": 14,
         "name": "Qui-Gon Jin",
-        "saber": "https://github.com/Han-Juri/React-Franco/blob/main/public/assets/images/cursors-and-icons/qui-gon_jin/qui_gon_jin_face.png?raw=true",
-        "icon": "https://github.com/Han-Juri/React-Franco/blob/main/public/assets/images/cursors-and-icons/qui-gon_jin/qui_gon_jin_lightsaber.png?raw=true",
+        "saber": "https://github.com/Han-Juri/React-Franco/blob/main/public/assets/images/cursors-and-icons/qui-gon_jin/qui_gon_jin_lightsaber.png?raw=true",
+        "icon": "https://github.com/Han-Juri/React-Franco/blob/main/public/assets/images/cursors-and-icons/qui-gon_jin/qui_gon_jin_face.png?raw=true",
         "profile": "https://github.com/Han-Juri/React-Franco/blob/main/public/assets/images/cursors-and-icons/qui-gon_jin/qui-gon_jin_profile.png?raw=true",
         "trype": "simple",
         "color": "green"

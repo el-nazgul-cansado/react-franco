@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/React-Franco/build/static/css/main.8d051c0f.css",
-    "main.js": "/React-Franco/build/static/js/main.d291a2f0.js",
+    "main.js": "/React-Franco/build/static/js/main.a7e4a00f.js",
     "static/js/787.53886fc2.chunk.js": "/React-Franco/build/static/js/787.53886fc2.chunk.js",
     "index.html": "/React-Franco/build/index.html",
     "main.8d051c0f.css.map": "/React-Franco/build/static/css/main.8d051c0f.css.map",
-    "main.d291a2f0.js.map": "/React-Franco/build/static/js/main.d291a2f0.js.map",
+    "main.a7e4a00f.js.map": "/React-Franco/build/static/js/main.a7e4a00f.js.map",
     "787.53886fc2.chunk.js.map": "/React-Franco/build/static/js/787.53886fc2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8d051c0f.css",
-    "static/js/main.d291a2f0.js"
+    "static/js/main.a7e4a00f.js"
   ]
 }

@@ -56,7 +56,7 @@ export const CartItem = ({id, name, price, cantidad, stock, image, color}) => {
                     <p className="cartItemPrice">Precio total: ${price * cantidad}</p>
                 </div>
                 <div className="cartItemImageContainer">
-                    <img src={image} className="cartItemImage" />
+                    <img src={image} className="cartItemImage" alt={name} />
                 </div>
             </div>
             <div className="cartItemActions">

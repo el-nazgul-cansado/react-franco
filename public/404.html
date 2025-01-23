@@ -1,0 +1,6 @@
+<script>
+    // Redirige todas las rutas al index.html
+    var path = window.location.pathname;
+    var newPath = window.location.origin + "/index.html";
+    window.location.replace(newPath + "?redirect=" + path);
+  </script>

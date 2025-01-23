@@ -11,9 +11,9 @@ const init = JSON.parse(localStorage.getItem('cart')) || []
 
 export const CartProvider = ({children}) => {
 
-    const add_to_cart_audio = new Audio("/assets/sounds/buttons_sounds/add_to_cart.mp3")
+    const add_to_cart_audio = new Audio("assets/sounds/buttons_sounds/add_to_cart.mp3")
 
-    const eliminate_audio = new Audio("/assets/sounds/buttons_sounds/eliminate.mp3")
+    const eliminate_audio = new Audio("assets/sounds/buttons_sounds/eliminate.mp3")
 
     const [cart, setCart] = useState(init)
   

@@ -18,7 +18,7 @@ export const ItemDetail = ({id, name, description, image, price, stock, category
 
     const navigate = useNavigate()
 
-    const to_cart_audio = new Audio("/assets/sounds/buttons_sounds/to_cart.mp3")
+    const to_cart_audio = new Audio("assets/sounds/buttons_sounds/to_cart.mp3")
 
     const to_cart_audio_handle = () => {
         to_cart_audio.play()

@@ -2,7 +2,7 @@ import './ItemCount.css'
 
 export const ItemCount = ({max, setCantidad, cantidad}) => {
 
-    const add_amount_audio = new Audio("/assets/sounds/buttons_sounds/add_amount.mp3")
+    const add_amount_audio = new Audio("assets/sounds/buttons_sounds/add_amount.mp3")
     
     const handleRestar = () => {
         cantidad > 1 && setCantidad(cantidad - 1)

@@ -23,6 +23,8 @@ export const Header = () => {
             setRotationDegrees(prev => prev + 180);
     };
 
+    const to_cart_audio = new Audio ("assets/sounds/buttons_sounds/to_cart.mp3")
+
     const vibrate = selectedIcon
     ? keyframes`
         0% { box-shadow: 0px 0px 5px ${selectedIcon.color}, 0px 0px 10px ${selectedIcon.color}, 0px 0px 20px ${selectedIcon.color}; }
@@ -64,8 +66,6 @@ export const Header = () => {
         animation: ${vibrate} .003s infinite; /* Aplicamos la animación vibrate */
         }
     `;
-
-    const to_cart_audio = new Audio ("/assets/sounds/buttons_sounds/to_cart.mp3")
 
     const to_cart_audio_handle = () => {
         to_cart_audio.play()

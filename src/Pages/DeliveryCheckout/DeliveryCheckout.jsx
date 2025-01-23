@@ -19,7 +19,7 @@ export const DeliveryCheckout = () => {
     const [loading, setLoading] = useState(true)
     const [userLogged, setUserLogged] = useState(false)
 
-    const select_option_audio = new Audio("/assets/sounds/buttons_sounds/next_card.mp3")
+    const select_option_audio = new Audio("assets/sounds/buttons_sounds/next_card.mp3")
 
     setTimeout(() =>{
         setLoading(false)

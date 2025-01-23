@@ -31,7 +31,7 @@ export const Checkout = () => {
     const [userLogged, setUserLogged] = useState(false)
     const [isDeliverySummaryReady, setIsDeliverySummaryReady] = useState(false);
 
-    const end_purchase_audio = new Audio("/assets/sounds/end_purchase.mp3")
+    const end_purchase_audio = new Audio("assets/sounds/end_purchase.mp3")
 
     const [loading, setLoading] = useState(true)
 

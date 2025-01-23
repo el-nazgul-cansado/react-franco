@@ -198,6 +198,12 @@ export const Sabers_and_Icons_carousel = () => {
         setStartBorderAnimation(1)
     };
 
+    const sableHover =
+    sabersAndIcons[caruselPosition] &&
+    {
+        cursor: `url(${sabersAndIcons[caruselPosition].saber}), auto`
+      };
+
     return (
         <>
             <div className='saiCarrouselContainer'>
@@ -206,6 +212,7 @@ export const Sabers_and_Icons_carousel = () => {
                     {sabersAndIcons.map((sai, index) => (
                         <div key={index}>
                             <StyledDiv className={`border${sai.color}`} 
+                            style={sableHover}
                             startBorderAnimation={startBorderAnimation}>
                                 <span></span>
                                 <span></span>

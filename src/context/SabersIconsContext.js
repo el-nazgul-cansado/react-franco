@@ -35,7 +35,7 @@ export const SabersIconsProvider = ({ children }) => {
     };
   }, [selectedIcon]);
 
-  const audio = new Audio("/assets/sounds/sonido_sable_laser_icono.mp3");
+  const audio = new Audio("https://github.com/Han-Juri/React-Franco/blob/main/public/assets/sounds/sonido_sable_laser_icono.mp3");
 
   const handleIconClick = (icon) => {
     setSelectedIcon(icon);

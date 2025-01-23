@@ -87,7 +87,7 @@ export const Header = () => {
                         <div className="icons-stars-logo">
                             <Sabers_and_icons />
                             <StarsRangeAndCount />
-                            <Link to="/"><img className="star-wars-logo" src="/assets/images/star-wars-logo.png" alt="star-wars-logo" /></ Link>
+                            <Link to="/"><img className="star-wars-logo" src="https://github.com/Han-Juri/React-Franco/blob/main/public/assets/images/star-wars-logo.png?raw=true" alt="star-wars-logo" /></ Link>
                         </div>
                         <nav className="contenedorLinks">
                             <StyledLink to="/productos/consola">Consolas</StyledLink>

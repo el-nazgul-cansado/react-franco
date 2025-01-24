@@ -22,7 +22,7 @@ export const Routers = () => {
 
     return(
         
-        <BrowserRouter>
+        <BrowserRouter basename="/react-franco">
             <StarredBackground />
             <Header /> 
             <Routes>

@@ -2,7 +2,7 @@
   "name": "react-franco",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://el-nazgul-cansado.github.io/react-franco/build",
+  "homepage": "https://el-nazgul-cansado.github.io",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",

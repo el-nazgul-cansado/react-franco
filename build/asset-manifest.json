@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-franco/build/static/css/main.57719fcf.css",
-    "main.js": "/react-franco/build/static/js/main.20d7352c.js",
-    "static/js/787.53886fc2.chunk.js": "/react-franco/build/static/js/787.53886fc2.chunk.js",
-    "index.html": "/react-franco/build/index.html",
-    "main.57719fcf.css.map": "/react-franco/build/static/css/main.57719fcf.css.map",
-    "main.20d7352c.js.map": "/react-franco/build/static/js/main.20d7352c.js.map",
-    "787.53886fc2.chunk.js.map": "/react-franco/build/static/js/787.53886fc2.chunk.js.map"
+    "main.css": "/static/css/main.57719fcf.css",
+    "main.js": "/static/js/main.d7615c6c.js",
+    "static/js/787.53886fc2.chunk.js": "/static/js/787.53886fc2.chunk.js",
+    "index.html": "/index.html",
+    "main.57719fcf.css.map": "/static/css/main.57719fcf.css.map",
+    "main.d7615c6c.js.map": "/static/js/main.d7615c6c.js.map",
+    "787.53886fc2.chunk.js.map": "/static/js/787.53886fc2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.57719fcf.css",
-    "static/js/main.20d7352c.js"
+    "static/js/main.d7615c6c.js"
   ]
 }

@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-franco/static/css/main.57719fcf.css",
-    "main.js": "/react-franco/static/js/main.06718cae.js",
-    "static/js/787.53886fc2.chunk.js": "/react-franco/static/js/787.53886fc2.chunk.js",
+    "main.css": "/react-franco/static/css/main.99268f0e.css",
+    "main.js": "/react-franco/static/js/main.efec6112.js",
+    "static/js/453.fdf8925c.chunk.js": "/react-franco/static/js/453.fdf8925c.chunk.js",
     "index.html": "/react-franco/index.html",
-    "main.57719fcf.css.map": "/react-franco/static/css/main.57719fcf.css.map",
-    "main.06718cae.js.map": "/react-franco/static/js/main.06718cae.js.map",
-    "787.53886fc2.chunk.js.map": "/react-franco/static/js/787.53886fc2.chunk.js.map"
+    "main.99268f0e.css.map": "/react-franco/static/css/main.99268f0e.css.map",
+    "main.efec6112.js.map": "/react-franco/static/js/main.efec6112.js.map",
+    "453.fdf8925c.chunk.js.map": "/react-franco/static/js/453.fdf8925c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.57719fcf.css",
-    "static/js/main.06718cae.js"
+    "static/css/main.99268f0e.css",
+    "static/js/main.efec6112.js"
   ]
 }

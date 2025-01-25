@@ -183,6 +183,11 @@
     border: 2px solid red;
     border-radius: 20px;
 }
+
+.deliveryBackButton:hover{
+    animation: vibratered 0.1s linear infinite;
+}
+
 .deliverySubmit{
     height: 38px;
     width: 200px;
@@ -191,6 +196,11 @@
     border: 2px solid green;
     border-radius: 20px;
 }
+
+.deliverySubmit:hover{
+    animation: vibrategreen 0.1s linear infinite;
+}
+
 .deliverySelected{
     border: 5px solid #FFD700;
 }

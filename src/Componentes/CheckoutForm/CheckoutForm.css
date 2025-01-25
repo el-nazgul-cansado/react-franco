@@ -17,3 +17,7 @@
     border: 2px solid green;
     border-radius: 20px;
 }
+
+.checkout-summary-btn:hover{
+    animation: vibrategreen 0.1s linear infinite;
+}

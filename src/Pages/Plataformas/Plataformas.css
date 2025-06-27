@@ -1,0 +1,31 @@
+.link-container {
+  height: calc(100vh - 140px - 138px);
+}
+
+.steamLink {
+  background-color: rgba(0, 0, 0, 0.692);
+}
+
+.steamLink img {
+  border-radius: 50px;
+}
+
+.originLink {
+  background-color: rgba(255, 166, 0, 0.429);
+}
+
+.playStationLink {
+  background-color: rgba(0, 0, 255, 0.429);
+}
+
+.xBoxLink {
+  background-color: rgba(0, 128, 0, 0.429);
+}
+
+.epicGamesLink {
+  background-color: rgba(128, 128, 128, 0.429);
+}
+
+.gogLink {
+  background-color: rgba(44, 44, 44, 0.429);
+}/*# sourceMappingURL=Plataformas.css.map */

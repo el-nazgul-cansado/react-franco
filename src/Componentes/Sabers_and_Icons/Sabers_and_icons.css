@@ -1,18 +1,13 @@
 .dropdown-content {
-  display: none; /* Oculta el contenido por defecto */
+  display: flex; /* Ya no se oculta en CSS, lo oculta React */
   position: absolute;
   background-color: black;
   min-width: 640px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  flex-wrap: wrap; /* Permite que los ítems se envuelvan en múltiples filas */
-  padding: 30px 15px 30px 15px;
-  transition: all 0.3 ease;
-}
-
-.dropdown:hover .dropdown-content {
   z-index: 1000;
-  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 15px 30px 15px;
+  transition: all 0.3s ease;
   justify-content: space-evenly;
   gap: 20px;
   border-radius: 20px;
